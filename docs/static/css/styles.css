@@ -1,0 +1,43 @@
+/* Copia del styles.css original */
+/* ==========================================
+   ESTILOS PARA TABLETA - ENTRENAMIENTO VOLEIBOL
+   Optimizado para pantallas táctiles
+   ========================================== */
+
+:root {
+    --color-primary: #ff6b9d;
+    --color-primary-dark: #ff4d7d;
+    --color-secondary: #4d7cfe;
+    --color-success: #4caf50;
+    --color-warning: #ff9800;
+    --color-bg-dark: #0a0e27;
+    --color-bg-medium: #1a1f3a;
+    --color-bg-light: #252b48;
+    --color-card: #1e2439;
+    --color-text: #ffffff;
+    --color-text-secondary: #b8c5d6;
+    --color-accent: #00d9ff;
+    --border-radius: 12px;
+    --shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: linear-gradient(135deg, var(--color-bg-dark) 0%, var(--color-bg-medium) 100%);
+    color: var(--color-text);
+    line-height: 1.6;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+    min-height: 100vh;
+}
+
+/* ...rest of the CSS... */
