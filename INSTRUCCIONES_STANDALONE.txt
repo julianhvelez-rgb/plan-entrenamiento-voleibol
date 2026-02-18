@@ -1,0 +1,244 @@
+═══════════════════════════════════════════════════════════════════════════
+  🏐 APLICACIÓN STANDALONE DE ENTRENAMIENTO DE VOLEIBOL
+  ✨ VERSIÓN INDEPENDIENTE - NO REQUIERE NAVEGADOR
+═══════════════════════════════════════════════════════════════════════════
+
+📱 ¿QUÉ ES ESTA VERSIÓN?
+
+   Esta es una aplicación de ESCRITORIO INDEPENDIENTE que:
+   
+   ✅ NO requiere abrir Chrome, Edge o ningún navegador
+   ✅ Se ejecuta como una aplicación normal de Windows
+   ✅ Tiene su propia ventana independiente
+   ✅ Se puede usar en PC, laptop o tablet Windows
+   ✅ Se puede convertir en un archivo .exe portátil
+
+═══════════════════════════════════════════════════════════════════════════
+🚀 OPCIÓN 1: EJECUTAR DIRECTAMENTE (Más rápido para probar)
+═══════════════════════════════════════════════════════════════════════════
+
+   1️⃣  Haz doble clic en: INICIAR_TABLETA_STANDALONE.bat
+   
+   2️⃣  Se abrirá una ventana de aplicación independiente
+   
+   3️⃣  ¡Listo! Usa la aplicación como cualquier programa
+
+   ⚠️  Nota: Requiere Python instalado y solo funciona en esta PC
+
+═══════════════════════════════════════════════════════════════════════════
+📦 OPCIÓN 2: CREAR EJECUTABLE .EXE (Recomendado para distribución)
+═══════════════════════════════════════════════════════════════════════════
+
+   1️⃣  Haz doble clic en: COMPILAR_TABLETA.bat
+   
+   2️⃣  Espera unos minutos mientras se compila (5-10 min aprox.)
+   
+   3️⃣  El archivo .exe estará en la carpeta "dist"
+   
+   4️⃣  Copia "EntrenamientoVoleibol_Tableta.exe" donde quieras
+   
+   5️⃣  Ejecuta el .exe en cualquier PC Windows (sin instalar nada)
+
+   💡 VENTAJAS del .exe:
+      • NO necesita Python instalado
+      • Se puede copiar a USB y usar en cualquier PC
+      • Funciona como una app profesional
+      • Perfecto para tabletas o laptops Windows
+
+═══════════════════════════════════════════════════════════════════════════
+🆚 DIFERENCIAS ENTRE VERSIONES
+═══════════════════════════════════════════════════════════════════════════
+
+   VERSIÓN WEB (app_tableta.py):
+   ├─ Requiere navegador (Chrome, Safari, etc.)
+   ├─ Funciona en Android, iOS, Windows
+   ├─ Necesita PC servidor y conexión WiFi
+   └─ Múltiples dispositivos simultáneos
+
+   VERSIÓN STANDALONE (app_tableta_standalone.py):
+   ├─ NO requiere navegador externo
+   ├─ Solo Windows (PC, laptop, tablet Windows)
+   ├─ Una sola ventana de aplicación
+   ├─ Se puede crear .exe portátil
+   └─ Funciona offline completamente
+
+═══════════════════════════════════════════════════════════════════════════
+⚙️ REQUISITOS
+═══════════════════════════════════════════════════════════════════════════
+
+   PARA EJECUTAR DIRECTAMENTE (.py):
+   • Python 3.7 o superior
+   • pip install pywebview flask
+
+   PARA CREAR .EXE:
+   • Python 3.7 o superior
+   • pip install pywebview flask pyinstaller
+
+   PARA EJECUTAR EL .EXE:
+   • NADA - Solo Windows (funciona en cualquier PC)
+
+═══════════════════════════════════════════════════════════════════════════
+🛠️ INSTALACIÓN MANUAL (Si los .bat no funcionan)
+═══════════════════════════════════════════════════════════════════════════
+
+   1. Instalar dependencias:
+      
+      pip install -r requirements_tableta.txt
+
+   2. Ejecutar aplicación:
+      
+      python app_tableta_standalone.py
+
+   3. Compilar a .exe:
+      
+      pyinstaller --clean --noconfirm EntrenamientoVoleibol_Tableta.spec
+
+   4. El .exe estará en:
+      
+      dist\EntrenamientoVoleibol_Tableta.exe
+
+═══════════════════════════════════════════════════════════════════════════
+💡 CARACTERÍSTICAS DE LA APP
+═══════════════════════════════════════════════════════════════════════════
+
+   ✨ Ventana de aplicación nativa de Windows
+   ✨ Interfaz moderna y optimizada para táctil
+   ✨ 3 secciones principales:
+      • 📋 Generar planes personalizados
+      • 📚 Consultar ejercicios por etapa
+      • 🏐 Ver diagramas de cancha
+   
+   ✨ Funciones:
+      • Compartir planes
+      • Imprimir directamente
+      • Ajuste de ventana y pantalla completa
+      • Funciona sin conexión a internet
+
+═══════════════════════════════════════════════════════════════════════════
+📱 USO EN TABLETAS WINDOWS
+═══════════════════════════════════════════════════════════════════════════
+
+   Para usar en una tablet Windows (Surface, etc.):
+
+   OPCIÓN A - Copiar el .exe:
+   1. Compila el .exe en tu PC (COMPILAR_TABLETA.bat)
+   2. Copia el archivo .exe a un USB
+   3. Inserta el USB en la tablet
+   4. Copia el .exe a la tablet
+   5. Ejecuta el .exe - ¡Listo!
+
+   OPCIÓN B - Instalar Python en la tablet:
+   1. Instala Python en la tablet
+   2. Copia toda la carpeta del proyecto
+   3. Instala dependencias: pip install pywebview flask
+   4. Ejecuta: python app_tableta_standalone.py
+
+   💡 Se recomienda la OPCIÓN A (más simple)
+
+═══════════════════════════════════════════════════════════════════════════
+🎯 CONSEJOS DE USO
+═══════════════════════════════════════════════════════════════════════════
+
+   ✅ PANTALLA COMPLETA:
+      • Presiona F11 o maximiza la ventana
+      • Perfecto para usar en modo presentación
+
+   ✅ CERRAR LA APP:
+      • Haz clic en la X de la ventana
+      • O presiona Alt+F4
+
+   ✅ REDIMENSIONAR:
+      • Arrastra los bordes de la ventana
+      • Ajusta al tamaño que prefieras
+
+   ✅ IMPRIMIR PLANES:
+      • Genera un plan
+      • Haz clic en "Imprimir"
+      • Selecciona tu impresora
+
+═══════════════════════════════════════════════════════════════════════════
+❓ PROBLEMAS COMUNES
+═══════════════════════════════════════════════════════════════════════════
+
+   PROBLEMA: "Se abre pero la ventana está vacía"
+   SOLUCIÓN:
+   • Espera unos segundos (el servidor necesita iniciar)
+   • Si persiste, cierra y vuelve a abrir
+   • Verifica que los puertos no estén ocupados
+
+   PROBLEMA: "Error al compilar el .exe"
+   SOLUCIÓN:
+   • Asegúrate de tener todas las dependencias:
+     pip install pywebview flask pyinstaller
+   • Verifica que existan las carpetas templates/ y static/
+   • Ejecuta como Administrador si hay problemas de permisos
+
+   PROBLEMA: "El .exe no funciona en otra PC"
+   SOLUCIÓN:
+   • El .exe debe estar solo (no necesita la carpeta del proyecto)
+   • Verifica que la otra PC sea Windows 7 o superior
+   • Algunas veces el antivirus bloquea el .exe - agrégalo a excepciones
+
+   PROBLEMA: "La app se ve borrosa en mi tablet"
+   SOLUCIÓN:
+   • Click derecho en el .exe → Propiedades
+   • Pestaña Compatibilidad
+   • Cambiar configuración de PPP alto
+   • Marcar "Reemplazar comportamiento de escalado de PPP alto"
+
+═══════════════════════════════════════════════════════════════════════════
+🔒 PRIVACIDAD Y SEGURIDAD
+═══════════════════════════════════════════════════════════════════════════
+
+   ✓ Toda la información se procesa localmente
+   ✓ NO se conecta a internet
+   ✓ NO envía datos a ningún servidor externo
+   ✓ Completamente privado y seguro
+   ✓ No requiere registro ni cuenta
+
+═══════════════════════════════════════════════════════════════════════════
+📊 COMPARACIÓN DE TODAS LAS VERSIONES DISPONIBLES
+═══════════════════════════════════════════════════════════════════════════
+
+   1️⃣  ejerciciosvoly.py
+      • Consola/Terminal, texto ASCII
+      • Funciona en cualquier sistema con Python
+      • Interfaz básica pero funcional
+
+   2️⃣  ejerciciosvoly_gui.py
+      • Interfaz gráfica con tkinter
+      • Windows/Linux/Mac
+      • Requiere Python instalado
+
+   3️⃣  app_tableta.py (Web)
+      • Navegador web, multi-dispositivo
+      • Android, iOS, Windows
+      • Requiere servidor y WiFi
+
+   4️⃣  app_tableta_standalone.py (NUEVA ⭐)
+      • Aplicación independiente Windows
+      • Ventana propia, sin navegador
+      • Se puede crear .exe portátil
+      • Perfecto para tablets Windows
+
+═══════════════════════════════════════════════════════════════════════════
+🚀 INICIO SUPER RÁPIDO
+═══════════════════════════════════════════════════════════════════════════
+
+   PARA PROBAR AHORA:
+   1. Doble clic en: INICIAR_TABLETA_STANDALONE.bat
+   2. ¡Listo! 🎉
+
+   PARA CREAR .EXE PORTABLE:
+   1. Doble clic en: COMPILAR_TABLETA.bat
+   2. Espera 5-10 minutos
+   3. Busca el .exe en la carpeta "dist"
+   4. Copia y usa donde quieras 🎉
+
+═══════════════════════════════════════════════════════════════════════════
+
+¡Disfruta de tu aplicación profesional de entrenamiento! 🏐💪
+
+Cualquier duda, revisa los comentarios en el código o contacta al desarrollador.
+
+═══════════════════════════════════════════════════════════════════════════

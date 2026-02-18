@@ -1,0 +1,184 @@
+═══════════════════════════════════════════════════════════════════
+📥 GUÍA COMPLETA: INSTALAR Y USAR NGROK
+═══════════════════════════════════════════════════════════════════
+
+🎯 ¿QUÉ ES NGROK?
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ngrok crea un túnel seguro con HTTPS REAL hacia tu servidor local.
+Chrome reconocerá el HTTPS y permitirá instalar la app como app real.
+
+
+📥 PASO 1: DESCARGAR NGROK
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Abre tu navegador y ve a: https://ngrok.com/download
+
+2. Clic en "Download for Windows"
+
+3. Se descargará un archivo: ngrok-v3-stable-windows-amd64.zip
+
+4. Extrae el archivo ZIP:
+   • Clic derecho sobre el .zip
+   • "Extraer todo..."
+   • Extraer a una carpeta fácil de encontrar
+
+
+📁 PASO 2: INSTALAR NGROK
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Crea la carpeta C:\ngrok
+
+2. Copia el archivo ngrok.exe a C:\ngrok\ngrok.exe
+
+3. Verifica que la ruta sea exactamente:
+   C:\ngrok\ngrok.exe
+
+
+🔑 PASO 3: OBTENER TOKEN GRATIS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Ve a: https://ngrok.com/
+
+2. Clic en "Sign up" (Registrarse) - ES GRATIS
+
+3. Puedes registrarte con:
+   • Email y contraseña
+   • Cuenta de Google
+   • Cuenta de GitHub
+
+4. Una vez dentro, verás tu "Authtoken"
+   • Se ve así: 2abc...XYZ (una cadena larga)
+   • Cópialo (botón Copy)
+
+
+⚙️ PASO 4: CONFIGURAR EL TOKEN
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Abre PowerShell (busca "PowerShell" en el menú inicio)
+
+2. Ejecuta estos comandos:
+   cd C:\ngrok
+   .\ngrok.exe config add-authtoken TU-TOKEN-AQUI
+
+   (Reemplaza TU-TOKEN-AQUI con el token que copiaste)
+
+3. Deberías ver:
+   Authtoken saved to configuration file: C:\Users\...\ngrok.yml
+
+✅ ¡Listo! ngrok está configurado
+
+
+🚀 PASO 5: USAR NGROK
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+VENTANA 1 - Iniciar el servidor Flask:
+   1. Ejecuta: INICIAR_SERVIDOR_HTTP.bat
+   2. El servidor correrá en http://localhost:5000
+   3. ¡NO CIERRES ESTA VENTANA!
+
+VENTANA 2 - Iniciar ngrok:
+   1. Abre otra PowerShell
+   2. Ejecuta:
+      cd C:\ngrok
+      .\ngrok.exe http 5000
+
+   3. ¡NO CIERRES ESTA VENTANA!
+
+   4. Verás algo como:
+
+      ┌─────────────────────────────────────────────────────┐
+      │                                                     │
+      │  Session Status     online                          │
+      │  Web Interface      http://127.0.0.1:4040          │
+      │  Forwarding         https://abc123.ngrok-free.app  │
+      │                                                     │
+      └─────────────────────────────────────────────────────┘
+
+   5. ¡Copia esa URL! (https://abc123.ngrok-free.app)
+
+
+📱 PASO 6: ACCEDER DESDE LA TABLETA
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. En la tableta, abre Chrome
+
+2. Escribe la URL de ngrok en la barra:
+   https://abc123.ngrok-free.app
+   (Usa tu URL real que te dio ngrok)
+
+3. Puede aparecer una pantalla de ngrok que dice:
+   "You are about to visit..."
+   • Clic en "Visit Site"
+
+4. ¡La app cargará con HTTPS REAL!
+
+5. Chrome detectará automáticamente que es instalable:
+   • Aparecerá banner "Instalar app"
+   • O en el menú (⋮): "Instalar app"
+
+6. ¡Instálala y funcionará como app independiente! 🎉
+
+
+💡 COMANDOS RÁPIDOS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Iniciar servidor Flask:
+   cd "C:\Users\willi\OneDrive\Desktop\proyectos\plan de entrenamiendo"
+   python app_tableta.py
+
+Iniciar ngrok:
+   cd C:\ngrok
+   .\ngrok.exe http 5000
+
+Ver túneles activos:
+   http://localhost:4040
+
+
+❓ SOLUCIÓN DE PROBLEMAS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+❌ "ngrok no se reconoce como comando"
+   → Asegúrate de estar en C:\ngrok antes de ejecutar .\ngrok.exe
+
+❌ "Please sign up for an account"
+   → Necesitas registrarte en ngrok.com y configurar el token
+
+❌ "ERROR: authentication failed"
+   → El token no está configurado o es incorrecto
+   → Repite el paso 4
+
+❌ La URL de ngrok no abre
+   → Verifica que el servidor Flask esté corriendo
+   → Verifica que ngrok diga "Session Status: online"
+
+❌ "ERR_NGROK_3200"
+   → Versión gratuita solo permite 3 túneles/hora
+   → Espera un momento o crea otra cuenta
+
+❌ Chrome no muestra "Instalar app"
+   → Verifica en DevTools (F12) → Application → Manifest
+   → Debe mostrar todos los datos sin errores
+
+
+✅ VENTAJAS DE ESTA SOLUCIÓN
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✅ HTTPS válido reconocido por Chrome
+✅ Chrome mostrará "Instalar app"
+✅ La app se instalará como app real independiente
+✅ Sin barra de Chrome, pantalla completa
+✅ Aparece en la lista de apps
+✅ Funciona offline después de instalar
+✅ Puedes acceder desde cualquier lugar con internet
+
+
+⚠️ IMPORTANTE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+• La URL de ngrok cambia cada vez que lo reinicias (versión gratis)
+• Necesitas ambas ventanas abiertas (Flask y ngrok)
+• Ctrl+C en cualquiera de las dos detiene el servicio
+• Para volver a usar la app, reinicia Flask y ngrok
+
+
+═══════════════════════════════════════════════════════════════════
+¡Con ngrok tendrás una APP REAL instalable! 🏐
+═══════════════════════════════════════════════════════════════════

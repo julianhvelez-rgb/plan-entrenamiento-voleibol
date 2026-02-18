@@ -1,0 +1,208 @@
+╔═══════════════════════════════════════════════════════════════════════════╗
+║                                                                           ║
+║     🏐  APLICACIÓN DE VOLEIBOL - INSTALACIÓN COMPLETADA  🏐              ║
+║                                                                           ║
+╚═══════════════════════════════════════════════════════════════════════════╝
+
+
+✅ TU APLICACIÓN ESTÁ LISTA PARA USAR
+
+
+📍 DÓNDE ENCONTRAR LA APLICACIÓN:
+═════════════════════════════════════════════════════════════════════════
+
+   🎯 OPCIÓN 1 - En el Escritorio:
+   ───────────────────────────────
+   Ubicación: C:\Users\willi\OneDrive\Desktop\
+   Archivo:   EntrenamientoVoleibol.exe
+   
+   👉 Haz doble clic para iniciar
+
+   
+   🎯 OPCIÓN 2 - En la carpeta del proyecto:
+   ─────────────────────────────────────────
+   Ubicación: plan de entrenamiendo\dist\
+   Archivo:   EntrenamientoVoleibol.exe
+
+
+   🎯 OPCIÓN 3 - Iniciador rápido:
+   ───────────────────────────────
+   Ubicación: plan de entrenamiendo\
+   Archivo:   INICIAR_AQUI.bat
+   
+   👉 Doble clic para lanzar con pantalla de bienvenida
+
+
+
+📦 ARCHIVOS CREADOS:
+═════════════════════════════════════════════════════════════════════════
+
+   ✓ EntrenamientoVoleibol.exe  (9.4 MB)  - APLICACIÓN PRINCIPAL
+   ✓ README.txt                           - Instrucciones completas
+   ✓ INICIAR_AQUI.bat                     - Lanzador rápido
+   ✓ ejerciciosvoly.py                    - Código fuente original
+   ✓ EntrenamientoVoleibol.spec           - Configuración PyInstaller
+
+
+
+🚀 INICIO RÁPIDO:
+═════════════════════════════════════════════════════════════════════════
+
+   1. Ve a tu Escritorio
+   
+   2. Busca "EntrenamientoVoleibol.exe"
+   
+   3. Haz doble clic
+   
+   4. ¡LISTO! Ya puedes planear entrenamientos
+
+
+
+💡 CARACTERÍSTICAS:
+═════════════════════════════════════════════════════════════════════════
+
+   ✓ NO necesita Python instalado
+   ✓ NO necesita Internet
+   ✓ Funciona sin instalación
+   ✓ Portable (copia a USB y úsala en otro PC)
+   ✓ Visualizaciones gráficas de cancha
+   ✓ Base de datos de 100+ ejercicios
+   ✓ Planes personalizados
+   ✓ Guarda planes en archivos .txt
+
+
+
+📝 FUNCIONES PRINCIPALES:
+═════════════════════════════════════════════════════════════════════════
+
+   1️⃣  Crear Plan de Entrenamiento del Día
+       • Elige edad de las niñas
+       • Anota cuántas asistieron
+       • Selecciona etapa de entrenamiento
+       • Obtén plan completo con ejercicios
+
+   2️⃣  Ver Base de Ejercicios por Etapa
+       • Explora ejercicios disponibles
+       • 5 etapas diferentes
+       • Ejercicios categorizados
+
+   3️⃣  Generar Plan Personalizado
+       • Selecciona ejercicios específicos
+       • Crea tu propio plan
+
+   4️⃣  Ver Diagramas de Cancha y Ejercicios
+       • Cancha completa con zonas
+       • Formaciones de recepción
+       • Diagramas de ejercicios
+       • Estaciones de trabajo
+
+
+
+🎨 DIAGRAMAS VISUALES INCLUIDOS:
+═════════════════════════════════════════════════════════════════════════
+
+   📊 Cancha completa con zonas numeradas (1-6)
+   📊 Formación en W (Recepción)
+   📊 Formación 3-2-1 (Recepción)
+   📊 Ejercicio en parejas
+   📊 Ejercicio en círculo
+   📊 Recepción-Colocación-Remate
+   📊 Bloqueo y Defensa
+   📊 Organización por estaciones (2, 3 o 4)
+
+
+
+⚙️ ETAPAS DE ENTRENAMIENTO:
+═════════════════════════════════════════════════════════════════════════
+
+   1. Preparación General
+   2. Preparación Específica
+   3. Precompetitiva
+   4. Competitiva
+   5. Transición
+
+
+
+👥 RANGOS DE EDAD:
+═════════════════════════════════════════════════════════════════════════
+
+   • 8-10 años   (Iniciación)
+   • 11-13 años  (Desarrollo)
+   • 14-16 años  (Perfeccionamiento)
+   • 17+ años    (Alto Rendimiento)
+
+
+
+📋 EJEMPLO DE USO:
+═════════════════════════════════════════════════════════════════════════
+
+   1. Abres la aplicación
+   2. Seleccionas opción 1 (Crear Plan del Día)
+   3. Eliges: "11-13 años (Desarrollo)"
+   4. Indicas: "12 niñas asistieron"
+   5. Seleccionas: "Preparación Específica"
+   6. ¡Obtienes plan completo con ejercicios!
+   7. Ves diagramas en la cancha
+   8. Guardas el plan (opcional)
+
+
+
+💾 COPIAR A OTRO COMPUTADOR:
+═════════════════════════════════════════════════════════════════════════
+
+   Solo necesitas copiar: EntrenamientoVoleibol.exe
+   
+   Puedes copiarlo a:
+   • Memoria USB
+   • Otro computador
+   • Carpeta de OneDrive
+   • Cualquier ubicación
+   
+   Y funcionará sin problemas
+
+
+
+⚠️ SI WINDOWS BLOQUEA LA APP:
+═════════════════════════════════════════════════════════════════════════
+
+   Puede aparecer: "Windows protegió el equipo"
+   
+   Solución:
+   1. Haz clic en "Más información"
+   2. Luego en "Ejecutar de todas formas"
+   
+   Es normal - la app es segura pero no tiene firma digital
+
+
+
+🎯 PRÓXIMOS PASOS:
+═════════════════════════════════════════════════════════════════════════
+
+   1. ✓ Prueba la aplicación en tu escritorio
+   
+   2. ✓ Crea tu primer plan de entrenamiento
+   
+   3. ✓ Explora los diagramas visuales
+   
+   4. ✓ Guarda tus planes favoritos
+   
+   5. ✓ Comparte la app con otros entrenadores (solo copia el .exe)
+
+
+
+📞 SOPORTE:
+═════════════════════════════════════════════════════════════════════════
+
+   • Lee el README.txt para más información
+   • El código fuente está en ejerciciosvoly.py
+   • Todos los archivos están en la carpeta del proyecto
+
+
+
+╔═══════════════════════════════════════════════════════════════════════════╗
+║                                                                           ║
+║                 ¡DISFRUTA TU APLICACIÓN DE VOLEIBOL! 🏐                  ║
+║                                                                           ║
+║                        Versión 1.0 - Febrero 2026                        ║
+║                                                                           ║
+╚═══════════════════════════════════════════════════════════════════════════╝

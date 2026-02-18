@@ -1,0 +1,353 @@
+╔═══════════════════════════════════════════════════════════════════════════╗
+║                                                                           ║
+║        🎨 VERSIÓN PROFESIONAL CON LOGO Y EJERCICIOS 🎨                  ║
+║                                                                           ║
+╚═══════════════════════════════════════════════════════════════════════════╝
+
+
+✨ VERSIÓN PRO - FEBRERO 2026
+══════════════════════════════════════════════════════════════════════════
+
+
+📍 NUEVA APLICACIÓN PROFESIONAL EN TU ESCRITORIO:
+══════════════════════════════════════════════════════════════════════════
+
+   🏆 ARCHIVO: EntrenamientoVoleibol_Pro.exe
+
+   📊 Tamaño: 18.03 MB
+   🎨 Logo: Balón de voleibol profesional
+   💻 Interfaz: Gráfica moderna con visualización de ejercicios
+   🏐 Diagramas: Visualización individual de cada ejercicio
+
+
+🆕 NUEVAS CARACTERÍSTICAS - VERSIÓN PRO:
+══════════════════════════════════════════════════════════════════════════
+
+✅ LOGO PERSONALIZADO
+   • Logo de balón de voleibol profesional
+   • Icono en la ventana de la aplicación
+   • Diseño en rojo deportivo y blanco
+   • Visible en la barra de tareas
+
+✅ VISUALIZACIÓN INDIVIDUAL DE EJERCICIOS
+   Ahora CADA ejercicio se puede ver gráficamente en la cancha:
+   
+   🏐 Ejercicios en Parejas
+      • Visualización de jugadoras emparejadas
+      • Flechas de pase bidireccionales
+      • Balones entre parejas
+   
+   🔄 Ejercicios en Círculo
+      • 8 jugadoras en formación circular
+      • Balón en el centro
+      • Líneas de conexión
+   
+   🎯 Ejercicios de Saque
+      • Sacadoras en posición
+      • Trayectorias de saque
+      • Zonas objetivo marcadas
+   
+   🛡️ Ejercicios de Recepción
+      • Formación W visual
+      • Colocadora en posición 3
+      • Flechas de dirección del balón
+   
+   ⚡ Ejercicios de Remate
+      • Secuencia completa con flechas
+      • Saque → Recepción → Colocación → Remate
+      • Colores diferentes por fase
+   
+   🚧 Ejercicios de Bloqueo
+      • 3 bloqueadoras en la red
+      • 3 defensoras posicionadas
+      • Visualización de cobertura
+   
+   🎨 Ejercicios de Colocación
+      • Colocadora en zona 3
+      • Flechas a zonas 2 y 4
+      • Rematadoras en posición
+   
+   🔁 Ejercicios de Pases
+      • Triángulo de pases
+      • Flechas de secuencia
+      • Balón en movimiento
+   
+   🏃 Ejercicios de Desplazamientos
+      • Patrón en zigzag
+      • Conos de referencia
+      • Cambios de dirección marcados
+   
+   💪 Ejercicios Físicos
+      • 4 estaciones visualizadas
+      • Sentadillas, planchas, saltos, abdominales
+      • Distribución del espacio
+
+✅ SISTEMA INTELIGENTE DE DETECCIÓN
+   • Detecta automáticamente el tipo de ejercicio
+   • Muestra el diagrama apropiado
+   • Visualización contextual
+
+
+🎨 COMPARACIÓN: ANTES VS AHORA
+══════════════════════════════════════════════════════════════════════════
+
+VERSIÓN ANTERIOR:                   VERSIÓN PRO:
+━━━━━━━━━━━━━━━━━━━━━            ━━━━━━━━━━━━━━━━━━━━━
+❌ Sin logo                         ✅ Logo profesional
+❌ Solo 7 diagramas genéricos       ✅ Visualización de CADA ejercicio
+❌ Texto en lista                   ✅ Diagramas interactivos
+❌ No personalizable                ✅ Detección automática de ejercicio
+❌ Estática                         ✅ Dinámica y visual
+
+
+🚀 CÓMO USAR LAS NUEVAS FUNCIONES:
+══════════════════════════════════════════════════════════════════════════
+
+1️⃣  VER EJERCICIOS INDIVIDUALES:
+
+   Método automático (recomendado):
+   ─────────────────────────────────
+   a) Ve a la pestaña "📋 Crear Plan"
+   b) Genera un plan de entrenamiento
+   c) Los ejercicios se visualizan automáticamente
+      según el tipo detectado
+
+   Método manual (exploración):
+   ─────────────────────────────
+   a) Ve a "🏐 Visualización Cancha"
+   b) Selecciona un diagrama del menú
+   c) Clic en "🔄 Mostrar Diagrama"
+
+
+2️⃣  TIPOS DE EJERCICIOS DETECTADOS:
+
+   La aplicación detecta automáticamente:
+   
+   Palabras clave      →  Diagrama mostrado
+   ─────────────────────────────────────────
+   "parejas", "duplas" →  Ejercicio en parejas
+   "círculo", "rueda"  →  Ejercicio en círculo
+   "remate", "ataque"  →  Secuencia de remate
+   "bloqueo", "bloque" →  Ejercicio de bloqueo
+   "saque", "servicio" →  Práctica de saque
+   "recepción"         →  Formación de recepción
+   "colocación"        →  Trabajo de colocadora
+   "pase", "voleo"     →  Ejercicios de pases
+   "desplazamiento"    →  Trabajo de movilidad
+   "físico", "saltos"  →  Acondicionamiento
+
+
+3️⃣  EXPLORAR LA BASE DE EJERCICIOS:
+
+   a) Ve a "📚 Base de Ejercicios"
+   b) Selecciona una etapa
+   c) Clic en "📖 Cargar Ejercicios"
+   d) Lee la descripción de cada ejercicio
+
+
+📊 CONTENIDO DE LA APLICACIÓN:
+══════════════════════════════════════════════════════════════════════════
+
+✓ 100+ Ejercicios catalogados
+✓ 10+ Tipos de visualización
+✓ 5 Etapas de entrenamiento
+✓ 4 Rangos de edad
+✓ Organización dinámica según asistentes
+
+
+🎯 EJERCICIOS POR ETAPA:
+══════════════════════════════════════════════════════════════════════════
+
+📍 PREPARACIÓN GENERAL
+   • Calentamiento (4 ejercicios)
+   • Técnica Básica (5 ejercicios)
+   • Juegos Grupales (4 ejercicios)
+   • Acondicionamiento (4 ejercicios)
+
+📍 PREPARACIÓN ESPECÍFICA
+   • Calentamiento (4 ejercicios)
+   • Técnica Avanzada (5 ejercicios)
+   • Trabajo Grupal (4 ejercicios)
+   • Acondicionamiento (4 ejercicios)
+
+📍 PRECOMPETITIVA
+   • Calentamiento (4 ejercicios)
+   • Táctica de Equipo (5 ejercicios)
+   • Simulación (4 ejercicios)
+   • Acondicionamiento (4 ejercicios)
+
+📍 COMPETITIVA
+   • Calentamiento (4 ejercicios)
+   • Mantenimiento (5 ejercicios)
+   • Estrategia (4 ejercicios)
+   • Recuperación (4 ejercicios)
+
+📍 TRANSICIÓN
+   • Calentamiento (3 ejercicios)
+   • Recreativo (5 ejercicios)
+   • Recuperación Activa (5 ejercicios)
+   • Evaluación (4 ejercicios)
+
+
+💡 CARACTERÍSTICAS DEL LOGO:
+══════════════════════════════════════════════════════════════════════════
+
+🏐 Diseño del Logo:
+   • Balón de voleibol realista
+   • Fondo circular rojo deportivo (#e94560)
+   • Balón blanco con líneas características
+   • Efecto 3D con sombras y brillos
+   • Tamaños: 16x16 a 256x256 pixeles
+   
+📂 Archivos de Logo:
+   • logo_voleibol.ico (icono del ejecutable)
+   • logo_voleibol.png (256x256)
+   • logo_voleibol_grande.png (512x512)
+
+
+🎨 MEJORAS VISUALES:
+══════════════════════════════════════════════════════════════════════════
+
+✓ Logo visible en la ventana principal
+✓ Logo en la barra de tareas de Windows
+✓ Logo como icono del archivo .exe
+✓ Cancha con color verde realista (#2d5016)
+✓ Jugadoras en círculos rojos (#e94560)
+✓ Flechas de movimiento con colores:
+  • Azul cyan (#00d9ff) para pases
+  • Naranja (#ffa500) para colocaciones
+  • Rojo (#e94560) para remates
+✓ Balones dorados (#ffd700)
+✓ Red blanca bien visible
+
+
+📦 VERSIONES DISPONIBLES:
+══════════════════════════════════════════════════════════════════════════
+
+En tu carpeta del proyecto:
+
+📁 dist/
+   ├── EntrenamientoVoleibol.exe       (9 MB - Versión Consola)
+   ├── EntrenamientoVoleibol_GUI.exe   (12 MB - Versión GUI básica)
+   └── EntrenamientoVoleibol_Pro.exe   (18 MB - ⭐ VERSIÓN PRO)
+
+📁 Escritorio/
+   └── EntrenamientoVoleibol_Pro.exe   (⭐ RECOMENDADA)
+
+
+💎 ¿POR QUÉ ES MÁS GRANDE LA VERSIÓN PRO?
+══════════════════════════════════════════════════════════════════════════
+
+   Incluye:
+   ✓ Librería PIL/Pillow (manejo de imágenes)
+   ✓ Logo integrado en múltiples formatos
+   ✓ Sistema de detección inteligente de ejercicios
+   ✓ +10 funciones de visualización nuevas
+   ✓ Código optimizado para diagramas dinámicos
+
+
+🎁 ARCHIVOS ADICIONALES CREADOS:
+══════════════════════════════════════════════════════════════════════════
+
+✓ crear_logo.py             - Script generador de logos
+✓ logo_voleibol.ico         - Icono para Windows
+✓ logo_voleibol.png         - Logo 256x256
+✓ logo_voleibol_grande.png  - Logo 512x512
+✓ ejerciciosvoly_gui.py     - Código fuente mejorado
+
+
+⚙️ REQUISITOS DE LA VERSIÓN PRO:
+══════════════════════════════════════════════════════════════════════════
+
+✓ Windows 7 o superior
+✓ ~18 MB de espacio en disco
+✓ Resolución mínima: 1024x768
+✓ Recomendado: 1400x900 o superior
+✓ NO requiere Python
+✓ NO requiere Internet
+✓ NO requiere instalación
+
+
+🔧 SOLUCIÓN DE PROBLEMAS:
+══════════════════════════════════════════════════════════════════════════
+
+❓ No veo el logo en la ventana:
+   → Normal en la primera ejecución
+   → Cierra y vuelve a abrir la aplicación
+   → El logo aparecerá en la barra de título
+
+❓ Los diagramas se ven pequeños:
+   → Maximiza la ventana
+   → O ajusta el tamaño manualmente
+   → Los diagramas se adaptan automáticamente
+
+❓ Un ejercicio no se visualiza correctamente:
+   → Algunos ejercicios genéricos muestran cancha básica
+   → Puedes usar el menú de "Visualización Cancha"
+   → para ver diagramas específicos
+
+❓ Quiero el logo en otro tamaño:
+   → Usa logo_voleibol_grande.png (512x512)
+   → O edita crear_logo.py para generar custom
+
+
+📝 EJEMPLO DE USO COMPLETO:
+══════════════════════════════════════════════════════════════════════════
+
+1. Abres EntrenamientoVoleibol_Pro.exe
+   → Ves el logo del balón en la ventana 🏐
+
+2. Vas a la pestaña "📋 Crear Plan"
+   
+3. Completas el formulario:
+   • Edad: "11-13 años (Desarrollo)"
+   • Asistentes: "12"
+   • Etapa: "Preparación Específica"
+
+4. Clic en "⚡ GENERAR PLAN"
+   → Aparece el plan completo en el panel
+
+5. Vas a "🏐 Visualización Cancha"
+   → Ya está mostrando un diagrama
+
+6. Seleccionas "Ejercicio Parejas" del menú
+   → Clic en "🔄 Mostrar Diagrama"
+   → ¡Ves el ejercicio en la cancha con colores!
+
+7. Regresas a "📋 Crear Plan"
+   → Clic en "💾 Guardar Plan"
+   → Guardas tu plan para imprimirlo
+
+
+🚀 VENTAJAS DE LA VERSIÓN PRO:
+══════════════════════════════════════════════════════════════════════════
+
+✅ Logo profesional que da credibilidad
+✅ Cada ejercicio se ve en la cancha
+✅ Más fácil explicar ejercicios al equipo
+✅ Visual y profesional
+✅ Puedes proyectar en pantalla
+✅ Impresiona a padres y directivos
+✅ Herramienta pedagógica superior
+
+
+💼 USO PROFESIONAL:
+══════════════════════════════════════════════════════════════════════════
+
+✓ Proyecta en pantalla para explicar al equipo
+✓ Imprime planes con diagramas
+✓ Muestra a padres la metodología
+✓ Presenta a directivos tu planificación
+✓ Documenta tus entrenamientos
+✓ Comparte con asistentes técnicos
+
+
+╔═══════════════════════════════════════════════════════════════════════════╗
+║                                                                           ║
+║          ⭐ VERSIÓN PROFESIONAL LISTA PARA USAR ⭐                       ║
+║                                                                           ║
+║       EntrenamientoVoleibol_Pro.exe - Con Logo y Ejercicios!             ║
+║                                                                           ║
+║                  🏐 ¡A entrenar con estilo! 🏐                           ║
+║                                                                           ║
+╚═══════════════════════════════════════════════════════════════════════════╝

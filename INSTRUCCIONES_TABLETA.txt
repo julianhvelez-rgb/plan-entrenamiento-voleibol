@@ -1,0 +1,220 @@
+═══════════════════════════════════════════════════════════════════════════
+  🏐 APLICACIÓN WEB DE ENTRENAMIENTO DE VOLEIBOL PARA TABLETA
+═══════════════════════════════════════════════════════════════════════════
+
+📱 COMPATIBLE CON:
+  ✅ Tabletas Android (Samsung, Xiaomi, Huawei, etc.)
+  ✅ iPad (iOS)
+  ✅ Tabletas Windows (Surface, etc.)
+  ✅ Cualquier dispositivo con navegador web
+
+═══════════════════════════════════════════════════════════════════════════
+📋 GUÍA DE INSTALACIÓN Y USO
+═══════════════════════════════════════════════════════════════════════════
+
+PASO 1: INSTALAR PYTHON Y FLASK (Solo la primera vez)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+   1. Abre PowerShell o CMD como Administrador
+   
+   2. Instala Flask ejecutando:
+      
+      pip install flask
+
+   3. Espera a que termine la instalación
+
+PASO 2: INICIAR EL SERVIDOR
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+   1. Abre PowerShell o CMD
+   
+   2. Navega a la carpeta del proyecto:
+      
+      cd "C:\Users\willi\OneDrive\Desktop\proyectos\plan de entrenamiendo"
+   
+   3. Ejecuta el servidor:
+      
+      python app_tableta.py
+   
+   4. Verás un mensaje similar a:
+   
+      ✅ Servidor iniciado correctamente
+      
+      🌐 Direcciones de acceso:
+         • Desde esta PC: http://localhost:5000
+         • Desde tableta: http://192.168.1.100:5000
+
+   5. ¡NO CIERRES esta ventana! Déjala abierta mientras uses la app
+
+PASO 3: CONECTAR TU TABLETA
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+   1. Asegúrate de que tu PC y tu tableta estén en la MISMA red WiFi
+   
+   2. En tu tableta, abre el navegador web:
+      • Chrome (Android)
+      • Safari (iPad)
+      • Edge (Windows)
+   
+   3. En la barra de direcciones, escribe la IP que aparece en el mensaje
+      del servidor. Por ejemplo:
+      
+      http://192.168.1.100:5000
+   
+   4. ¡Listo! La aplicación debería abrirse en tu tableta
+
+═══════════════════════════════════════════════════════════════════════════
+🔧 ENCONTRAR LA IP DE TU PC
+═══════════════════════════════════════════════════════════════════════════
+
+   WINDOWS:
+   --------
+   1. Abre CMD o PowerShell
+   2. Escribe: ipconfig
+   3. Busca "Dirección IPv4" en la sección de tu conexión WiFi
+   4. Será algo como: 192.168.1.100 o 192.168.0.50
+
+   Ejemplo:
+      Adaptador de LAN inalámbrica Wi-Fi:
+         Dirección IPv4. . . . . . . . . : 192.168.1.100  ← Esta es tu IP
+
+═══════════════════════════════════════════════════════════════════════════
+📱 CÓMO USAR LA APLICACIÓN EN TU TABLETA
+═══════════════════════════════════════════════════════════════════════════
+
+LA APLICACIÓN TIENE 3 SECCIONES PRINCIPALES:
+
+1️⃣  GENERAR PLAN (Pestaña 📋)
+   ────────────────────────────────────
+   • Selecciona la edad de las jugadoras (8-10, 11-13, 14-16, 17+)
+   • Indica cuántas jugadoras participarán (4-30)
+   • Elige la etapa de la temporada:
+     - Preparación General
+     - Preparación Específica
+     - Precompetitiva
+     - Competitiva
+     - Transición
+   • (Opcional) Selecciona un fundamento específico
+   • Ajusta la duración del entrenamiento (60-150 min)
+   • Presiona "Generar Plan"
+   
+   ➜ El plan aparecerá con ejercicios organizados y recomendaciones
+   ➜ Puedes IMPRIMIR, COMPARTIR o crear un NUEVO PLAN
+
+2️⃣  CONSULTAR EJERCICIOS (Pestaña 📚)
+   ────────────────────────────────────
+   • Selecciona una etapa
+   • Verás TODOS los ejercicios disponibles para esa etapa
+   • Organizados por categorías (calentamiento, técnica, etc.)
+   • Perfecto para consultar opciones rápidamente
+
+3️⃣  DIAGRAMAS (Pestaña 🏐)
+   ────────────────────────────────────
+   • Visualiza diagramas de cancha
+   • Formaciones de recepción (W, 3-2-1)
+   • Sistema de rotaciones
+   • Útil para explicar posiciones a las jugadoras
+
+═══════════════════════════════════════════════════════════════════════════
+💡 CONSEJOS PARA USO EN TABLETA
+═══════════════════════════════════════════════════════════════════════════
+
+✅ AGREGAR A PANTALLA DE INICIO (Acceso rápido):
+   
+   Android/Chrome:
+   1. Abre el menú (3 puntos)
+   2. Selecciona "Agregar a pantalla de inicio"
+   3. Listo, ahora tienes un ícono directo a la app
+   
+   iPad/Safari:
+   1. Toca el botón de compartir (cuadro con flecha)
+   2. Selecciona "Añadir a la pantalla de inicio"
+   3. Listo, ahora tienes un ícono directo a la app
+
+✅ MODO PANTALLA COMPLETA:
+   • En tablets, puedes usar el modo pantalla completa del navegador
+   • Se verá y funcionará como una app nativa
+
+✅ USO OFFLINE:
+   • La app requiere conexión al servidor (tu PC)
+   • Si vas a otra ubicación, necesitarás llevar tu laptop/PC
+   • O puedes instalar el servidor en un dispositivo portátil
+
+═══════════════════════════════════════════════════════════════════════════
+🔒 SEGURIDAD Y PRIVACIDAD
+═══════════════════════════════════════════════════════════════════════════
+
+✓ La aplicación solo es accesible en tu red WiFi local
+✓ No se envía información a internet
+✓ Todos los datos permanecen en tu red privada
+✓ No requiere registro ni credenciales
+
+═══════════════════════════════════════════════════════════════════════════
+❓ PROBLEMAS COMUNES Y SOLUCIONES
+═══════════════════════════════════════════════════════════════════════════
+
+PROBLEMA: "No puedo conectarme desde mi tableta"
+SOLUCIÓN:
+  • Verifica que PC y tableta estén en la MISMA red WiFi
+  • Comprueba que escribiste correctamente la IP
+  • Asegúrate de incluir el puerto :5000
+  • Verifica que el firewall no esté bloqueando Python
+  • Prueba desactivar temporalmente el firewall para verificar
+
+PROBLEMA: "El servidor no inicia"
+SOLUCIÓN:
+  • Asegúrate de haber instalado Flask: pip install flask
+  • Verifica que Python esté instalado
+  • Comprueba que estás en la carpeta correcta
+
+PROBLEMA: "La página se ve mal en mi tableta"
+SOLUCIÓN:
+  • Prueba girar la tableta (horizontal/vertical)
+  • Actualiza la página (desliza hacia abajo)
+  • Limpia el caché del navegador
+
+PROBLEMA: "No aparece mi IP"
+SOLUCIÓN:
+  • El servidor muestra la IP al iniciar
+  • Si no aparece, usa el comando ipconfig (Windows)
+  • La IP debe ser local: 192.168.x.x o 10.0.x.x
+
+═══════════════════════════════════════════════════════════════════════════
+🚀 INICIO RÁPIDO (Resumen)
+═══════════════════════════════════════════════════════════════════════════
+
+  EN TU PC:
+  1. pip install flask
+  2. cd "ruta\del\proyecto"
+  3. python app_tableta.py
+  4. Anota la IP que aparece (ej: 192.168.1.100:5000)
+
+  EN TU TABLETA:
+  1. Conectar a la misma WiFi que la PC
+  2. Abrir navegador
+  3. Ir a: http://[IP-DE-TU-PC]:5000
+  4. ¡A entrenar! 🏐
+
+═══════════════════════════════════════════════════════════════════════════
+📞 CARACTERÍSTICAS DE LA APP
+═══════════════════════════════════════════════════════════════════════════
+
+✨ Interfaz optimizada para pantallas táctiles
+✨ Botones grandes y fáciles de tocar
+✨ Funciona en cualquier orientación (vertical/horizontal)
+✨ Diseño moderno y atractivo
+✨ Generación automática de planes personalizados
+✨ Base de datos completa de ejercicios
+✨ Recomendaciones basadas en edad y nivel
+✨ Diagramas de cancha interactivos
+✨ Función de compartir e imprimir
+✨ Sin necesidad de instalación en la tableta
+✨ Uso completamente gratuito
+
+═══════════════════════════════════════════════════════════════════════════
+
+¡Disfruta de tu nueva herramienta de entrenamiento profesional! 🏐💪
+
+Para más ayuda, revisa los comentarios en el código o contacta al desarrollador.
+
+═══════════════════════════════════════════════════════════════════════════

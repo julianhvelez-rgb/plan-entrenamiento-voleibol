@@ -1,0 +1,148 @@
+═══════════════════════════════════════════════════════════════════
+🔧 NUEVA VERSIÓN CON BOTÓN DE INSTALACIÓN MEJORADO
+═══════════════════════════════════════════════════════════════════
+
+✨ ¿QUÉ CAMBIÓ?
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Ahora la app tiene un BOTÓN DE INSTALACIÓN INTEGRADO que aparecerá
+automáticamente si Chrome detecta que la app es instalable.
+
+El botón se verá así:
+
+┌─────────────────────────────────────────────────────────────────┐
+│  📱  Instalar Aplicación                                        │
+│     Instala esta app para usarla sin conexión y como           │
+│     app independiente                                           │
+│                                                                 │
+│     [ Instalar Ahora ]   [ Más tarde ]                         │
+└─────────────────────────────────────────────────────────────────┘
+
+
+📱 PASOS PARA INSTALAR (NUEVA VERSIÓN)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🖥️ EN TU PC:
+1. Detén el servidor si está corriendo (Ctrl+C)
+2. Ejecuta: INICIAR_SERVIDOR_HTTPS.bat
+3. Anota la dirección: https://10.0.0.156:5000
+
+📱 EN TU TABLETA:
+
+PASO 1: Limpiar caché (IMPORTANTE)
+────────────────────────────────────────────────────────────────
+   • Abre Configuración del Android
+   • Ve a Apps → Chrome
+   • Toca "Almacenamiento"
+   • Toca "Borrar caché" (NO borrar datos, solo caché)
+   • Cierra Chrome completamente desde multitarea
+
+PASO 2: Abrir la app
+────────────────────────────────────────────────────────────────
+   • Abre Chrome
+   • En la barra de direcciones escribe exactamente:
+     https://10.0.0.156:5000
+   • Toca "Avanzado" en la pantalla de seguridad
+   • Toca "Acceder a 10.0.0.156 (sitio no seguro)"
+
+PASO 3: El botón de instalación
+────────────────────────────────────────────────────────────────
+   Ahora hay 2 posibilidades:
+
+   ✅ ESCENARIO A - Chrome reconoce la app como instalable:
+      → Aparecerá el BOTÓN DE INSTALACIÓN en la parte superior
+      → Toca "Instalar Ahora"
+      → Confirma la instalación
+      → ¡Listo! La app se instalará como app independiente
+
+   ❌ ESCENARIO B - Chrome NO reconoce la app:
+      → El botón NO aparecerá
+      → Abre la consola de Chrome para ver los errores:
+        • Menú (⋮) → Más herramientas → Herramientas para
+          desarrolladores
+        • Ve a la pestaña "Console"
+        • Toma captura de los mensajes de error
+
+
+🔍 DIAGNÓSTICO AUTOMÁTICO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+La app ahora tiene diagnóstico integrado. Abre las herramientas de
+desarrollador en Chrome y verás mensajes como:
+
+✅ "beforeinstallprompt activado - La app ES instalable"
+   → ¡Perfecto! El botón debería aparecer
+
+⚠️ "beforeinstallprompt NO se activó después de 3 segundos"
+   → Problema: Chrome no reconoce la app como instalable
+   → Verás posibles causas en la consola
+
+
+❓ ¿POR QUÉ PUEDE NO APARECER EL BOTÓN?
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. Service Worker no se registró correctamente
+2. El manifest.json tiene errores
+3. La app ya está instalada
+4. Chrome tiene caché vieja
+5. La versión de Chrome no soporta PWA correctamente
+
+
+🛠️ SOLUCIONES SI NO APARECE EL BOTÓN
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SOLUCIÓN 1: Forzar actualización
+   • En Chrome, toca Ctrl+Shift+R (o Cmd+Shift+R en Mac)
+   • Esto recarga sin caché
+
+SOLUCIÓN 2: Borrar todo de Chrome
+   • Configuración → Apps → Chrome
+   • Almacenamiento → Borrar datos de navegación
+   • Selecciona: Caché e imágenes almacenadas
+   • Vuelve a intentar
+
+SOLUCIÓN 3: Usar Chrome Dev/Canary
+   • Descarga Chrome Dev o Chrome Canary
+   • Estas versiones tienen mejor soporte PWA
+   • Intenta desde ahí
+
+SOLUCIÓN 4: Verificar en Chrome Desktop
+   • Abre la app en Chrome de tu PC
+   • Ve a chrome://apps
+   • Verifica si aparece el ícono de instalación en la barra
+
+
+💡 VERIFICAR QUE TODO FUNCIONA
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+En Chrome de escritorio, abre:
+   https://10.0.0.156:5000
+
+Abre DevTools (F12) y:
+   • Application → Manifest: Debe mostrar toda la info sin errores
+   • Application → Service Workers: Debe estar "activated and running"
+   • Console: Debe mostrar "✅ Service Worker registrado"
+
+
+🎯 RESULTADO ESPERADO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Si todo funciona correctamente:
+
+1. En la tableta aparecerá el botón "Instalar Ahora"
+2. Al tocarlo, Chrome preguntará: "¿Agregar a pantalla de inicio?"
+3. Confirmas y la app se instala
+4. El ícono aparece en tu lista de apps
+5. Al abrirla, se ve como app independiente (sin Chrome UI)
+
+
+📝 REPORTAR PROBLEMAS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Si el botón no aparece, necesito que me digas:
+
+1. ¿Qué mensajes aparecen en la Consola de Chrome?
+2. ¿Qué dice en Application → Manifest?
+3. ¿Qué dice en Application → Service Workers?
+4. ¿La app ya estaba instalada antes?
+5. ¿Qué versión de Chrome usas? (Configuración → Acerca de Chrome)
+
+
+═══════════════════════════════════════════════════════════════════
+Con estos cambios, Chrome debería reconocer automáticamente que
+la app es instalable y mostrar el botón. 🏐
+═══════════════════════════════════════════════════════════════════

@@ -1,0 +1,71 @@
+═══════════════════════════════════════════════════════════════════
+🌐 SOLUCIÓN: USAR NGROK PARA HTTPS REAL
+═══════════════════════════════════════════════════════════════════
+
+Chrome Android NO permite instalar PWAs como apps reales con certificados
+autofirmados. La solución es usar ngrok para obtener HTTPS válido.
+
+
+📥 INSTALACIÓN DE NGROK
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Ve a: https://ngrok.com/download
+2. Descarga ngrok para Windows
+3. Extrae el archivo .zip
+4. Mueve ngrok.exe a: C:\ngrok\ngrok.exe
+5. Abre PowerShell y ejecuta:
+   cd C:\ngrok
+   .\ngrok.exe authtoken <tu-token>
+   (Obtén el token gratis registrándote en ngrok.com)
+
+
+🚀 CÓMO USAR NGROK
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PASO 1: Cambia el servidor a HTTP (ngrok maneja el HTTPS)
+   • Detén el servidor actual (Ctrl+C)
+   • Edita app_tableta.py línea final:
+     Cambia: ssl_context=('cert.pem', 'key.pem')
+     Por: ssl_context=None
+     O simplemente borra esa parte
+
+PASO 2: Inicia el servidor Flask sin SSL
+   • python app_tableta.py
+   • El servidor correrá en http://10.0.0.156:5000
+
+PASO 3: En otra ventana de PowerShell, ejecuta:
+   cd C:\ngrok
+   .\ngrok.exe http 5000
+
+PASO 4: ngrok te dará una URL como:
+   https://abc123.ngrok-free.app
+
+PASO 5: En tu tableta, abre Chrome y ve a esa URL
+   • ¡Tendrás HTTPS real!
+   • ¡Chrome reconocerá la app como instalable!
+   • Aparecerá el banner "Instalar app"
+
+
+✅ VENTAJAS DE NGROK
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✅ HTTPS válido reconocido por Chrome
+✅ Chrome mostrará "Instalar app" correctamente
+✅ La app se instalará como app independiente real
+✅ Funciona desde cualquier lugar (no solo tu red local)
+✅ Gratis para uso básico
+
+
+❌ DESVENTAJAS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+❌ La URL cambia cada vez que reinicias ngrok (versión gratis)
+❌ Requiere internet
+❌ La conexión pasa por servidores de ngrok
+
+
+💡 ALTERNATIVA: ngrok URL fija (plan de pago)
+Con el plan de pago de ngrok puedes tener una URL fija y personalizada.
+
+
+═══════════════════════════════════════════════════════════════════
+¿Quieres que te ayude a configurar ngrok? Es la mejor solución. 🚀
+═══════════════════════════════════════════════════════════════════

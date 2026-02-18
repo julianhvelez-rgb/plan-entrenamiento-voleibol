@@ -1,0 +1,120 @@
+╔═══════════════════════════════════════════════════════════════╗
+║                                                               ║
+║       🏐 GUÍA DE INICIO RÁPIDO - VERSIÓN PRO 🏐             ║
+║                                                               ║
+╚═══════════════════════════════════════════════════════════════╝
+
+
+🚀 COMIENZA EN 3 PASOS:
+═══════════════════════════════════════════════════════════════
+
+1. ABRE LA APLICACIÓN
+   📍 Ubicación: Escritorio
+   📂 Archivo: EntrenamientoVoleibol_Pro.exe
+   👆 Doble clic para abrir
+
+2. GENERA TU PRIMER PLAN
+   • Pestaña "📋 Crear Plan"
+   • Llena los 3 campos
+   • Clic en botón rojo "⚡ GENERAR PLAN"
+
+3. VE LOS EJERCICIOS EN CANCHA
+   • Pestaña "🏐 Visualización Cancha"
+   • Selecciona un tipo de ejercicio
+   • Clic en "🔄 Mostrar Diagrama"
+
+
+🎯 ¿QUÉ HACE CADA PESTAÑA?
+═══════════════════════════════════════════════════════════════
+
+📋 CREAR PLAN
+   → Genera planes completos de entrenamiento
+   → Guarda planes en archivos .txt
+   → Muestra recomendaciones según asistentes
+
+🏐 VISUALIZACIÓN CANCHA
+   → Muestra diagramas de ejercicios
+   → 10+ tipos diferentes
+   → Cancha en colores realistas
+
+📚 BASE DE EJERCICIOS
+   → Explora todos los ejercicios disponibles
+   → Organizados por etapa
+   → 100+ ejercicios catalogados
+
+
+✨ CARACTERÍSTICAS PRINCIPALES:
+═══════════════════════════════════════════════════════════════
+
+🎨 LOGO PROFESIONAL
+   • Balón de voleibol en rojo y blanco
+   • Visible en ventana y barra de tareas
+
+🏐 VISUALIZACIÓN DE EJERCICIOS
+   • CADA ejercicio se ve en la cancha
+   • Colores realistas
+   • Flechas de movimiento
+
+💾 GUARDAR PLANES
+   • Exporta a archivos de texto
+   • Imprime o comparte
+
+📊 INTELIGENTE
+   • Detecta tipo de ejercicio automáticamente
+   • Recomienda organización
+   • Calcula tiempos
+
+
+🎓 EJEMPLOS DE EJERCICIOS VISUALIZADOS:
+═══════════════════════════════════════════════════════════════
+
+🏃 Ejercicios en Parejas
+   → Jugadoras enfrentadas
+   → Flechas de pase bidireccionales
+
+🔄 Ejercicios en Círculo
+   → 8 jugadoras en círculo
+   → Balón en el centro
+
+🎯 Saques
+   → Sacadoras en línea de fondo
+   → Trayectorias marcadas
+
+⚡ Remates
+   → Secuencia completa
+   → Saque → Recepción → Colocación → Remate
+
+🛡️ Bloqueo y Defensa
+   → Bloqueadoras en la red
+   → Defensoras atrás
+
+...¡Y MUCHOS MÁS!
+
+
+💡 CONSEJOS PRO:
+═══════════════════════════════════════════════════════════════
+
+✓ Maximiza la ventana para ver mejor los diagramas
+✓ Proyecta en pantalla para explicar al equipo
+✓ Guarda tus planes favoritos
+✓ Explora todas las etapas de entrenamiento
+✓ Usa los diagramas como apoyo pedagógico
+
+
+📞 NECESITAS AYUDA:
+═══════════════════════════════════════════════════════════════
+
+📖 Lee: VERSION_PRO_FINAL.txt (guía completa)
+📖 Lee: NUEVA_VERSION_GUI.txt (características GUI)
+📖 Lee: README.txt (instrucciones básicas)
+
+
+╔═══════════════════════════════════════════════════════════════╗
+║                                                               ║
+║              ¡DISFRUTA TU APLICACIÓN PRO! 🏐                 ║
+║                                                               ║
+║           EntrenamientoVoleibol_Pro.exe                       ║
+║                                                               ║
+║         Versión Profesional - Febrero 2026                   ║
+║                                                               ║
+╚═══════════════════════════════════════════════════════════════╝

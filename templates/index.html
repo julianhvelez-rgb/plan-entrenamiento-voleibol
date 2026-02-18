@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    
+    <!-- PWA Meta Tags -->
+    <meta name="application-name" content="Entrena Voleibol WH">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Entrena Voleibol WH">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#ff6b9d">
+    <meta name="msapplication-TileColor" content="#ff6b9d">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="description" content="Sistema profesional de planificación de entrenamientos de voleibol para entrenadores">
+    <meta name="format-detection" content="telephone=no">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="{{ url_for('static', filename='manifest.json') }}">
+    
+    <!-- Icons - Múltiples tamaños -->
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='img/icon-192.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='img/icon-192.png') }}">
+    <link rel="icon" type="image/png" sizes="192x192" href="{{ url_for('static', filename='img/icon-192.png') }}">
+    <link rel="icon" type="image/png" sizes="512x512" href="{{ url_for('static', filename='img/icon-512.png') }}">
+    
+    <!-- Apple Touch Icons -->
+    <link rel="apple-touch-icon" href="{{ url_for('static', filename='img/icon-152.png') }}">
+    <link rel="apple-touch-icon" sizes="152x152" href="{{ url_for('static', filename='img/icon-152.png') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='img/icon-192.png') }}">
+    
+    <!-- Android Chrome -->
+    <meta name="mobile-web-app-title" content="Entrena Voleibol WH">
+    
+    <title>🏐 Entrena Voleibol WH</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1 class="title">🏐 Entrena Voleibol WH</h1>
+            <p class="subtitle">Sistema de planificación para tablets</p>
+        </div>
+    </header>
+
+    <!-- Botón de instalación PWA -->
+    <div id="install-prompt" class="install-prompt" style="display: none;">
+        <div class="container">
+            <div class="install-card">
+                <div class="install-icon">📱</div>
+                <div class="install-text">
+                    <h3>Instalar Aplicación</h3>
+                    <p>Instala esta app para usarla sin conexión y como app independiente</p>
+                </div>
+                <div class="install-actions">
+                    <button id="install-button" class="btn-install">Instalar Ahora</button>
+                    <button id="dismiss-button" class="btn-dismiss">Más tarde</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navegación por pestañas -->
+    <nav class="tabs">
+        <button class="tab-btn active" data-tab="generar">📋 Generar Plan</button>
+        <button class="tab-btn" data-tab="consultar">📚 Consultar Ejercicios</button>
+        <button class="tab-btn" data-tab="diagrama">🏐 Diagramas</button>
+    </nav>
+
+    <!-- Contenido principal -->
+    <main class="main-content">
+        <div class="container">
+            
+            <!-- TAB 1: Generar Plan -->
+            <section id="tab-generar" class="tab-content active">
+                <div class="card">
+                    <h2 class="card-title">Crear Plan de Entrenamiento</h2>
+                    
+                    <form id="form-plan" class="form">
+                        <div class="form-group">
+                            <label class="form-label">👥 Rango de Edad</label>
+                            <select id="edad" name="edad" class="form-control" required>
+                                <option value="">Seleccionar...</option>
+                                <option value="8-10">8-10 años (Iniciación)</option>
+                                <option value="11-13">11-13 años (Desarrollo)</option>
+                                <option value="14-16">14-16 años (Perfeccionamiento)</option>
+                                <option value="17+">17+ años (Alto Rendimiento)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">🔢 Cantidad de Jugadoras</label>
+                            <input type="number" id="cantidad" name="cantidad" class="form-control" 
+                                   min="4" max="30" value="12" required>
+                            <small class="form-hint">4-30 jugadoras</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">📅 Etapa de la Temporada</label>
+                            <select id="etapa" name="etapa" class="form-control" required>
+                                <option value="">Seleccionar...</option>
+                                <option value="Preparación General">Preparación General</option>
+                                <option value="Preparación Específica">Preparación Específica</option>
+                                <option value="Precompetitiva">Precompetitiva</option>
+                                <option value="Competitiva">Competitiva</option>
+                                <option value="Transición">Transición</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">⚡ Fundamento (Opcional)</label>
+                            <select id="fundamento" name="fundamento" class="form-control">
+                                <option value="todos">Todos los fundamentos</option>
+                                <option value="saque">🏐 Saque</option>
+                                <option value="recepcion">🤲 Recepción</option>
+                                <option value="armado">🙌 Armado/Levantada</option>
+                                <option value="ataque">⚡ Ataque/Remate</option>
+                                <option value="bloqueo">🛡️ Bloqueo</option>
+                                <option value="defensa">🏃 Defensa</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">⏱️ Duración del Entrenamiento (min)</label>
+                            <input type="range" id="tiempo" name="tiempo" class="form-range" 
+                                   min="60" max="150" value="90" step="15">
+                            <div class="range-value" id="tiempo-value">90 min</div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-large">
+                            🎯 Generar Plan de Entrenamiento
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Resultado del plan -->
+                <div id="resultado-plan" class="result-container" style="display: none;">
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">✅ Plan de Entrenamiento Generado</h2>
+                            <div class="action-buttons">
+                                <button class="btn btn-secondary" onclick="imprimirPlan()">🖨️ Imprimir</button>
+                                <button class="btn btn-secondary" onclick="compartirPlan()">📤 Compartir</button>
+                                <button class="btn btn-outline" onclick="nuevoPlan()">🔄 Nuevo Plan</button>
+                            </div>
+                        </div>
+                        
+                        <div id="plan-detalles" class="plan-details"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TAB 2: Consultar Ejercicios -->
+            <section id="tab-consultar" class="tab-content">
+                <div class="card">
+                    <h2 class="card-title">Consultar Base de Ejercicios</h2>
+                    
+                    <div class="form-group">
+                        <label class="form-label">📅 Seleccionar Etapa</label>
+                        <select id="etapa-consulta" class="form-control">
+                            <option value="">Seleccionar...</option>
+                            <option value="Preparación General">Preparación General</option>
+                            <option value="Preparación Específica">Preparación Específica</option>
+                            <option value="Precompetitiva">Precompetitiva</option>
+                            <option value="Competitiva">Competitiva</option>
+                            <option value="Transición">Transición</option>
+                        </select>
+                    </div>
+
+                    <div id="ejercicios-lista" class="ejercicios-container"></div>
+                </div>
+            </section>
+
+            <!-- TAB 3: Diagramas -->
+            <section id="tab-diagrama" class="tab-content">
+                <div class="card">
+                    <h2 class="card-title">🏐 Diagramas de Cancha</h2>
+                    
+                    <div class="diagrams-grid">
+                        <button class="diagram-btn" onclick="mostrarDiagrama('cancha')">
+                            <span class="diagram-icon">🏐</span>
+                            <span class="diagram-label">Cancha Completa</span>
+                        </button>
+                        <button class="diagram-btn" onclick="mostrarDiagrama('formacion-w')">
+                            <span class="diagram-icon">⭕</span>
+                            <span class="diagram-label">Formación W</span>
+                        </button>
+                        <button class="diagram-btn" onclick="mostrarDiagrama('formacion-321')">
+                            <span class="diagram-icon">🔷</span>
+                            <span class="diagram-label">Formación 3-2-1</span>
+                        </button>
+                        <button class="diagram-btn" onclick="mostrarDiagrama('rotaciones')">
+                            <span class="diagram-icon">🔄</span>
+                            <span class="diagram-label">Rotaciones</span>
+                        </button>
+                    </div>
+
+                    <div id="diagrama-display" class="diagram-display"></div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Loading overlay -->
+    <div id="loading" class="loading-overlay" style="display: none;">
+        <div class="spinner"></div>
+        <p>Generando plan...</p>
+    </div>
+
+    <!-- Toast notifications -->
+    <div id="toast" class="toast"></div>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>

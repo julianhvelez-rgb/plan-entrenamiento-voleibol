@@ -1,0 +1,73 @@
+╔══════════════════════════════════════════════════════════════════╗
+║     CAMBIOS APLICADOS - VERSIÓN 2 (8 de febrero de 2026)        ║
+╚══════════════════════════════════════════════════════════════════╝
+
+📌 MEJORAS IMPLEMENTADAS:
+
+1. ⏱️ LÍMITE DE TIEMPO DE ENTRENAMIENTO
+   ✓ Todos los planes ahora están limitados a 120 minutos máximo
+   ✓ El sistema ajusta automáticamente los ejercicios para respetar el límite
+   ✓ Se muestra claramente la duración total y advertencias si se ajusta
+   ✓ Distribución inteligente del tiempo entre categorías de ejercicios
+
+2. 📐 GRÁFICOS MÁS COMPACTOS
+   ✓ Reducción de tamaños de canvas:
+     - Canvas principal: 600x400 (antes 800x600)
+     - Diagramas de visualización: más pequeños y proporcionados
+   ✓ Elementos visuales optimizados (círculos, textos, líneas)
+   ✓ Mejor aprovechamiento del espacio en pantalla
+
+3. 🎨 NUEVA DISTRIBUCIÓN DE INTERFAZ
+   ✓ Ventana ampliada a 1600x900 píxeles
+   ✓ Diseño de 3 columnas en pestaña Plan:
+     - Columna izquierda: Formulario de configuración
+     - Columna central: Visualización gráfica en tiempo real
+     - Columna derecha: Plan detallado generado
+   ✓ Los ejercicios y diagramas ahora aparecen juntos visualmente
+
+4. 📊 VISUALIZACIÓN EN TIEMPO REAL
+   ✓ Nuevo canvas compacto (400x350) en el panel de generación de plan
+   ✓ Se actualiza automáticamente al generar un plan
+   ✓ Muestra diagrama apropiado según cantidad de asistentes:
+     - Grupos pequeños (≤6): Cancha con posiciones individuales
+     - Grupos medianos (7-12): Formación de 2 equipos
+     - Grupos grandes (>12): Sistema de estaciones rotativas
+
+5. 🔧 MEJORAS TÉCNICAS
+   ✓ Organización más limpia del código
+   ✓ Funciones auxiliares para diagramas compactos
+   ✓ Cálculo dinámico de tiempos por categoría
+   ✓ Sistema de advertencias cuando se ajustan tiempos
+
+═══════════════════════════════════════════════════════════════════
+
+📦 ARCHIVOS GENERADOS:
+
+- EntrenamientoVoleibol_Pro_v2.exe (18.04 MB)
+  Ubicado en: Escritorio
+  
+═══════════════════════════════════════════════════════════════════
+
+🚀 CÓMO USAR LA NUEVA VERSIÓN:
+
+1. Ejecuta EntrenamientoVoleibol_Pro_v2.exe desde el escritorio
+2. En la pestaña "Crear Plan":
+   - Completa el formulario (izquierda)
+   - Observa el diagrama visual (centro)
+   - Lee el plan detallado (derecha)
+3. El tiempo total nunca excederá 120 minutos
+4. Los gráficos son más compactos y claros
+
+═══════════════════════════════════════════════════════════════════
+
+💡 RECOMENDACIONES:
+
+- Si el plan se ajusta automáticamente, verás una advertencia
+- Los ejercicios se priorizan según la etapa de entrenamiento
+- El diagrama cambia según la cantidad de asistentes
+- Puedes guardar planes con Ctrl+S o botón "Guardar Plan"
+
+═══════════════════════════════════════════════════════════════════
+
+Desarrollado por: Sistema de Entrenamiento de Voleibol 🏐
+Fecha: 8 de febrero de 2026

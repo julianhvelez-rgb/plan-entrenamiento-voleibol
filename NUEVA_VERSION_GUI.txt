@@ -1,0 +1,265 @@
+╔═══════════════════════════════════════════════════════════════════════════╗
+║                                                                           ║
+║         🎨 NUEVA VERSIÓN CON INTERFAZ GRÁFICA MODERNA 🎨                ║
+║                                                                           ║
+╚═══════════════════════════════════════════════════════════════════════════╝
+
+
+✨ VERSIÓN MEJORADA DISPONIBLE - FEBRERO 2026
+══════════════════════════════════════════════════════════════════════════
+
+
+📍 NUEVA APLICACIÓN EN TU ESCRITORIO:
+══════════════════════════════════════════════════════════════════════════
+
+   🎯 ARCHIVO: EntrenamientoVoleibol_GUI.exe
+
+   📊 Tamaño: 11.92 MB
+   💻 Interfaz: Gráfica moderna con ventanas
+   🎨 Diseño: Profesional con colores deportivos
+
+
+🆕 MEJORAS EN LA NUEVA VERSIÓN:
+══════════════════════════════════════════════════════════════════════════
+
+✅ INTERFAZ GRÁFICA COMPLETA
+   • Ventanas modernas con diseño profesional
+   • Colores deportivos (azul oscuro, rojo, cyan)
+   • Sin consola negra - 100% visual
+
+✅ NAVEGACIÓN POR PESTAÑAS
+   📋 Pestaña 1: Crear Plan
+      • Formulario visual fácil de usar
+      • Menús desplegables grandes
+      • Botones grandes y claros
+      • Resultados en panel lateral
+
+   🏐 Pestaña 2: Visualización de Cancha
+      • Diagramas dibujados en la cancha
+      • Colores realistas (verde cancha, jugadoras rojas)
+      • Selector visual de diagramas
+      • Vista interactiva
+
+   📚 Pestaña 3: Base de Ejercicios
+      • Lista completa de ejercicios
+      • Organizado por etapa
+      • Fácil lectura con scroll
+
+✅ DIAGRAMAS MEJORADOS
+   • Cancha con color verde realista
+   • Jugadoras representadas con círculos rojos
+   • Red amarilla visible
+   • Flechas de movimiento con colores
+   • Etiquetas de posiciones clarásimas
+   • Dimensiones reales de cancha
+
+✅ EXPERIENCIA DE USUARIO
+   • Muy fácil de usar
+   • Todo en una sola ventana
+   • No necesitas escribir en consola
+   • Clics en botones y menús
+   • Guardar planes con diálogo visual
+
+
+🎨 CARACTERÍSTICAS VISUALES:
+══════════════════════════════════════════════════════════════════════════
+
+🎨 Tema Oscuro Deportivo:
+   • Fondo oscuro elegante
+   • Acentos en rojo intenso (#e94560)
+   • Texto blanco de alta legibilidad
+   • Efectos visuales suaves
+
+📊 Elementos Gráficos:
+   • Botones 3D con efectos hover
+   • Combos desplegables estilizados
+   • Área de texto con scroll
+   • Cancha con dibujos vectoriales
+   • Colores por categoría
+
+🏐 Diagramas Interactivos:
+   • 7 diagramas diferentes
+   • Selector visual de tipo
+   • Botón "Mostrar Diagrama"
+   • Canvas redimensionable
+
+
+📋 COMPARACIÓN: ANTES VS AHORA
+══════════════════════════════════════════════════════════════════════════
+
+VERSIÓN ANTERIOR (Consola):         VERSIÓN NUEVA (GUI):
+━━━━━━━━━━━━━━━━━━━━━━━━━━        ━━━━━━━━━━━━━━━━━━━━━━━━
+❌ Fondo negro                      ✅ Interfaz con colores
+❌ Solo texto ASCII                 ✅ Gráficos dibujados
+❌ Menús con números                ✅ Botones y menús visuales
+❌ Diagramas en texto               ✅ Diagramas gráficos
+❌ Copiar/pegar manual              ✅ Botón "Guardar"  
+❌ Menos intuitiva                  ✅ Muy fácil de usar
+
+
+🚀 CÓMO USAR LA NUEVA VERSIÓN:
+══════════════════════════════════════════════════════════════════════════
+
+1️⃣  INICIAR LA APLICACIÓN:
+   • Abre: EntrenamientoVoleibol_GUI.exe (en tu escritorio)
+   • Se abre una ventana moderna
+   • Ya estás listo!
+
+2️⃣  CREAR UN PLAN (Pestaña "Crear Plan"):
+   a) Selecciona rango de edad (menú desplegable)
+   b) Escribe cantidad de asistentes
+   c) Selecciona etapa de entrenamiento
+   d) Clic en "⚡ GENERAR PLAN"
+   e) El plan aparece en el panel derecho
+   f) Clic en "💾 Guardar Plan" si quieres guardarlo
+
+3️⃣  VER DIAGRAMAS (Pestaña "Visualización Cancha"):
+   a) Selecciona tipo de diagrama
+   b) Clic en "🔄 Mostrar Diagrama"
+   c) ¡Mira la cancha con colores realistas!
+
+4️⃣  EXPLORAR EJERCICIOS (Pestaña "Base de Ejercicios"):
+   a) Selecciona una etapa
+   b) Clic en "📖 Cargar Ejercicios"
+   c) Lee todos los ejercicios disponibles
+
+
+🎯 EJEMPLOS DE DIAGRAMAS DISPONIBLES:
+══════════════════════════════════════════════════════════════════════════
+
+1. Cancha Completa
+   → Vista completa con todas las zonas (1-6)
+   → Jugadoras en posiciones
+   → Red central
+   → Dimensiones reales
+
+2. Formación W
+   → Posiciones de recepción
+   → 5 jugadoras en formación W
+   → Marcas de dirección
+
+3. Formación 3-2-1
+   → Sistema de recepción alternativo
+   → 3 delanteros, 2 laterales, 1 zaguero
+
+4. Ejercicio de Remate
+   → Flecha con secuencia completa:
+   → Saque → Recepción → Colocación → Remate
+   → Colores diferentes por fase
+
+5. Ejercicio de Bloqueo
+   → 3 bloqueadoras en la red
+   → 3 defensoras atrás
+   → Posiciones claras
+
+6. Ejercicio en Parejas
+   → 8 jugadoras en 4 parejas
+   → Flechas de pase
+
+7. Organización por Estaciones
+   → 4 estaciones visuales
+   → Distribución del espacio
+
+
+💾 ARCHIVOS DISPONIBLES:
+══════════════════════════════════════════════════════════════════════════
+
+En tu carpeta del proyecto tienes AMBAS VERSIONES:
+
+📁 dist/
+   ├── EntrenamientoVoleibol.exe       (9 MB - Versión Consola)
+   └── EntrenamientoVoleibol_GUI.exe   (12 MB - ⭐ Versión GUI)
+
+📁 Escritorio/
+   ├── EntrenamientoVoleibol.exe       (Versión Consola)
+   └── EntrenamientoVoleibol_GUI.exe   (⭐ RECOMENDADA - Interfaz Gráfica)
+
+
+💡 RECOMENDACIÓN:
+══════════════════════════════════════════════════════════════════════════
+
+   👉 USA: EntrenamientoVoleibol_GUI.exe
+
+   ✅ Más fácil de usar
+   ✅ Más visual
+   ✅ Más profesional
+   ✅ Diagramas en color
+   ✅ Mejores funciones
+
+
+📊 VENTAJAS DE LA VERSIÓN GUI:
+══════════════════════════════════════════════════════════════════════════
+
+✓ No necesitas saber escribir comandos
+✓ Todo con clics del mouse
+✓ Ves todo a la vez (pestañas)
+✓ Diagramas de cancha con colores reales
+✓ Guardar planes con ventana de explorador
+✓ Mensajes visuales de confirmación
+✓ Más rápida de usar
+✓ Más profesional
+
+
+⚙️ REQUISITOS:
+══════════════════════════════════════════════════════════════════════════
+
+✓ Windows 7 o superior
+✓ ~12 MB de espacio
+✓ NO requiere Python
+✓ NO requiere Internet
+✓ NO requiere instalación
+
+
+🎁 BONUS - FUNCIONES EXTRA:
+══════════════════════════════════════════════════════════════════════════
+
+• Cambio entre pestañas instantáneo
+• Ventana ajustable (1200x800 inicial)
+• Scroll automático en textos largos
+• Mensajes de éxito/error visuales
+• Diálogo para guardar archivos
+• Temas de colores profesionales
+
+
+🔧 SOLUCIÓN DE PROBLEMAS:
+══════════════════════════════════════════════════════════════════════════
+
+❓ No se abre la aplicación:
+   → Dale doble clic a EntrenamientoVoleibol_GUI.exe
+   → Espera 2-3 segundos (es normal)
+
+❓ Windows bloquea la aplicación:
+   → Clic en "Más información"
+   → "Ejecutar de todas formas"
+   → (Es segura, solo no tiene certificado digital)
+
+❓ Los diagramas no se ven:
+   → Ve a la pestaña "Visualización Cancha"
+   → Selecciona un diagrama del menú
+   → Clic en "Mostrar Diagrama"
+
+❓ Quiero la versión de consola:
+   → Puedes usar EntrenamientoVoleibol.exe
+   → Ambas funcionan igual (diferente interfaz)
+
+
+🎉 RESUMEN DE MEJORAS:
+══════════════════════════════════════════════════════════════════════════
+
+Hemos mejorado COMPLETAMENTE la aplicación:
+
+   ✨ De consola negra → Interfaz gráfica colorida
+   ✨ De texto ASCII → Diagramas dibujados
+   ✨ De menús numerados → Botones y menús visuales
+   ✨ De difícil → Súper fácil de usar
+
+¡Es como pasar de MS-DOS a Windows! 🚀
+
+
+╔═══════════════════════════════════════════════════════════════════════════╗
+║                                                                           ║
+║          ⭐ DISFRUTA TU NUEVA APLICACIÓN PROFESIONAL ⭐                  ║
+║                                                                           ║
+║          EntrenamientoVoleibol_GUI.exe - Lista para usar!                ║
+║                                                                           ║
+╚═══════════════════════════════════════════════════════════════════════════╝

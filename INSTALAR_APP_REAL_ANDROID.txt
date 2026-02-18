@@ -1,0 +1,195 @@
+═══════════════════════════════════════════════════════════════════════════
+  🎉 APP REAL PARA TABLETA ANDROID - PROGRESSIVE WEB APP (PWA)
+═══════════════════════════════════════════════════════════════════════════
+
+✨ TU APLICACIÓN AHORA ES UNA PWA COMPLETA ✨
+
+Ya NO se instala como un simple acceso directo. Ahora cuando la agregues
+a la pantalla de inicio, se comportará como una APP REAL:
+
+  ✅ Se abre en pantalla completa (sin barra del navegador)
+  ✅ Tiene su propio ícono personalizado 🏐
+  ✅ Aparece como app independiente en el sistema
+  ✅ Se puede usar offline (con caché)
+  ✅ Funciona exactamente como una app nativa
+
+═══════════════════════════════════════════════════════════════════════════
+📱 CÓMO INSTALAR LA APP EN TU TABLETA ANDROID
+═══════════════════════════════════════════════════════════════════════════
+
+PASO 1 - Asegúrate de que el servidor está corriendo ✅
+────────────────────────────────────────────────────
+  • El servidor ya está iniciado en tu PC
+  • NO cierres la ventana de PowerShell
+
+PASO 2 - Conecta ambos dispositivos a la misma WiFi
+────────────────────────────────────────────────────
+  • PC y tableta en la misma red WiFi de tu casa
+
+PASO 3 - Abre la app en tu tableta
+────────────────────────────────────────────────────
+  1. Abre Chrome en tu tableta Android
+  
+  2. Escribe esta dirección:
+     http://10.0.0.156:5000
+  
+  3. Espera a que cargue la página
+
+PASO 4 - INSTALAR COMO APP REAL 🎯
+────────────────────────────────────────────────────
+  
+  EN CHROME (Método recomendado):
+  
+  A) Si aparece el banner "Agregar a pantalla de inicio":
+     • Toca el banner
+     • Confirma "Agregar"
+     • ¡Listo! 🎉
+  
+  B) Si NO aparece el banner automáticamente:
+     1. Toca el menú (⋮ tres puntos arriba a la derecha)
+     2. Busca la opción "Instalar app" o "Agregar a inicio"
+     3. Toca en esa opción
+     4. Confirma "Instalar" o "Agregar"
+     5. ¡Listo! 🎉
+  
+  C) Método manual (si no ves "Instalar app"):
+     1. Toca el menú (⋮)
+     2. Selecciona "Agregar a pantalla de inicio"
+     3. Dale un nombre: "Entrenamiento Voleibol"
+     4. Confirma
+     5. ¡Listo! 🎉
+
+PASO 5 - USA TU APP REAL
+────────────────────────────────────────────────────
+  1. Ve a la pantalla de inicio de tu tableta
+  
+  2. Verás el ícono de la app 🏐
+  
+  3. Toca el ícono
+  
+  4. La app se abre EN PANTALLA COMPLETA
+     (sin la barra del navegador Chrome)
+  
+  5. ¡Se comporta como una app real! 🎉
+
+═══════════════════════════════════════════════════════════════════════════
+✨ DIFERENCIAS: ACCESO DIRECTO vs APP REAL (PWA)
+═══════════════════════════════════════════════════════════════════════════
+
+ANTES (Acceso directo simple):
+❌ Se abre en Chrome con la barra del navegador visible
+❌ Parece solo una página web
+❌ Ocupa menos espacio de pantalla
+❌ No tiene ícono personalizado
+
+AHORA (PWA - App Real):
+✅ Se abre en PANTALLA COMPLETA sin barra del navegador
+✅ Parece y se comporta como una app nativa
+✅ Usa toda la pantalla disponible
+✅ Tiene ícono personalizado con logo de voleibol 🏐
+✅ Aparece en el listado de apps del sistema
+✅ Funciona offline (con caché)
+✅ Experiencia profesional
+
+═══════════════════════════════════════════════════════════════════════════
+🔍 VERIFICAR QUE ES UNA APP REAL
+═══════════════════════════════════════════════════════════════════════════
+
+Cuando la app se ejecuta como PWA instalada:
+
+  ✓ NO verás la barra de Chrome arriba
+  ✓ NO verás la URL
+  ✓ NO verás botones de navegación del navegador
+  ✓ Toda la pantalla es para la app
+  ✓ Se siente como una app nativa
+
+Si todavía ves la barra de Chrome:
+  → Significa que la abriste desde el navegador
+  → Cierra esa pestaña
+  → Abre la app desde el ÍCONO en la pantalla de inicio
+
+═══════════════════════════════════════════════════════════════════════════
+📊 RESUMEN DE CARACTERÍSTICAS PWA
+═══════════════════════════════════════════════════════════════════════════
+
+Tu aplicación ahora incluye:
+
+  ✅ manifest.json - Define la app (nombre, iconos, colores)
+  ✅ Service Worker - Permite caché y funcionalidad offline
+  ✅ Iconos PWA - 192x192 y 512x512 con logo personalizado
+  ✅ Meta tags - Configuración para iOS y Android
+  ✅ Modo standalone - Se ejecuta sin barra del navegador
+  ✅ Theme color - Color rosa (#ff6b9d) en la barra de estado
+  ✅ Splash screen - Android genera automáticamente
+
+═══════════════════════════════════════════════════════════════════════════
+💡 CONSEJOS IMPORTANTES
+═══════════════════════════════════════════════════════════════════════════
+
+1. SIEMPRE abre la app desde el ícono en la pantalla de inicio
+   NO desde Chrome/navegador
+
+2. Si quieres usarla en la cancha:
+   • Lleva tu laptop/PC para tener el servidor
+   • Comparte WiFi desde tu PC (hotspot)
+   • Conéctate con la tableta
+   • ¡Usa la app!
+
+3. Para desinstalar:
+   • Mantén presionado el ícono
+   • Arrastra a "Desinstalar" o "Eliminar"
+
+4. Para actualizar la app:
+   • Abre desde el navegador
+   • Refrescar página (Ctrl+R o deslizar hacia abajo)
+   • Vuelve a instalar si es necesario
+
+═══════════════════════════════════════════════════════════════════════════
+❓ PROBLEMAS COMUNES
+═══════════════════════════════════════════════════════════════════════════
+
+PROBLEMA: No veo la opción "Instalar app" en Chrome
+SOLUCIÓN:
+  • Asegúrate de usar Chrome (no otro navegador)
+  • Refresca la página (desliza hacia abajo)
+  • Espera unos segundos, Chrome detecta automáticamente las PWA
+  • Si no funciona, usa el método manual (Menú → Agregar a inicio)
+
+PROBLEMA: Se sigue abriendo con la barra de Chrome
+SOLUCIÓN:
+  • Cierra TODAS las pestañas de Chrome
+  • Abre la app SOLO desde el ícono de la pantalla de inicio
+  • NO abras desde una pestaña del navegador
+
+PROBLEMA: El ícono no se ve bien
+SOLUCIÓN:
+  • Los iconos se crearon automáticamente
+  • Si quieres cambiarlos, edita: static/img/icon-192.png
+  • Desinstala y vuelve a instalar la app
+
+PROBLEMA: No funciona offline
+SOLUCIÓN:
+  • La primera vez necesita internet para cargar
+  • Después el caché permitirá uso básico offline
+  • Generar planes nuevos SÍ requiere conexión al servidor
+
+═══════════════════════════════════════════════════════════════════════════
+🎯 PRÓXIMOS PASOS
+═══════════════════════════════════════════════════════════════════════════
+
+1. ✅ Abre http://10.0.0.156:5000 en Chrome de tu tableta
+
+2. ✅ Instala la app (Menú → Instalar app)
+
+3. ✅ Abre desde el ícono de la pantalla de inicio
+
+4. ✅ Verifica que se abre en pantalla completa (sin barra de Chrome)
+
+5. 🎉 ¡Disfruta tu app profesional de entrenamiento!
+
+═══════════════════════════════════════════════════════════════════════════
+
+Si después de instalarla se abre en PANTALLA COMPLETA sin ver la barra
+de Chrome arriba, ¡FELICIDADES! Tu app está funcionando como PWA real 🎉
+
+═══════════════════════════════════════════════════════════════════════════

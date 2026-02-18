@@ -1,0 +1,117 @@
+═══════════════════════════════════════════════════════════════
+🔒 INSTRUCCIONES: INSTALAR APP EN TABLETA ANDROID CON HTTPS
+═══════════════════════════════════════════════════════════════
+
+📌 ¿QUÉ CAMBIA CON HTTPS?
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Chrome ahora reconocerá la app como INSTALABLE y mostrará 
+"Instalar app" en lugar de solo "Crear acceso directo".
+
+La app se instalará como una aplicación independiente real.
+
+
+📱 PASO A PASO EN TU PC
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. Haz doble clic en: INICIAR_SERVIDOR_HTTPS.bat
+
+2. El servidor mostrará tu IP, algo como:
+   🌐 https://10.0.0.156:5000
+
+3. ¡ANOTA ESA DIRECCIÓN!
+
+
+📱 PASO A PASO EN TU TABLETA ANDROID
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. Abre Google Chrome en la tableta
+
+2. Ve a la dirección con HTTPS (ejemplo):
+   https://10.0.0.156:5000
+   ⚠️ IMPORTANTE: Debe empezar con "https://" NO "http://"
+
+3. Chrome mostrará: "Tu conexión no es privada"
+   ⚠️ ¡ESTO ES NORMAL! Es porque usamos certificado autofirmado
+   
+4. Toca "Avanzado" (en la parte inferior)
+
+5. Toca "Acceder a [tu-IP] (sitio no seguro)"
+   ⚠️ Es seguro, es tu propia red local
+
+6. ¡La app cargará! 🎉
+
+7. Ahora Chrome mostrará en el menú o en la barra:
+   • "Instalar app" o
+   • "Agregar a pantalla de inicio" con ícono de instalar
+   
+   ✅ Ya NO dirá solo "Crear acceso directo"
+
+8. Toca "Instalar" o "Instalar app"
+
+9. La app se instalará como aplicación independiente 🏐
+
+10. Búscala en tu lista de aplicaciones como:
+    "Voleibol Pro" o "Entrenamiento de Voleibol Pro"
+
+
+🆚 DIFERENCIAS: ACCESO DIRECTO vs APP INSTALADA
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ANTES (con HTTP):
+❌ Aparecía como "acceso directo"
+❌ Abría Chrome con su barra de navegación
+❌ Se veía como una pestaña más del navegador
+
+AHORA (con HTTPS):
+✅ Se instala como APP REAL
+✅ Abre en ventana independiente sin barra de Chrome
+✅ Pantalla completa (sin dirección URL arriba)
+✅ Aparece en la lista de apps como cualquier otra app
+✅ Puedes cambiar entre apps y aparece separada
+✅ Usa los colores personalizados de la app
+
+
+🛠️ SOLUCIÓN DE PROBLEMAS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+❓ Chrome no muestra "Instalar app"
+   → Verifica que la URL empiece con https:// (no http://)
+   → Limpia caché de Chrome en la tableta:
+     Configuración → Apps → Chrome → Almacenamiento → Borrar caché
+   → Cierra Chrome completamente y vuelve a abrir
+
+❓ Dice "No se puede acceder al sitio"
+   → Verifica que PC y tableta estén en la misma WiFi
+   → Verifica que la IP sea correcta (mira la ventana del servidor)
+   → Windows Firewall puede estar bloqueando, desactívalo temporalmente
+
+❓ Chrome muestra "No seguro" en rojo
+   → Es normal con certificado autofirmado
+   → Sigue los pasos 4-5 para acceder de todas formas
+   → NO afecta la funcionalidad
+
+❓ Ya instalé antes con HTTP, ¿qué hago?
+   → Desinstala la versión anterior:
+     Mantén presionado el ícono → Desinstalar
+   → Borra caché de Chrome
+   → Instala de nuevo con HTTPS
+
+
+💡 NOTAS TÉCNICAS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+• HTTPS es REQUERIMIENTO de Chrome para PWA instalables
+• El certificado es autofirmado (válido 1 año)
+• Solo funciona en tu red local
+• No necesitas conexión a internet
+• Los archivos cert.pem y key.pem deben estar en la carpeta
+
+
+🎯 RESULTADO FINAL
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Tendrás una app REAL en tu tableta que:
+✅ Se abre como app independiente
+✅ No muestra la interfaz de Chrome
+✅ Funciona offline después de la primera carga
+✅ Tiene su propio ícono en el launcher
+✅ Aparece como app separada en multitarea
+
+
+═══════════════════════════════════════════════════════════════
+¡Ahora sí tendrás una APP INDEPENDIENTE de verdad! 🏐
+═══════════════════════════════════════════════════════════════

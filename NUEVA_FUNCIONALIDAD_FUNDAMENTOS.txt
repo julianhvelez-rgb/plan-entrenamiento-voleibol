@@ -1,0 +1,231 @@
+╔══════════════════════════════════════════════════════════════════╗
+║   🏐 NUEVA FUNCIONALIDAD: SELECCIÓN DE FUNDAMENTOS (8/2/2026)   ║
+╚══════════════════════════════════════════════════════════════════╝
+
+✨ NUEVA CARACTERÍSTICA AÑADIDA:
+
+Ahora puedes elegir un fundamento específico del voleibol para enfocar
+todo el entrenamiento. Todos los ejercicios generados estarán dirigidos
+al fundamento seleccionado.
+
+═══════════════════════════════════════════════════════════════════
+
+🎯 FUNDAMENTOS DISPONIBLES:
+
+1. 🏐 Todos los fundamentos
+   - Plan de entrenamiento completo con todos los fundamentos
+   - Desarrollo integral de habilidades
+
+2. 🏐 Saque
+   - Técnica de saque bajo y alto
+   - Precisión en zonas específicas
+   - Diferentes tipos de efectos
+   - Competencias de precisión
+
+3. 🤲 Recepción
+   - Pase de antebrazo
+   - Recepción de saque
+   - Formación W
+   - Desplazamientos y posicionamiento
+   - Recepción a zona específica
+
+4. 🙌 Armado/Levantada
+   - Pase de dedos
+   - Posicionamiento de armador
+   - Armado desde diferentes posiciones
+   - Coordinación recepción-armado-ataque
+   - Técnica de muñecas
+
+5. ⚡ Ataque/Remate
+   - Aproximación y timing
+   - Remate desde diferentes zonas
+   - Coordinación brazos-salto
+   - Combinaciones de ataque
+   - Remate con oposición
+
+6. 🛡️ Bloqueo
+   - Técnica de bloqueo individual
+   - Desplazamiento lateral en red
+   - Bloqueo doble coordinado
+   - Lectura del atacante
+   - Transición defensa
+
+7. 🏃 Defensa
+   - Posición baja y movimientos
+   - Defensa de ataques
+   - Plancha y salvadas
+   - Sistemas defensivos
+   - Transición contraataque
+
+═══════════════════════════════════════════════════════════════════
+
+💡 CÓMO FUNCIONA:
+
+1. FILTRADO INTELIGENTE
+   ✓ El sistema analiza todos los ejercicios de la base de datos
+   ✓ Identifica ejercicios relacionados con el fundamento elegido
+   ✓ Usa palabras clave específicas para cada fundamento
+   ✓ Filtra y selecciona solo ejercicios relevantes
+
+2. EJERCICIOS GENÉRICOS
+   ✓ Si no hay suficientes ejercicios en la base de datos
+   ✓ Genera automáticamente ejercicios específicos del fundamento
+   ✓ Incluye calentamiento especializado
+   ✓ Progresión técnica adecuada
+
+3. PLAN PERSONALIZADO
+   ✓ El plan muestra el fundamento seleccionado
+   ✓ Todos los ejercicios están enfocados
+   ✓ Respeta el límite de 120 minutos
+   ✓ Se adapta a la cantidad de asistentes
+
+═══════════════════════════════════════════════════════════════════
+
+📝 EJEMPLO DE USO:
+
+CONFIGURACIÓN:
+- Edad: 11-13 años (Desarrollo)
+- Cantidad: 12 asistentes
+- Etapa: Preparación Específica
+- Fundamento: ⚡ Ataque/Remate
+
+RESULTADO:
+El plan generado contendrá:
+✓ Calentamiento con saltos y aproximación
+✓ Técnica de remate desde diferentes zonas
+✓ Coordinación armado-remate
+✓ Ejercicios de timing y coordinación
+✓ Remate con oposición
+✓ Juegos enfocados en el ataque
+
+═══════════════════════════════════════════════════════════════════
+
+🎨 INTERFAZ ACTUALIZADA:
+
+FORMULARIO DE CONFIGURACIÓN:
+┌─────────────────────────────────────┐
+│ ⚙️ Datos del Entrenamiento          │
+├─────────────────────────────────────┤
+│ Rango de Edad: [Selector]           │
+│ Cantidad de Asistentes: [Número]    │
+│ Etapa de Entrenamiento: [Selector]  │
+│ Fundamento a Trabajar: [NUEVO] ⭐   │
+├─────────────────────────────────────┤
+│ ⚡ GENERAR PLAN                      │
+│ 💾 GUARDAR PLAN                      │
+└─────────────────────────────────────┘
+
+PLAN GENERADO MUESTRA:
+📆 Fecha: 08/02/2026
+👥 Asistentes: 12 niñas
+🎯 Edad: 11-13 años
+📊 Etapa: Preparación Específica
+🏐 Fundamento: ⚡ Ataque/Remate ⭐ NUEVO
+
+═══════════════════════════════════════════════════════════════════
+
+🔍 PALABRAS CLAVE POR FUNDAMENTO:
+
+SAQUE: saque, servicio, servidor
+RECEPCIÓN: recepción, pase de antebrazo, antebrazos, recibir
+ARMADO: armado, levantada, dedos, colocación, setter, pase de dedos
+ATAQUE: ataque, remate, rematar, atacante, spike
+BLOQUEO: bloqueo, bloquear, bloqueador, block
+DEFENSA: defensa, defensivo, defender, planchar, salvada
+
+El sistema busca estas palabras en los nombres de los ejercicios
+para identificar cuáles corresponden al fundamento seleccionado.
+
+═══════════════════════════════════════════════════════════════════
+
+⚙️ DETALLES TÉCNICOS:
+
+FUNCIONES AÑADIDAS:
+- _filtrar_ejercicios_por_fundamento()
+  Filtra ejercicios según palabras clave
+
+- _crear_ejercicios_genericos_fundamento()
+  Crea ejercicios cuando no hay suficientes en la BD
+
+VARIABLES NUEVAS:
+- self.fundamento_var (StringVar)
+  Almacena el fundamento seleccionado
+
+- self.fundamentos (diccionario)
+  Define los fundamentos disponibles
+
+MODIFICACIONES:
+- Función _generar_plan() actualizada
+  Filtra ejercicios antes de generar el plan
+  Muestra el fundamento en el encabezado
+
+═══════════════════════════════════════════════════════════════════
+
+📊 VENTAJAS DE ESTA FUNCIONALIDAD:
+
+✅ ESPECIALIZACIÓN
+   - Entrenamientos enfocados en necesidades específicas
+   - Desarrollo profundo de cada fundamento
+   - Mayor efectividad en el aprendizaje
+
+✅ FLEXIBILIDAD
+   - Opción "Todos los fundamentos" para entrenamiento integral
+   - Adaptación a objetivos específicos del día
+   - Preparación para competencias
+
+✅ PROGRESIÓN
+   - Trabajo sistemático de cada fundamento
+   - Posibilidad de ciclos de entrenamiento
+   - Evaluación específica por fundamento
+
+✅ AUTOMATIZACIÓN
+   - Filtrado inteligente de ejercicios
+   - Generación automática si no hay ejercicios
+   - Sin necesidad de buscar manualmente
+
+═══════════════════════════════════════════════════════════════════
+
+💡 SUGERENCIAS DE USO:
+
+CICLO SEMANAL RECOMENDADO:
+Lunes:    🏐 Saque y Recepción
+Martes:   🙌 Armado y Coordinación
+Miércoles: ⚡ Ataque y Remate
+Jueves:   🛡️ Bloqueo y Defensa
+Viernes:  🏐 Todos los fundamentos (integración)
+
+ANTES DE COMPETENCIAS:
+- Trabajar fundamento débil del equipo
+- Enfocarse en fundamento que enfrentará el rival
+- Entrenamientos especializados
+
+DESARROLLO TÉCNICO:
+- Dedicar sesiones completas a cada fundamento
+- Progresión mensual de complejidad
+- Evaluación específica al final
+
+═══════════════════════════════════════════════════════════════════
+
+📦 ARCHIVO ACTUALIZADO:
+
+EntrenamientoVoleibol_Final.exe (18.04 MB)
+Ubicación: Escritorio
+Fecha: 8 de febrero de 2026, 9:30 PM
+
+═══════════════════════════════════════════════════════════════════
+
+✨ RESUMEN:
+
+NUEVA CARACTERÍSTICA: Selección de fundamento específico
+OPCIONES: 7 fundamentos diferentes + opción de todos
+FUNCIONAMIENTO: Filtrado automático e inteligente
+RESULTADO: Planes enfocados y especializados
+DISEÑO: Integrado perfectamente en la interfaz
+
+═══════════════════════════════════════════════════════════════════
+
+¡Disfruta de entrenamientos más especializados y efectivos! 🏐
+
+Desarrollado para: Entrenamiento de Voleibol
+Versión: Final con Fundamentos
+Fecha: 8 de febrero de 2026

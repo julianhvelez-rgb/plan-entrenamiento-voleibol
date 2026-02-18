@@ -1,0 +1,86 @@
+╔══════════════════════════════════════════════════════════════════╗
+║          VERSIÓN FINAL - V3 (8 de febrero de 2026)               ║
+╚══════════════════════════════════════════════════════════════════╝
+
+✅ CAMBIOS APLICADOS:
+
+1. ❌ VISUALIZACIÓN ELIMINADA
+   • Se removió el canvas de visualización del panel central
+   • La interfaz vuelve al diseño de 2 columnas (formulario + resultados)
+   • Ventana redimensionada a 1400x900 píxeles (tamaño original)
+   • Eliminadas funciones no utilizadas (_actualizar_diagrama_plan,
+     _dibujar_cancha_compacta, _dibujar_estaciones_compactas)
+
+2. ⏱️ LÍMITE DE 120 MINUTOS (MANTENIDO)
+   • Los entrenamientos están limitados a 120 minutos máximo
+   • El sistema ajusta automáticamente los ejercicios
+   • Alertas cuando se realizan ajustes de tiempo
+
+3. 🎯 INTERFAZ SIMPLIFICADA
+   • Pestaña "Crear Plan": Solo formulario y plan generado
+   • Pestaña "Visualización": Canvas con diagramas de cancha
+   • Pestaña "Ejercicios": Base de datos completa por etapa
+   • Mayor espacio para el plan detallado
+
+═══════════════════════════════════════════════════════════════════
+
+📦 ARCHIVOS DISPONIBLES EN EL ESCRITORIO:
+
+✓ EntrenamientoVoleibol_Pro_v3.exe (18.03 MB) - VERSIÓN ACTUAL
+  - Sin visualización en panel principal
+  - Límite de 120 minutos
+  - Interfaz limpia y simple
+
+✓ EntrenamientoVoleibol_Pro_v2.exe (18.04 MB) - Versión anterior
+  - Con visualización integrada en 3 columnas
+
+✓ EntrenamientoVoleibol_Pro.exe (18.03 MB) - Versión original
+  - Primera versión con logo
+
+═══════════════════════════════════════════════════════════════════
+
+🎨 ESTRUCTURA ACTUAL:
+
+PESTAÑA 1: Crear Plan de Entrenamiento
+├── Columna Izquierda: Formulario
+│   ├── Edad de las niñas
+│   ├── Cantidad de asistentes
+│   └── Etapa de entrenamiento
+│
+└── Columna Derecha: Plan Generado
+    ├── Datos del entrenamiento
+    ├── Ejercicios por categoría
+    ├── Tiempos calculados
+    └── Duración total (máx 120 min)
+
+PESTAÑA 2: Visualización de Cancha
+└── Diagramas interactivos (sin cambios)
+
+PESTAÑA 3: Base de Datos
+└── Ejercicios por etapa (sin cambios)
+
+═══════════════════════════════════════════════════════════════════
+
+✨ VENTAJAS DE ESTA VERSIÓN:
+
+✓ Interfaz más limpia y enfocada
+✓ Mayor espacio para leer el plan completo
+✓ Diseño tradicional de 2 columnas
+✓ Sin distracciones visuales
+✓ Control de tiempo respetado (120 min)
+
+═══════════════════════════════════════════════════════════════════
+
+🚀 USO RECOMENDADO:
+
+1. Ejecuta EntrenamientoVoleibol_Pro_v3.exe
+2. Completa el formulario en la pestaña "Crear Plan"
+3. Presiona "Generar Plan"
+4. Revisa el plan detallado a la derecha
+5. Guarda el plan si es satisfactorio
+6. Ve a "Visualización" si quieres ver diagramas
+
+═══════════════════════════════════════════════════════════════════
+
+Desarrollado para: Entrenamiento de Voleibol 🏐
+Fecha: 8 de febrero de 2026
