@@ -173,19 +173,39 @@
 				</div>
 			</section>
 		</div>
-	</main>
+
+	<!-- Barra inferior tipo app -->
+	<nav class="appbar">
+			<button class="appbar-btn" id="appbar-generar" title="Generar Plan" onclick="document.querySelector('.tab-btn[data-tab=generar]').click();"><span>📋</span></button>
+			<button class="appbar-btn" id="appbar-consultar" title="Consultar Ejercicios" onclick="document.querySelector('.tab-btn[data-tab=consultar]').click();"><span>📚</span></button>
+			<button class="appbar-btn" id="appbar-diagrama" title="Diagramas" onclick="document.querySelector('.tab-btn[data-tab=diagrama]').click();"><span>🏐</span></button>
+	</nav>
+
 	<!-- Loading overlay -->
 	<div id="loading" class="loading-overlay" style="display: none;">
-		<div class="spinner"></div>
-		<p>Generando plan...</p>
+			<div class="spinner"></div>
+			<p>Generando plan...</p>
 	</div>
 	<!-- Toast notifications -->
 	<div id="toast" class="toast"></div>
 	<script src="static/js/app.js"></script>
 	<script>
-	  if ('serviceWorker' in navigator) {
-		navigator.serviceWorker.register('static/js/sw.js');
-	  }
+		// Appbar active state
+		function updateAppbarActive(tab) {
+			document.querySelectorAll('.appbar-btn').forEach(btn => btn.classList.remove('active'));
+			if(tab === 'generar') document.getElementById('appbar-generar').classList.add('active');
+			if(tab === 'consultar') document.getElementById('appbar-consultar').classList.add('active');
+			if(tab === 'diagrama') document.getElementById('appbar-diagrama').classList.add('active');
+		}
+		document.querySelectorAll('.tab-btn').forEach(btn => {
+			btn.addEventListener('click', function() {
+				updateAppbarActive(this.dataset.tab);
+			});
+		});
+		updateAppbarActive('generar');
+		if ('serviceWorker' in navigator) {
+			navigator.serviceWorker.register('static/js/sw.js');
+		}
 	</script>
-</body>
-</html>
+	</body>
+	</html>

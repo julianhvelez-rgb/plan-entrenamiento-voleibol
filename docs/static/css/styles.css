@@ -10,16 +10,20 @@
     --color-secondary: #4d7cfe;
     --color-success: #4caf50;
     --color-warning: #ff9800;
-    --color-bg-dark: #0a0e27;
-    --color-bg-medium: #1a1f3a;
+    --color-bg-dark: #181c2f;
+    --color-bg-medium: #23284a;
     --color-bg-light: #252b48;
-    --color-card: #1e2439;
+    --color-card: rgba(30,36,57,0.85);
+    --color-glass: rgba(255,255,255,0.08);
     --color-text: #ffffff;
     --color-text-secondary: #b8c5d6;
     --color-accent: #00d9ff;
-    --border-radius: 12px;
-    --shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    --transition: all 0.3s ease;
+    --border-radius: 18px;
+    --shadow: 0 8px 32px rgba(77, 124, 254, 0.15), 0 2px 8px rgba(255, 107, 157, 0.08);
+    --transition: all 0.3s cubic-bezier(.4,0,.2,1);
+    --blur: blur(16px);
+    --appbar-height: 64px;
+}
 }
 
 * {
@@ -41,16 +45,42 @@ body {
     font-size: 18px;
     letter-spacing: 0.02em;
     transition: background 0.4s;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.main-content {
+    min-height: calc(100vh - var(--appbar-height) - 32px);
+    padding-bottom: calc(var(--appbar-height) + 16px);
+}
+
+/* Glassmorphism background overlay */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 0;
+    background: linear-gradient(120deg, var(--color-bg-dark) 0%, var(--color-primary-dark) 100%);
+    filter: var(--blur);
+    opacity: 0.85;
+    pointer-events: none;
+}
 }
 
 /* Modern Card Style */
+/* Modern Card Style con glassmorphism */
 .card {
     background: var(--color-card);
     border-radius: var(--border-radius);
-    box-shadow: 0 8px 32px rgba(77, 124, 254, 0.15), 0 2px 8px rgba(255, 107, 157, 0.08);
+    box-shadow: var(--shadow);
     padding: 2rem;
     margin-bottom: 2rem;
     animation: fadeInCard 0.5s;
+    backdrop-filter: var(--blur);
+    border: 1.5px solid var(--color-glass);
+    position: relative;
+    z-index: 1;
+}
 }
 
 @keyframes fadeInCard {
@@ -66,10 +96,11 @@ body {
     letter-spacing: 0.03em;
 }
 
+/* Botones grandes y modernos */
 .btn {
-    padding: 1rem 2rem;
-    font-size: 1.2rem;
-    font-weight: 600;
+    padding: 1.2rem 2.2rem;
+    font-size: 1.25rem;
+    font-weight: 700;
     border: none;
     border-radius: var(--border-radius);
     cursor: pointer;
@@ -78,6 +109,10 @@ body {
     color: #fff;
     box-shadow: 0 4px 15px rgba(255, 107, 157, 0.2);
     margin: 0.5rem 0;
+    letter-spacing: 0.04em;
+    outline: none;
+    min-width: 180px;
+}
 }
 .btn-primary {
     background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
@@ -100,7 +135,7 @@ body {
     margin-top: 1rem;
 }
 
-/* Floating Tabs */
+/* Floating Tabs estilo app */
 .tabs {
     display: flex;
     background: var(--color-bg-medium);
@@ -111,27 +146,121 @@ body {
     top: 0;
     z-index: 99;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-    border-radius: 0 0 16px 16px;
+    border-radius: 0 0 24px 24px;
+    margin-bottom: 1.5rem;
 }
 .tab-btn {
     flex: 1;
-    min-width: 150px;
-    padding: 1rem 1.5rem;
+    min-width: 140px;
+    padding: 1.1rem 1.2rem;
     background: var(--color-bg-light);
     border: none;
     border-radius: var(--border-radius);
     color: var(--color-text-secondary);
-    font-size: 1rem;
-    font-weight: 600;
+    font-size: 1.1rem;
+    font-weight: 700;
     cursor: pointer;
     transition: var(--transition);
     white-space: nowrap;
     box-shadow: 0 2px 8px rgba(77, 124, 254, 0.08);
+    outline: none;
 }
 .tab-btn.active {
     background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
     color: var(--color-text);
     box-shadow: 0 4px 15px rgba(255, 107, 157, 0.4);
+    font-size: 1.18rem;
+}
+/* Barra inferior tipo app */
+.appbar {
+    position: fixed;
+    left: 0; right: 0; bottom: 0;
+    height: var(--appbar-height);
+    background: var(--color-bg-medium);
+    box-shadow: 0 -2px 16px rgba(0,0,0,0.18);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 100;
+    border-radius: 24px 24px 0 0;
+    padding: 0 1.5rem;
+    backdrop-filter: var(--blur);
+}
+.appbar-btn {
+    background: none;
+    border: none;
+    color: var(--color-text-secondary);
+    font-size: 2rem;
+    padding: 0.2rem 0.8rem;
+    border-radius: 50%;
+    transition: var(--transition);
+    cursor: pointer;
+}
+.appbar-btn.active, .appbar-btn:focus {
+    color: var(--color-primary);
+    background: var(--color-glass);
+    outline: none;
+}
+/* Animación de entrada para cards y botones */
+.fade-in {
+    animation: fadeInCard 0.7s cubic-bezier(.4,0,.2,1);
+}
+/* Sombra y glass para formularios */
+.form {
+    background: var(--color-glass);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    box-shadow: 0 2px 12px rgba(77, 124, 254, 0.08);
+    margin-bottom: 1.5rem;
+    backdrop-filter: var(--blur);
+}
+/* Toast y overlay más modernos */
+.toast {
+    position: fixed;
+    bottom: calc(var(--appbar-height) + 24px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--color-card);
+    color: var(--color-text);
+    padding: 1.2rem 2.2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    z-index: 9999;
+    font-size: 1.1rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+.toast.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+/* Spinner overlay */
+.loading-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(24,28,47,0.85);
+    z-index: 9998;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    color: var(--color-primary);
+    backdrop-filter: var(--blur);
+}
+.spinner {
+    border: 6px solid #eee;
+    border-top: 6px solid var(--color-primary);
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    animation: spin 1s linear infinite;
+    margin-bottom: 1.5rem;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 
 /* Responsive Modern */
