@@ -1,9 +1,23 @@
 // Service Worker para PWA
-const CACHE_NAME = 'voleibol-v1';
+
+const CACHE_NAME = 'voleibol-v2';
 const urlsToCache = [
-  '/',
-  '/static/css/styles.css',
-  '/static/js/app.js'
+  './',
+  './index.html',
+  './static/css/styles.css',
+  './static/js/app.js',
+  './static/manifest.json',
+  './static/img/icon-72.png',
+  './static/img/icon-96.png',
+  './static/img/icon-128.png',
+  './static/img/icon-144.png',
+  './static/img/icon-152.png',
+  './static/img/icon-192.png',
+  './static/img/icon-384.png',
+  './static/img/icon-512.png',
+  './static/img/icon-maskable-192.png',
+  './static/img/icon-maskable-512.png',
+  './static/img/screenshot1.png'
 ];
 
 self.addEventListener('install', event => {
