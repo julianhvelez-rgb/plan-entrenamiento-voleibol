@@ -14,6 +14,14 @@
 	<meta name="msapplication-tap-highlight" content="no">
 	<meta name="description" content="Sistema profesional de planificación de entrenamientos de voleibol para entrenadores">
 	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=no, viewport-fit=cover">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="apple-mobile-web-app-title" content="Entrena Voleibol WH">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="HandheldFriendly" content="true">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-touch-fullscreen" content="yes">
 	<!-- PWA Manifest -->
 	<link rel="manifest" href="static/manifest.json">
 	<!-- Icons - Múltiples tamaños -->
@@ -203,9 +211,30 @@
 			});
 		});
 		updateAppbarActive('generar');
+		// Service Worker
 		if ('serviceWorker' in navigator) {
 			navigator.serviceWorker.register('static/js/sw.js');
 		}
+		// PWA Install Prompt personalizado
+		let deferredPrompt;
+		window.addEventListener('beforeinstallprompt', (e) => {
+			e.preventDefault();
+			deferredPrompt = e;
+			document.getElementById('install-prompt').style.display = 'block';
+		});
+		document.getElementById('install-button').addEventListener('click', async () => {
+			if (deferredPrompt) {
+				deferredPrompt.prompt();
+				const { outcome } = await deferredPrompt.userChoice;
+				if (outcome === 'accepted') {
+					document.getElementById('install-prompt').style.display = 'none';
+				}
+				deferredPrompt = null;
+			}
+		});
+		document.getElementById('dismiss-button').addEventListener('click', () => {
+			document.getElementById('install-prompt').style.display = 'none';
+		});
 	</script>
 	</body>
 	</html>
