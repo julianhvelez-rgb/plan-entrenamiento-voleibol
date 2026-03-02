@@ -1,0 +1,159 @@
+═════════════════════════════════════════════════════════════════
+   🏐 MEJORAS V4 - ENFOQUE 8-10 AÑOS 🏐
+═════════════════════════════════════════════════════════════════
+
+Fecha: 2 de Marzo de 2026
+
+✅ CAMBIOS REALIZADOS:
+═════════════════════════════════════════════════════════════════
+
+1. ⏱️ AUMENTO DE DURACIÓN DEL ENTRENAMIENTO
+   ────────────────────────────────────────────────
+   Antes: Máximo 120 minutos (2 horas)
+   Ahora: Máximo 150 minutos (2 horas y 30 minutos)
+   
+   ➜ Permite entrenamientos más completos y estructurados
+   ➜ Mejor cobertura de todas las áreas de desarrollo
+   ➜ Más tiempo para la parte lúdica y recreativa
+
+2. 📚 EXPANSIÓN SIGNIFICATIVA DE EJERCICIOS
+   ────────────────────────────────────────────────
+   
+   CALENTAMIENTO: 4 → 9 ejercicios
+   ├── Trote suave alrededor de la cancha
+   ├── Movilidad articular completa
+   ├── Estiramientos dinámicos
+   ├── Juego de atrapar en parejas
+   ├── Caminata lateral con brazos
+   ├── Saltos ligeros en el lugar
+   ├── Giros de cintura con brazos extendidos
+   ├── Círculos de brazos hacia adelante y atrás
+   └── Desplazamientos laterales suaves
+
+   TÉCNICA BÁSICA: 5 → 12 ejercicios
+   ├── Posición básica y desplazamientos
+   ├── Golpe de antebrazos contra la pared
+   ├── Golpe de dedos en parejas
+   ├── Saques de abajo
+   ├── Recepción básica
+   ├── Posición de defensa
+   ├── Movimientos de brazos con balón
+   ├── Práctica de contacto suave con pelota
+   ├── Pase de dedos individual contra pared
+   ├── Coordinación de brazos y piernas
+   ├── Toque de antebrazos contra pared
+   └── Control del balón en el aire
+
+   ACTIVIDADES GRUPALES: 4 → 13 ejercicios
+   ├── Pase 10: mantener el balón sin que caiga
+   ├── Carrera de relevos con balón
+   ├── Círculo de pases (grupos de 5-6)
+   ├── Mini voleibol (3 vs 3)
+   ├── Pases en parejas en movimiento
+   ├── Juego del espejo: copiar movimientos
+   ├── Carreras con cambios de dirección
+   ├── Relevos de velocidad
+   ├── Juego de los números
+   ├── Pases en triángulo
+   ├── Competencia de precisión de pases
+   ├── Juego modificado con 4 vs 4
+   └── Voleibol de cancha reducida
+
+   NUEVA CATEGORÍA: COORDINACIÓN Y HABILIDADES
+   ├── Saltos alternados con brazos
+   ├── Equilibrio en una pierna
+   ├── Desplazamientos en línea recta
+   ├── Carreras de espalda
+   ├── Saltos laterales (lado a lado)
+   ├── Coordinación ojo-mano con balón
+   ├── Pases mientras se camina
+   ├── Lanzamientos y recepciones
+   ├── Ejercicios de agilidad con conos
+   ├── Trabajo de footwork básico
+   └── Cambios rápidos de dirección
+
+   ACONDICIONAMIENTO SUAVE: 4 → 11 ejercicios
+   ├── Sentadillas (3x10)
+   ├── Planchas (3x15-20 seg)
+   ├── Saltos (3x10)
+   ├── Abdominales (3x12)
+   ├── Flexiones modificadas (de rodillas)
+   ├── Levantamiento de piernas acostadas
+   ├── Puentes glúteos
+   ├── Patadas hacia atrás
+   ├── Ejercicios de equilibrio
+   ├── Trabajo de core ligero
+   └── Estiramientos finales personalizados
+
+3. 🎯 ENFOQUE ESPECIAL PARA EDADES 8-10 AÑOS
+   ────────────────────────────────────────────────
+   
+   ✓ Ejercicios más didácticos y lúdicos
+   ✓ Movimientos básicos bien estructurados
+   ✓ Mayor variedad de actividades divertidas
+   ✓ Énfasis en coordinación y equilibrio
+   ✓ Actividades en parejas y grupos pequeños
+   ✓ Menor intensidad, mayor diversión
+
+4. 📊 ESTADÍSTICAS DE MEJORA
+   ────────────────────────────────────────────────
+   
+   Total de ejercicios originales: ~50
+   Total de ejercicios mejorados: ~85+
+   
+   Aumento: +70% más opciones
+   Duración: +25% más tiempo disponible
+
+═════════════════════════════════════════════════════════════════
+
+🎮 ARCHIVO EJECUTABLE:
+═════════════════════════════════════════════════════════════════
+
+   Nombre: EntrenamientoVoleibol_Pro_Final.exe
+   Ubicación: dist/
+   Tamaño: 16.4 MB
+   Fecha compilación: 2/3/2026 8:43 a.m.
+   
+   ✓ Versión 4.0 - Con mejoras para 8-10 años
+
+═════════════════════════════════════════════════════════════════
+
+🚀 CÓMO USAR LA VERSIÓN MEJORADA:
+═════════════════════════════════════════════════════════════════
+
+1. Ve a: dist/EntrenamientoVoleibol_Pro_Final.exe
+
+2. Haz doble clic para iniciar
+
+3. Selecciona "8-10 años (Iniciación)" como rango de edad
+
+4. Elige "Preparación General" como etapa
+
+5. Genera el plan - ¡Ahora con 150 minutos disponibles!
+
+═════════════════════════════════════════════════════════════════
+
+📋 NOVEDADES EN EL CÓDIGO:
+═════════════════════════════════════════════════════════════════
+
+Archivo modificado: ejerciciosvoly_gui.py
+
+Cambios principales:
+1. TIEMPO_MAXIMO: 120 → 150 minutos
+2. Método _cargar_ejercicios() expandido completamente
+3. Nuevas categorías de ejercicios
+4. Más variedad para mejor estructura de entrenamientos
+
+═════════════════════════════════════════════════════════════════
+
+✨ BENEFICIOS PARA LOS ENTRENAMIENTOS:
+═════════════════════════════════════════════════════════════════
+
+✓ Entrenamientos más completos (150 vs 120 min)
+✓ Mayor variedad de ejercicios para niños
+✓ Mejor estructura didáctica
+✓ Más opciones de actividades lúdicas
+✓ Equilibrio entre técnica, coordinación y diversión
+✓ Mejor aprovechamiento del tiempo disponible
+
+═════════════════════════════════════════════════════════════════

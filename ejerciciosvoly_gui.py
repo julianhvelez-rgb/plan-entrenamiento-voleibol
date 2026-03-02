@@ -14,7 +14,7 @@ class EntrenamientoVoleibolGUI:
         self.root.configure(bg='#1a1a2e')
         
         # Límite de tiempo del entrenamiento (minutos)
-        self.TIEMPO_MAXIMO = 120
+        self.TIEMPO_MAXIMO = 150
         
         # Cargar logo si existe
         try:
@@ -1641,26 +1641,67 @@ class EntrenamientoVoleibolGUI:
                     'Trote suave alrededor de la cancha (5 min)',
                     'Movilidad articular completa',
                     'Estiramientos dinámicos',
-                    'Juego de atrapar en parejas'
+                    'Juego de atrapar en parejas',
+                    'Caminata lateral con brazos',
+                    'Saltos ligeros en el lugar',
+                    'Giros de cintura con brazos extendidos',
+                    'Círculos de brazos hacia adelante y atrás',
+                    'Desplazamientos laterales suaves'
                 ],
                 'Técnica Básica': [
                     'Posición básica y desplazamientos',
                     'Golpe de antebrazos contra la pared',
                     'Golpe de dedos en parejas',
                     'Saques de abajo',
-                    'Recepción básica'
+                    'Recepción básica',
+                    'Posición de defensa (en \"V\" o lista)',
+                    'Movimientos de brazos con balón',
+                    'Práctica de contacto suave con pelota',
+                    'Pase de dedos individual contra pared',
+                    'Coordinación de brazos y piernas',
+                    'Toque de antebrazos contra pared',
+                    'Control del balón en el aire'
                 ],
                 'Juegos Grupales': [
                     'Pase 10: mantener el balón sin que caiga',
                     'Carrera de relevos con balón',
                     'Círculo de pases (grupos de 5-6)',
-                    'Mini voleibol'
+                    'Mini voleibol (3 vs 3)',
+                    'Pases en parejas en movimiento',
+                    'Juego del espejo: copiar movimientos',
+                    'Carreras con cambios de dirección',
+                    'Relevos de velocidad',
+                    'Juego de los números',
+                    'Pases en triángulo',
+                    'Competencia de precisión de pases',
+                    'Juego modificado con 4 vs 4',
+                    'Voleibol de cancha reducida'
                 ],
-                'Acondicionamiento': [
+                'Coordinación y Habilidades': [
+                    'Saltos alternados con brazos',
+                    'Equilibrio en una pierna',
+                    'Desplazamientos en línea recta',
+                    'Carreras de espalda',
+                    'Saltos laterales (lado a lado)',
+                    'Coordinación ojo-mano con balón',
+                    'Pases mientras se camina',
+                    'Lanzamientos y recepciones',
+                    'Ejercicios de agilidad con conos',
+                    'Trabajo de footwork básico',
+                    'Cambios rápidos de dirección'
+                ],
+                'Acondicionamiento Suave': [
                     'Sentadillas (3x10)',
                     'Planchas (3x15-20 seg)',
                     'Saltos (3x10)',
-                    'Abdominales (3x12)'
+                    'Abdominales (3x12)',
+                    'Flexiones modificadas (de rodillas)',
+                    'Levantamiento de piernas acostadas',
+                    'Puentes glúteos',
+                    'Patadas hacia atrás',
+                    'Ejercicios de equilibrio',
+                    'Trabajo de core ligero',
+                    'Estiramientos finales personalizados'
                 ]
             },
             'Preparación Específica': {
@@ -1668,26 +1709,39 @@ class EntrenamientoVoleibolGUI:
                     'Trote con cambios de dirección',
                     'Desplazamientos defensivos',
                     'Pases en movimiento',
-                    'Saltos de activación'
+                    'Saltos de activación',
+                    'Agilidad con cambios rápidos',
+                    'Calentamiento específico por posición',
+                    'Simulación de movimientos de juego'
                 ],
                 'Técnica Avanzada': [
                     'Remate desde zona 4',
                     'Bloqueo individual y en parejas',
                     'Saques de arriba',
                     'Recepción en formación W',
-                    'Colocación desde zona 3'
+                    'Colocación desde zona 3',
+                    'Recepción con desplazamiento',
+                    'Remate en salto progresivo',
+                    'Defensa baja en movimiento',
+                    'Coordinación recepción-ataque'
                 ],
                 'Trabajo Grupal': [
                     'Rotaciones y posiciones',
                     'Cadena: recepción-colocación-remate',
                     'Bloqueo-defensa-contraataque',
-                    'Juego dirigido 6 vs 6'
+                    'Juego dirigido 6 vs 6',
+                    'Práctica de sistemas de juego',
+                    'Coordinación entre posiciones',
+                    'Situaciones de juego real'
                 ],
                 'Acondicionamiento': [
                     'Saltos al cajón (3x8)',
                     'Burpees (3x10)',
                     'Desplazamientos (30s x3)',
-                    'Core: planchas laterales'
+                    'Core: planchas laterales',
+                    'Saltos explosivos',
+                    'Trabajo de velocidad',
+                    'Resistencia muscular específica'
                 ]
             },
             'Precompetitiva': {
@@ -1695,26 +1749,33 @@ class EntrenamientoVoleibolGUI:
                     'Activación cardiovascular intensa',
                     'Desplazamientos específicos',
                     'Pases en triángulo',
-                    'Saltos y bloqueos'
+                    'Saltos y bloqueos',
+                    'Simulación de situaciones competitivas',
+                    'Calentamiento enfocado en técnica'
                 ],
                 'Táctica de Equipo': [
                     'Sistemas de recepción 3-1-2 / 3-2-1',
                     'Sistemas ofensivos 4-2 / 5-1',
                     'Jugadas ensayadas',
                     'Cobertura de bloqueo',
-                    'Transiciones defensa-ataque'
+                    'Transiciones defensa-ataque',
+                    'Temas defensivos específicos',
+                    'Estrategias de ataque'
                 ],
                 'Simulación': [
                     'Set completo 6 vs 6',
                     'Situaciones de presión',
                     'Práctica de rotaciones',
-                    'Estrategias vs formaciones'
+                    'Estrategias vs formaciones',
+                    'Simulaciones de partidos',
+                    'Análisis de errores'
                 ],
                 'Acondicionamiento': [
                     'Intervalos alta intensidad',
                     'Circuito de potencia',
                     'Saltos explosivos',
-                    'Recuperación activa'
+                    'Recuperación activa',
+                    'Trabajo específico de resistencia'
                 ]
             },
             'Competitiva': {
@@ -1722,52 +1783,62 @@ class EntrenamientoVoleibolGUI:
                     'Rutina de precompetencia',
                     'Activación neuromuscular',
                     'Práctica de remate y saque',
-                    'Mentalización'
+                    'Mentalización',
+                    'Movimientos dinámicos'
                 ],
                 'Mantenimiento': [
                     'Repaso de jugadas clave',
                     'Ajustes tácticos',
                     'Situaciones críticas',
                     'Trabajo por posición',
-                    'Set de práctica corto'
+                    'Set de práctica corto',
+                    'Correcciones técnicas'
                 ],
                 'Estrategia': [
                     'Análisis del rival',
                     'Comunicación en cancha',
                     'Rotaciones optimizadas',
-                    'Gestión de sustituciones'
+                    'Gestión de sustituciones',
+                    'Tácticas especiales'
                 ],
                 'Recuperación': [
                     'Estiramientos prolongados',
                     'Trabajo de movilidad',
                     'Ejercicios de descarga',
-                    'Hidratación'
+                    'Hidratación',
+                    'Enfoque mental'
                 ]
             },
             'Transición': {
                 'Calentamiento': [
                     'Actividad recreativa',
                     'Juegos lúdicos',
-                    'Movilidad relajada'
+                    'Movilidad relajada',
+                    'Ejercicios de bajo impacto'
                 ],
                 'Recreativo': [
                     'Vóley playa',
                     'Juegos modificados',
                     'Actividades multideportivas',
-                    'Competencias divertidas'
+                    'Competencias divertidas',
+                    'Juegos de coordinación',
+                    'Actividades en grupo'
                 ],
                 'Recuperación Activa': [
                     'Yoga para atletas',
                     'Natación',
                     'Trote suave',
                     'Estiramientos',
-                    'Juegos de coordinación'
+                    'Juegos de coordinación',
+                    'Actividad lúdica',
+                    'Movilidad con ejercicios'
                 ],
                 'Evaluación': [
                     'Reflexión sobre temporada',
                     'Evaluación de progreso',
                     'Metas personales',
-                    'Feedback grupal'
+                    'Feedback grupal',
+                    'Planificación futura'
                 ]
             }
         }
