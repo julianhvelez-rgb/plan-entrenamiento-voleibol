@@ -14,138 +14,206 @@ EJERCICIOS_DB = {
     'Preparación General': {
         'calentamiento': [
             'Trote suave alrededor de la cancha (5 min)',
-            'Movilidad articular: círculos de brazos, rodillas, tobillos',
+            'Movilidad articular completa',
             'Estiramientos dinámicos',
-            'Juego de atrapar (parejas)'
+            'Juego de atrapar en parejas',
+            'Caminata lateral con brazos',
+            'Saltos ligeros en el lugar',
+            'Giros de cintura con brazos extendidos',
+            'Círculos de brazos hacia adelante y atrás',
+            'Desplazamientos laterales suaves'
         ],
         'tecnica_basica': [
             'Posición básica y desplazamientos',
             'Golpe de antebrazos contra la pared',
             'Golpe de dedos en parejas',
             'Saques de abajo',
-            'Recepción básica en parejas'
+            'Recepción básica',
+            'Posición de defensa (en "V" o lista)',
+            'Movimientos de brazos con balón',
+            'Práctica de contacto suave con pelota',
+            'Pase de dedos individual contra pared',
+            'Coordinación de brazos y piernas',
+            'Toque de antebrazos contra pared',
+            'Control del balón en el aire'
         ],
         'juegos_grupos': [
-            'Pase 10: mantener el balón sin que caiga (grupos de 3-4)',
+            'Pase 10: mantener el balón sin que caiga',
             'Carrera de relevos con balón',
             'Círculo de pases (grupos de 5-6)',
-            'Mini voleibol (toda la cancha, equipos flexibles)'
+            'Mini voleibol (3 vs 3)',
+            'Pases en parejas en movimiento',
+            'Juego del espejo: copiar movimientos',
+            'Carreras con cambios de dirección',
+            'Relevos de velocidad',
+            'Juego de los números',
+            'Pases en triángulo',
+            'Competencia de precisión de pases',
+            'Juego modificado con 4 vs 4',
+            'Voleibol de cancha reducida'
+        ],
+        'coordinacion_habilidades': [
+            'Saltos alternados con brazos',
+            'Equilibrio en una pierna',
+            'Desplazamientos en línea recta',
+            'Carreras de espalda',
+            'Saltos laterales (lado a lado)',
+            'Coordinación ojo-mano con balón',
+            'Pases mientras se camina',
+            'Lanzamientos y recepciones',
+            'Ejercicios de agilidad con conos',
+            'Trabajo de footwork básico',
+            'Cambios rápidos de dirección'
         ],
         'acondicionamiento': [
-            'Sentadillas (3 series de 10)',
-            'Planchas (3 series de 15-20 seg)',
-            'Saltos en el lugar (3 series de 10)',
-            'Abdominales (3 series de 12)'
+            'Sentadillas (3x10)',
+            'Planchas (3x15-20 seg)',
+            'Saltos (3x10)',
+            'Abdominales (3x12)',
+            'Flexiones modificadas (de rodillas)',
+            'Levantamiento de piernas acostadas',
+            'Puentes glúteos',
+            'Patadas hacia atrás',
+            'Ejercicios de equilibrio',
+            'Trabajo de core ligero',
+            'Estiramientos finales personalizados'
         ]
     },
     'Preparación Específica': {
         'calentamiento': [
-            'Trote con cambios de dirección (5 min)',
-            'Desplazamientos laterales y defensivos',
-            'Pases en movimiento (parejas)',
-            'Saltos de calentamiento'
+            'Trote con cambios de dirección',
+            'Desplazamientos defensivos',
+            'Pases en movimiento',
+            'Saltos de activación',
+            'Agilidad con cambios rápidos',
+            'Calentamiento específico por posición',
+            'Simulación de movimientos de juego'
         ],
         'tecnica_avanzada': [
-            'Remate desde zona 4 (con lanzamiento)',
+            'Remate desde zona 4',
             'Bloqueo individual y en parejas',
             'Saques de arriba',
             'Recepción en formación W',
             'Colocación desde zona 3',
-            'Defensa de campo con desplazamientos'
+            'Recepción con desplazamiento',
+            'Remate en salto progresivo',
+            'Defensa baja en movimiento',
+            'Coordinación recepción-ataque'
         ],
         'trabajo_grupal': [
-            'Rotaciones y posiciones (equipos de 6)',
-            'Cadena: recepción-colocación-remate (grupos de 4-5)',
-            'Bloqueo-defensa-contraataque (grupos de 6)',
-            'Juego dirigido 4 vs 4 o 6 vs 6'
+            'Rotaciones y posiciones',
+            'Cadena: recepción-colocación-remate',
+            'Bloqueo-defensa-contraataque',
+            'Juego dirigido 6 vs 6',
+            'Práctica de sistemas de juego',
+            'Coordinación entre posiciones',
+            'Situaciones de juego real'
         ],
         'acondicionamiento': [
-            'Saltos al cajón (3 series de 8)',
-            'Burpees (3 series de 10)',
-            'Desplazamientos defensivos (30 seg x 3)',
-            'Core: planchas laterales (30 seg cada lado)'
+            'Saltos al cajón (3x8)',
+            'Burpees (3x10)',
+            'Desplazamientos (30s x3)',
+            'Core: planchas laterales',
+            'Saltos explosivos',
+            'Trabajo de velocidad',
+            'Resistencia muscular específica'
         ]
     },
     'Precompetitiva': {
         'calentamiento': [
-            'Activación cardiovascular intensa (7 min)',
-            'Desplazamientos específicos de voleibol',
-            'Pases en triángulo con movimiento',
-            'Saltos y bloqueos de activación'
+            'Activación cardiovascular intensa',
+            'Desplazamientos específicos',
+            'Pases en triángulo',
+            'Saltos y bloqueos',
+            'Simulación de situaciones competitivas',
+            'Calentamiento enfocado en técnica'
         ],
         'tactica_equipo': [
             'Sistemas de recepción 3-1-2 / 3-2-1',
             'Sistemas ofensivos 4-2 / 5-1',
-            'Jugadas ensayadas de remate',
-            'Cobertura de bloqueo y ataque',
+            'Jugadas ensayadas',
+            'Cobertura de bloqueo',
             'Transiciones defensa-ataque',
-            'Situaciones de juego específicas'
+            'Temas defensivos específicos',
+            'Estrategias de ataque'
         ],
         'simulacion': [
-            'Set completo de práctica 6 vs 6',
-            'Situaciones de presión (punto de oro)',
-            'Práctica de rotaciones en juego real',
-            'Estrategias contra diferentes formaciones'
+            'Set completo 6 vs 6',
+            'Situaciones de presión',
+            'Práctica de rotaciones',
+            'Estrategias vs formaciones',
+            'Simulaciones de partidos',
+            'Análisis de errores'
         ],
         'acondicionamiento': [
-            'Intervalos de alta intensidad (10 min)',
-            'Circuito de potencia (4 estaciones)',
-            'Saltos explosivos (4 series de 6)',
-            'Recuperación activa'
+            'Intervalos alta intensidad',
+            'Circuito de potencia',
+            'Saltos explosivos',
+            'Recuperación activa',
+            'Trabajo específico de resistencia'
         ]
     },
     'Competitiva': {
         'calentamiento': [
-            'Rutina de precompetencia (10 min)',
+            'Rutina de precompetencia',
             'Activación neuromuscular',
             'Práctica de remate y saque',
-            'Mentalización y concentración'
+            'Mentalización',
+            'Movimientos dinámicos'
         ],
         'mantenimiento': [
-            'Repaso de jugadas clave del equipo',
-            'Ajustes tácticos según rival',
-            'Práctica de situaciones críticas',
-            'Trabajo específico por posición',
-            'Set de práctica corto (15 puntos)'
+            'Repaso de jugadas clave',
+            'Ajustes tácticos',
+            'Situaciones críticas',
+            'Trabajo por posición',
+            'Set de práctica corto',
+            'Correcciones técnicas'
         ],
         'estrategia': [
-            'Análisis del rival y ajustes',
+            'Análisis del rival',
             'Comunicación en cancha',
             'Rotaciones optimizadas',
-            'Gestión de tiempo y sustituciones'
+            'Gestión de sustituciones',
+            'Tácticas especiales'
         ],
         'recuperacion': [
-            'Estiramientos prolongados (15 min)',
+            'Estiramientos prolongados',
             'Trabajo de movilidad',
             'Ejercicios de descarga',
-            'Hidratación y nutrición'
+            'Hidratación',
+            'Enfoque mental'
         ]
     },
     'Transición': {
         'calentamiento': [
-            'Actividad recreativa con balón (10 min)',
-            'Juegos lúdicos grupales',
-            'Movilidad general relajada'
+            'Actividad recreativa',
+            'Juegos lúdicos',
+            'Movilidad relajada',
+            'Ejercicios de bajo impacto'
         ],
         'recreativo': [
-            'Vóley playa o en pasto',
-            'Juegos modificados de voleibol',
+            'Vóley playa',
+            'Juegos modificados',
             'Actividades multideportivas',
-            'Competencias por equipos divertidas',
-            'Circuitos recreativos con balón'
+            'Competencias divertidas',
+            'Juegos de coordinación',
+            'Actividades en grupo'
         ],
         'recuperacion_activa': [
-            'Yoga para atletas (20 min)',
-            'Natación o actividad acuática',
-            'Caminata o trote suave',
-            'Estiramientos y flexibilidad',
-            'Juegos de coordinación'
+            'Yoga para atletas',
+            'Natación',
+            'Trote suave',
+            'Estiramientos',
+            'Juegos de coordinación',
+            'Actividad lúdica',
+            'Movilidad con ejercicios'
         ],
         'evaluacion': [
-            'Reflexión sobre la temporada',
-            'Evaluación individual de progreso',
-            'Establecimiento de metas personales',
-            'Feedback grupal'
+            'Reflexión sobre temporada',
+            'Evaluación de progreso',
+            'Metas personales',
+            'Feedback grupal',
+            'Planificación futura'
         ]
     }
 }

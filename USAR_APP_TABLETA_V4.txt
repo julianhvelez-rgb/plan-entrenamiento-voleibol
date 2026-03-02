@@ -1,0 +1,169 @@
+═════════════════════════════════════════════════════════════════
+  🏐 CÓMO USAR LA APP EN LA TABLETA - VERSIÓN MEJORADA 🏐
+═════════════════════════════════════════════════════════════════
+
+✅ PROBLEMA RESUELTO: Flask instalado + Ejercicios actualizados
+Fecha: 2 de Marzo de 2026
+
+═════════════════════════════════════════════════════════════════
+📋 QUÉ SE ARREGLÓ:
+═════════════════════════════════════════════════════════════════
+
+1. ✅ Instalado Flask (necesario para el servidor web)
+2. ✅ Actualizados todos los ejercicios en app_tableta.py
+3. ✅ Sincronizados con las mejoras de la versión desktop (150 min)
+4. ✅ Agregada nueva categoría: "Coordinación y Habilidades"
+5. ✅ Expandidos ejercicios para niños de 8-10 años
+
+═════════════════════════════════════════════════════════════════
+🚀 CÓMO INICIAR LA APP:
+═════════════════════════════════════════════════════════════════
+
+OPCIÓN 1: Usando el archivo BAT (Más fácil)
+─────────────────────────────────────────────
+1. Haz doble clic en: INICIAR_APP_TABLETA.bat
+2. El servidor se iniciará automáticamente
+3. NO cierres la ventana negra que aparece
+
+OPCIÓN 2: Manual
+─────────────────────────────────────────────
+1. Abre PowerShell o CMD
+2. Ejecuta:
+   cd "c:\Users\willi\OneDrive\Desktop\proyectos\plan de entrenamiendo"
+   python app_tableta.py
+
+═════════════════════════════════════════════════════════════════
+📱 CONECTAR TU TABLETA:
+═════════════════════════════════════════════════════════════════
+
+Una vez iniciado el servidor, verás este mensaje:
+
+   ✅ Servidor HTTP iniciado correctamente
+   
+   💡 ACCESO LOCAL:
+      http://10.143.157.177:5000
+
+PASOS:
+──────
+1. Asegúrate de que tu PC y tableta estén en la MISMA red WiFi
+
+2. En tu tableta, abre el navegador (Chrome, Safari, etc.)
+
+3. En la barra de direcciones, escribe la IP que aparece:
+   
+   http://10.143.157.177:5000
+   
+   (La IP puede ser diferente en tu caso)
+
+4. ¡La app se abrirá en tu tableta!
+
+═════════════════════════════════════════════════════════════════
+🔧 SI LA IP NO FUNCIONA:
+═════════════════════════════════════════════════════════════════
+
+1. Abre CMD o PowerShell
+2. Escribe: ipconfig
+3. Busca "Dirección IPv4" en la sección WiFi
+4. Usa esa IP en tu tableta seguida de :5000
+
+Ejemplo: http://192.168.1.100:5000
+
+═════════════════════════════════════════════════════════════════
+📊 NOVEDADES EN LA APP DE TABLETA:
+═════════════════════════════════════════════════════════════════
+
+✨ PREPARACIÓN GENERAL (8-10 años):
+   • Calentamiento: 4 → 9 ejercicios
+   • Técnica Básica: 5 → 12 ejercicios
+   • Juegos Grupales: 4 → 13 ejercicios
+   • NUEVO: Coordinación y Habilidades (11 ejercicios)
+   • Acondicionamiento: 4 → 11 ejercicios
+
+✨ TODAS LAS ETAPAS:
+   • Preparación Específica: +7 ejercicios
+   • Precompetitiva: +3 ejercicios
+   • Competitiva: +2 ejercicios
+   • Transición: +4 ejercicios
+
+═════════════════════════════════════════════════════════════════
+🎮 USO DE LA APP EN TABLETA:
+═════════════════════════════════════════════════════════════════
+
+La interfaz web tiene 3 pestañas:
+
+1️⃣  GENERAR PLAN (📋)
+   • Selecciona edad (8-10, 11-13, 14-16, 17+)
+   • Cantidad de jugadoras
+   • Etapa de entrenamiento
+   • Fundamento específico (opcional)
+   • Duración (60-150 minutos) ← NUEVO: 150 min!
+   • Clic en "Generar Plan"
+
+2️⃣  VER EJERCICIOS (📚)
+   • Explora todos los ejercicios por etapa
+   • Ver categorías completas
+   • Buscar ejercicios específicos
+
+3️⃣  ESTADÍSTICAS (📊)
+   • Resumen de planes generados
+   • Historial de entrenamientos
+   • Análisis de ejercicios más usados
+
+═════════════════════════════════════════════════════════════════
+⚠️ IMPORTANTE:
+═════════════════════════════════════════════════════════════════
+
+✓ NO cierres la ventana del servidor mientras uses la app
+✓ La PC y la tableta deben estar en la misma red WiFi
+✓ Si cambias de red WiFi, la IP puede cambiar
+✓ Para cerrar el servidor: presiona CTRL+C en la ventana
+
+═════════════════════════════════════════════════════════════════
+🌐 OPCIÓN AVANZADA: Usar con Ngrok
+═════════════════════════════════════════════════════════════════
+
+Para acceso desde cualquier lugar (no solo WiFi local):
+
+1. Instala Ngrok desde: https://ngrok.com/download
+2. Abre otra terminal y ejecuta:
+   cd C:\ngrok
+   .\ngrok.exe http 5000
+
+3. Ngrok te dará una URL como:
+   https://abc123.ngrok-free.app
+
+4. Usa esa URL en tu tableta (funciona desde internet)
+
+═════════════════════════════════════════════════════════════════
+📞 SOLUCIÓN DE PROBLEMAS:
+═════════════════════════════════════════════════════════════════
+
+❌ "No se puede conectar"
+   → Verifica que ambos dispositivos estén en la misma red
+   → Verifica que el servidor esté corriendo
+   → Comprueba la IP con 'ipconfig'
+
+❌ "ModuleNotFoundError: No module named 'flask'"
+   → Ya está resuelto, Flask está instalado ✅
+
+❌ "La página no carga"
+   → Revisa el firewall de Windows
+   → Asegúrate de usar http:// (no https://)
+
+❌ "Los ejercicios no aparecen"
+   → Reinicia el servidor (CTRL+C y volver a ejecutar)
+   → Ya están actualizados en el código ✅
+
+═════════════════════════════════════════════════════════════════
+✅ TODO LISTO:
+═════════════════════════════════════════════════════════════════
+
+Tu app para tableta está actualizada con:
+• +70% más ejercicios
+• Duración de 150 minutos
+• Enfoque especial en niños 8-10 años
+• Nueva categoría de coordinación
+• Todo sincronizado con la versión desktop
+
+¡Disfruta entrenando! 🏐
+═════════════════════════════════════════════════════════════════
