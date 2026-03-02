@@ -2,81 +2,80 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Plan de Entrenamiento de Voleibol Profesional - Versión 4.0">
-    <title>🏐 Plan de Entrenamiento de Voleibol</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Plan de Entrenamiento de Voleibol Profesional - Versión 4.0 Offline">
+    <title>🏐 Plan de Entrenamientos</title>
     <meta name="theme-color" content="#667eea">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Entrena Voleibol">
     <meta name="mobile-web-app-capable" content="yes">
-    <link rel="manifest" href="static/manifest.json">
+    <link rel="manifest" href="data:application/manifest+json,{%22name%22:%22Plan de Entrenamientos%22,%22short_name%22:%22Entrena%22,%22start_url%22:%22/plan-entrenamiento-voleibol/%22,%22display%22:%22standalone%22,%22background_color%22:%22%23ffffff%22,%22theme_color%22:%22%23667eea%22,%22orientation%22:%22portrait-primary%22}">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            -webkit-user-select: none;
+            user-select: none;
         }
         
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        html, body {
+            width: 100%;
+            height: 100%;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            padding: 10px;
             color: #333;
+            overflow: hidden;
         }
         
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
-            overflow: hidden;
+        .app {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            width: 100%;
         }
         
         .header {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 40px 20px;
+            padding: 15px 20px;
             text-align: center;
+            flex-shrink: 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
         
         .header h1 {
-            font-size: 36px;
-            margin-bottom: 10px;
+            font-size: 24px;
+            margin-bottom: 5px;
         }
         
         .header p {
-            font-size: 16px;
-            opacity: 0.9;
-            margin-bottom: 10px;
-        }
-        
-        .version-badge {
-            display: inline-block;
-            background: rgba(255,255,255,0.2);
-            padding: 6px 14px;
-            border-radius: 20px;
             font-size: 12px;
+            opacity: 0.9;
         }
         
         .tabs {
             display: flex;
-            border-bottom: 2px solid #eee;
             background: #f8f8f8;
-            flex-wrap: wrap;
+            border-bottom: 2px solid #ddd;
+            flex-shrink: 0;
+            overflow-x: auto;
         }
         
         .tab-btn {
             flex: 1;
-            min-width: 120px;
-            padding: 15px 10px;
+            min-width: 90px;
+            padding: 12px 10px;
             border: none;
             background: none;
             cursor: pointer;
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 500;
             color: #666;
-            transition: all 0.3s;
+            white-space: nowrap;
             border-bottom: 3px solid transparent;
+            transition: all 0.3s;
         }
         
         .tab-btn.active {
@@ -86,8 +85,10 @@
         }
         
         .content {
-            padding: 30px 20px;
-            min-height: 400px;
+            flex: 1;
+            overflow-y: auto;
+            padding: 15px;
+            background: white;
         }
         
         .tab-pane {
@@ -99,24 +100,34 @@
         }
         
         .form-group {
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
         
         label {
             display: block;
             font-weight: 600;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
             color: #333;
+            font-size: 14px;
         }
         
         select, input {
             width: 100%;
-            padding: 12px;
+            padding: 10px;
             border: 2px solid #ddd;
-            border-radius: 8px;
+            border-radius: 6px;
             font-size: 14px;
-            transition: border-color 0.3s;
             font-family: inherit;
+            -webkit-appearance: none;
+            appearance: none;
+            background-color: white;
+        }
+        
+        select {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23667eea' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 8px center;
+            padding-right: 30px;
         }
         
         select:focus, input:focus {
@@ -126,12 +137,12 @@
         
         button {
             width: 100%;
-            padding: 16px;
+            padding: 12px;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             border: none;
-            border-radius: 8px;
-            font-size: 16px;
+            border-radius: 6px;
+            font-size: 15px;
             font-weight: 600;
             cursor: pointer;
             transition: transform 0.2s;
@@ -143,26 +154,25 @@
         
         .result {
             background: #f0f4ff;
-            padding: 20px;
-            border-radius: 8px;
-            margin-top: 20px;
-            max-height: 500px;
-            overflow-y: auto;
+            padding: 15px;
+            border-radius: 6px;
+            margin-top: 15px;
+            font-size: 13px;
+            line-height: 1.6;
         }
         
         .result h3 {
             color: #667eea;
-            margin: 15px 0 10px 0;
-            font-size: 18px;
+            margin: 10px 0 8px 0;
+            font-size: 16px;
         }
         
         .result h4 {
             color: #764ba2;
-            margin-top: 12px;
-            margin-bottom: 8px;
-            font-size: 14px;
+            margin-top: 10px;
+            margin-bottom: 6px;
+            font-size: 12px;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
         }
         
         .result ul {
@@ -171,9 +181,8 @@
         }
         
         .result li {
-            padding: 8px 0 8px 25px;
+            padding: 6px 0 6px 20px;
             color: #555;
-            font-size: 14px;
             position: relative;
             border-bottom: 1px solid #e0e0f0;
         }
@@ -193,79 +202,86 @@
         .info-box {
             background: #e8f4f8;
             border-left: 4px solid #667eea;
-            padding: 15px;
+            padding: 10px;
             margin-bottom: 15px;
             border-radius: 4px;
-            font-size: 14px;
-            line-height: 1.6;
-        }
-        
-        .plan-info {
-            background: white;
-            padding: 15px;
-            border-radius: 8px;
-            margin-bottom: 15px;
-            border: 1px solid #e0e0e0;
-        }
-        
-        .plan-info strong {
-            color: #667eea;
+            font-size: 12px;
         }
         
         .spinner {
             text-align: center;
-            padding: 20px;
+            padding: 15px;
             display: none;
+            font-size: 14px;
         }
         
         .spinner.show {
             display: block;
         }
         
-        .footer {
-            background: #f8f8f8;
-            padding: 20px;
-            text-align: center;
-            font-size: 12px;
-            color: #666;
-            border-top: 1px solid #eee;
+        .offline-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #ff6b6b;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+            display: none;
+            z-index: 100;
         }
         
-        @media (max-width: 600px) {
+        .offline-badge.show {
+            display: block;
+        }
+        
+        .plan-info {
+            background: white;
+            padding: 10px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            font-size: 13px;
+        }
+        
+        .plan-info strong {
+            color: #667eea;
+        }
+        
+        @media (max-width: 500px) {
             .header h1 {
-                font-size: 28px;
+                font-size: 22px;
             }
             
             .tab-btn {
-                min-width: 100px;
+                min-width: 70px;
                 font-size: 12px;
-            }
-            
-            .content {
-                padding: 20px 15px;
             }
         }
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="offline-badge" id="offline-badge">📡 Offline</div>
+    
+    <div class="app">
         <div class="header">
-            <h1>🏐 Plan de Entrenamiento</h1>
-            <p>Sistema Profesional de Voleibol</p>
-            <div class="version-badge">✨ Versión 4.0 - 2026</div>
+            <h1>🏐 Entrena Voleibol</h1>
+            <p>v4.0 - Funciona Offline</p>
         </div>
         
         <div class="tabs">
-            <button class="tab-btn active" onclick="switchTab(event, 'plan')">📋 Generar Plan</button>
+            <button class="tab-btn active" onclick="switchTab(event, 'plan')">📋 Plan</button>
             <button class="tab-btn" onclick="switchTab(event, 'ejercicios')">📚 Ejercicios</button>
-            <button class="tab-btn" onclick="switchTab(event, 'info')">ℹ️ Información</button>
+            <button class="tab-btn" onclick="switchTab(event, 'info')">ℹ️ Info</button>
         </div>
         
         <div class="content">
             <!-- TAB: Generar Plan -->
             <div id="plan" class="tab-pane active">
                 <div class="info-box">
-                    <strong>✨ Novedad:</strong> Entrenamientos hasta 150 minutos (2.5 horas) con +70% más ejercicios especializado en 8-10 años
+                    ✨ <strong>150 min máximo</strong> • <strong>80+ ejercicios</strong> • <strong>Offline</strong>
                 </div>
                 
                 <form id="form-plan" onsubmit="generarPlan(event)">
@@ -273,24 +289,24 @@
                         <label>👥 Rango de Edad</label>
                         <select id="edad" required>
                             <option value="">Seleccionar...</option>
-                            <option value="8-10">8-10 años (Iniciación)</option>
-                            <option value="11-13">11-13 años (Desarrollo)</option>
-                            <option value="14-16">14-16 años (Perfeccionamiento)</option>
-                            <option value="17+">17+ años (Alto Rendimiento)</option>
+                            <option value="8-10">8-10 años</option>
+                            <option value="11-13">11-13 años</option>
+                            <option value="14-16">14-16 años</option>
+                            <option value="17+">17+ años</option>
                         </select>
                     </div>
                     
                     <div class="form-group">
-                        <label>🔢 Cantidad de Jugadoras</label>
+                        <label>🔢 Jugadoras</label>
                         <input type="number" id="cantidad" min="4" max="30" value="12" required>
                     </div>
                     
                     <div class="form-group">
-                        <label>📊 Etapa de Entrenamiento</label>
+                        <label>📅 Etapa</label>
                         <select id="etapa" required>
                             <option value="">Seleccionar...</option>
                             <option value="Preparación General">Preparación General</option>
-                            <option value="Preparación Específica">Preparación Específica</option>
+                            <option value="Preparación Específica">Prep. Específica</option>
                             <option value="Precompetitiva">Precompetitiva</option>
                             <option value="Competitiva">Competitiva</option>
                             <option value="Transición">Transición</option>
@@ -298,7 +314,7 @@
                     </div>
                     
                     <div class="form-group">
-                        <label>⏱️ Duración (minutos): <strong id="tiempoVal">90</strong></label>
+                        <label>⏱️ Duración: <span id="tiempoVal">90</span> min</label>
                         <input type="range" id="tiempo" min="60" max="150" value="90" step="15" 
                                oninput="document.getElementById('tiempoVal').textContent = this.value">
                     </div>
@@ -306,18 +322,18 @@
                     <button type="submit">✨ Generar Plan</button>
                 </form>
                 
-                <div class="spinner" id="spinner">⏳ Generando plan...</div>
+                <div class="spinner" id="spinner">⏳ Generando...</div>
                 <div class="result" id="result" style="display:none;"></div>
             </div>
             
             <!-- TAB: Ejercicios -->
             <div id="ejercicios" class="tab-pane">
                 <div class="form-group">
-                    <label>📊 Selecciona una Etapa</label>
-                    <select id="etapa-ej" onchange="cargarEjercicios()">
+                    <label>📅 Etapa</label>
+                    <select id="etapa-ej" onchange="cargarEjercicios()" style="margin-bottom: 15px;">
                         <option value="">Seleccionar...</option>
                         <option value="Preparación General">Preparación General</option>
-                        <option value="Preparación Específica">Preparación Específica</option>
+                        <option value="Preparación Específica">Prep. Específica</option>
                         <option value="Precompetitiva">Precompetitiva</option>
                         <option value="Competitiva">Competitiva</option>
                         <option value="Transición">Transición</option>
@@ -329,47 +345,41 @@
             <!-- TAB: Información -->
             <div id="info" class="tab-pane">
                 <div class="result">
-                    <h3>🏐 Acerca de esta Aplicación</h3>
-                    <p style="color: #555; font-size: 14px; line-height: 1.8; margin-bottom: 15px;">
-                        <strong>Versión:</strong> 4.0 Mejorada<br>
-                        <strong>Actualización:</strong> 2 de Marzo, 2026<br>
-                        <strong>URL:</strong> plan-entrenamiento-voleibol.juliahvelez-rgb.github.io<br><br>
+                    <h3>ℹ️ Acerca de la App</h3>
+                    <p>
+                        <strong>Versión:</strong> 4.0<br>
+                        <strong>Modo:</strong> Completamente Offline ✓<br>
+                        <strong>Ejercicios:</strong> 80+ opciones<br>
+                        <strong>Duración:</strong> 60-150 minutos<br><br>
                         
-                        <strong>✨ Características:</strong><br>
-                        • Entrenamientos 60-150 minutos<br>
-                        • 5 etapas profesionales<br>
-                        • +80 ejercicios disponibles<br>
-                        • Especializado en 8-10 años<br>
-                        • Nueva categoría Coordinación<br>
-                        • Adaptable a grupos grandes/pequeños<br><br>
+                        <strong>Características:</strong><br>
+                        • Funciona sin internet<br>
+                        • Planes personalizados<br>
+                        • Especializado 8-10 años<br>
+                        • 5 etapas de entrenamiento<br>
+                        • Instalable como app<br><br>
                         
-                        <strong>📚 Etapas incluidas:</strong><br>
-                        1. <strong>Preparación General</strong> - Base técnica y coordinación<br>
-                        2. <strong>Preparación Específica</strong> - Técnica avanzada<br>
-                        3. <strong>Precompetitiva</strong> - Táctica de equipo<br>
-                        4. <strong>Competitiva</strong> - Juego competitivo<br>
-                        5. <strong>Transición</strong> - Recuperación y evaluación<br><br>
-                        
-                        <strong>🎯 Cómo usar:</strong><br>
-                        1. Selecciona el rango de edad<br>
-                        2. Ingresa cantidad de jugadoras<br>
-                        3. Elige la etapa de entrenamiento<br>
-                        4. Ajusta la duración (máx 150 min)<br>
-                        5. ¡Genera tu plan personalizado!
+                        <strong>📱 Para instalar:</strong><br>
+                        1. Toca el menú (⋮)<br>
+                        2. Selecciona "Agregar a pantalla inicio"<br>
+                        3. ¡Listo!
                     </p>
                 </div>
             </div>
         </div>
-        
-        <div class="footer">
-            <strong>🏐 Plan de Entrenamiento de Voleibol</strong><br>
-            Versión 4.0 | Desarrollado por Julia Vélez | © 2026
-        </div>
     </div>
     
     <script>
-        // Base de datos de ejercicios V4
-        const ejerciciosDB = {
+        // Verificar conexión
+        window.addEventListener('online', () => {
+            document.getElementById('offline-badge').classList.remove('show');
+        });
+        window.addEventListener('offline', () => {
+            document.getElementById('offline-badge').classList.add('show');
+        });
+        
+        // Base de datos de ejercicios
+        const EJERCICIOS = {
             'Preparación General': {
                 'Calentamiento': [
                     'Trote suave alrededor de la cancha',
@@ -378,91 +388,92 @@
                     'Juego de atrapar en parejas',
                     'Caminata lateral con brazos',
                     'Saltos ligeros en el lugar',
-                    'Giros de cintura con brazos extendidos',
+                    'Giros de cintura',
                     'Círculos de brazos',
-                    'Desplazamientos laterales suaves'
+                    'Desplazamientos laterales'
                 ],
                 'Técnica Básica': [
-                    'Posición básica y desplazamientos',
-                    'Golpe de antebrazos contra pared',
-                    'Golpe de dedos en parejas',
+                    'Posición básica',
+                    'Golpe de antebrazos',
+                    'Golpe de dedos',
                     'Saques de abajo',
                     'Recepción básica',
                     'Posición de defensa',
-                    'Movimientos de brazos con balón',
-                    'Práctica de contacto con pelota',
-                    'Pase de dedos individual',
-                    'Coordinación de brazos y piernas',
+                    'Movimientos de brazos',
+                    'Práctica con pelota',
+                    'Pase de dedos',
+                    'Coordinación brazos-piernas',
                     'Toque de antebrazos',
                     'Control del balón'
                 ],
                 'Juegos Grupales': [
-                    'Pase 10: mantener balón sin caer',
-                    'Carrera de relevos con balón',
-                    'Círculo de pases (5-6 personas)',
-                    'Mini voleibol 3 vs 3',
-                    'Pases en parejas en movimiento',
+                    'Pase 10',
+                    'Relevos con balón',
+                    'Círculo de pases',
+                    'Mini voleibol 3v3',
+                    'Pases en parejas',
                     'Juego del espejo',
-                    'Carreras con cambios dirección',
+                    'Carreras con cambios',
                     'Relevos de velocidad',
-                    'Juego de los números',
+                    'Juego de números',
                     'Pases en triángulo',
-                    'Competencia precisión pases',
-                    'Juego modificado 4 vs 4',
-                    'Voleibol cancha reducida'
+                    'Competencia de pases',
+                    'Voleibol 4v4',
+                    'Cancha reducida'
                 ],
-                'Coordinación y Habilidades': [
-                    'Saltos alternados con brazos',
+                'Coordinación': [
+                    'Saltos alternados',
                     'Equilibrio en una pierna',
-                    'Desplazamientos en línea recta',
-                    'Carreras de espalda',
+                    'Desplazamientos rectos',
+                    'Carreras hacia atrás',
                     'Saltos laterales',
                     'Coordinación ojo-mano',
-                    'Pases mientras se camina',
-                    'Lanzamientos y recepciones',
-                    'Ejercicios agilidad con conos',
-                    'Trabajo footwork básico',
-                    'Cambios rápidos dirección'
+                    'Pases caminando',
+                    'Lanzamientos',
+                    'Agilidad con conos',
+                    'Footwork básico',
+                    'Cambios de dirección'
                 ],
                 'Acondicionamiento': [
-                    'Sentadillas (3x10)',
-                    'Planchas (3x15-20 seg)',
-                    'Saltos (3x10)',
-                    'Abdominales (3x12)',
+                    'Sentadillas 3x10',
+                    'Planchas 3x20s',
+                    'Saltos 3x10',
+                    'Abdominales 3x12',
                     'Flexiones modificadas',
                     'Levantamiento piernas',
                     'Puentes glúteos',
-                    'Patadas hacia atrás',
+                    'Patadas atrás',
                     'Ejercicios equilibrio',
-                    'Trabajo core ligero',
-                    'Estiramientos finales'
+                    'Core ligero',
+                    'Estiramientos'
                 ]
             },
             'Preparación Específica': {
                 'Calentamiento': [
-                    'Trote con cambios dirección',
+                    'Trote con cambios',
                     'Desplazamientos defensivos',
                     'Pases en movimiento',
-                    'Saltos activación'
+                    'Saltos de activación'
                 ],
                 'Técnica Avanzada': [
                     'Remate zona 4',
-                    'Bloqueo individual y parejas',
+                    'Bloqueo individual',
+                    'Bloqueo en parejas',
                     'Saques arriba',
                     'Recepción formación W',
                     'Colocación zona 3'
                 ],
                 'Trabajo Grupal': [
-                    'Rotaciones posiciones',
-                    'Cadena recepción-colocación-remate',
+                    'Rotaciones',
+                    'Recepción-colocación-remate',
                     'Bloqueo-defensa-contraataque',
-                    'Juego dirigido 6 vs 6'
+                    'Juego 6v6 dirigido'
                 ],
                 'Acondicionamiento': [
-                    'Saltos cajón (3x8)',
-                    'Burpees (3x10)',
-                    'Desplazamientos (30s x3)',
-                    'Core planchas laterales'
+                    'Saltos al cajón 3x8',
+                    'Burpees 3x10',
+                    'Desplazamientos 30s',
+                    'Planchas laterales'
                 ]
             },
             'Precompetitiva': {
@@ -470,20 +481,23 @@
                     'Activación cardiovascular',
                     'Desplazamientos específicos',
                     'Pases en triángulo',
-                    'Saltos y bloqueos'
+                    'Saltos y bloqueos',
+                    'Movimientos dinámicos'
                 ],
-                'Táctica de Equipo': [
-                    'Sistemas recepción 3-1-2/3-2-1',
-                    'Sistemas ofensivos 4-2/5-1',
+                'Táctica': [
+                    'Sistemas 3-1-2',
+                    'Sistemas 3-2-1',
+                    'Ofensiva 4-2',
+                    'Ofensiva 5-1',
                     'Jugadas ensayadas',
-                    'Cobertura bloqueo',
-                    'Transiciones defensa-ataque'
+                    'Cobertura de bloqueo',
+                    'Transiciones'
                 ],
                 'Simulación': [
-                    'Set 6 vs 6',
-                    'Situaciones presión',
+                    'Set 6v6',
+                    'Situaciones de presión',
                     'Práctica rotaciones',
-                    'Estrategias formaciones'
+                    'Estrategias'
                 ],
                 'Acondicionamiento': [
                     'Intervalos alta intensidad',
@@ -496,7 +510,7 @@
                 'Calentamiento': [
                     'Rutina precompetencia',
                     'Activación neuromuscular',
-                    'Práctica remate saque',
+                    'Práctica remate',
                     'Mentalización'
                 ],
                 'Mantenimiento': [
@@ -507,37 +521,32 @@
                 ],
                 'Estrategia': [
                     'Análisis rival',
-                    'Comunicación cancha',
+                    'Comunicación',
                     'Rotaciones optimizadas',
-                    'Gestión sustituciones'
+                    'Cambios'
                 ],
                 'Recuperación': [
-                    'Estiramientos prolongados',
-                    'Trabajo movilidad',
-                    'Ejercicios descarga',
+                    'Estiramientos',
+                    'Movilidad',
+                    'Descarga',
                     'Hidratación'
                 ]
             },
             'Transición': {
-                'Calentamiento': [
-                    'Actividad recreativa',
-                    'Juegos lúdicos',
-                    'Movilidad relajada'
-                ],
                 'Recreativo': [
                     'Vóley playa',
                     'Juegos modificados',
-                    'Actividades multideportivas',
+                    'Actividades multi-deporte',
                     'Competencias divertidas'
                 ],
-                'Recuperación Activa': [
-                    'Yoga atletas',
+                'Recuperación': [
+                    'Yoga',
                     'Natación',
                     'Trote suave',
                     'Estiramientos'
                 ],
                 'Evaluación': [
-                    'Reflexión temporada',
+                    'Reflexión',
                     'Evaluación progreso',
                     'Metas personales',
                     'Feedback grupal'
@@ -545,10 +554,10 @@
             }
         };
         
-        function switchTab(event, tabName) {
+        function switchTab(event, tab) {
             document.querySelectorAll('.tab-pane').forEach(el => el.classList.remove('active'));
             document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
-            document.getElementById(tabName).classList.add('active');
+            document.getElementById(tab).classList.add('active');
             event.target.classList.add('active');
         }
         
@@ -561,7 +570,7 @@
             const tiempo = document.getElementById('tiempo').value;
             
             if (!edad || !etapa) {
-                alert('Por favor completa todos los campos');
+                alert('Completa los campos');
                 return;
             }
             
@@ -569,59 +578,81 @@
             document.getElementById('result').style.display = 'none';
             
             setTimeout(() => {
-                const ejercicios = ejerciciosDB[etapa] || {};
-                const numSecciones = Object.keys(ejercicios).length;
-                const tiempoPorSeccion = Math.floor(tiempo / numSecciones);
+                const ejercicios = EJERCICIOS[etapa] || {};
+                const secciones = Object.keys(ejercicios).length;
+                const minPorSeccion = Math.floor(tiempo / secciones);
                 
-                let html = `<h3>✅ Plan Generado</h3>`;
-                html += `<div class="plan-info">`;
+                let html = '<h3>✅ Plan Generado</h3>';
+                html += '<div class="plan-info">';
                 html += `<strong>Fecha:</strong> ${new Date().toLocaleDateString('es-ES')}<br>`;
                 html += `<strong>Edad:</strong> ${edad}<br>`;
                 html += `<strong>Jugadoras:</strong> ${cantidad}<br>`;
-                html += `<strong>Duración total:</strong> ${tiempo} minutos`;
-                html += `</div>`;
+                html += `<strong>Duración:</strong> ${tiempo} min`;
+                html += '</div>';
+                html += '<h3>📋 Ejercicios</h3>';
                 
-                html += `<h3>📋 Ejercicios del Plan</h3>`;
-                
-                Object.entries(ejercicios).forEach(([categoria, lista]) => {
-                    const numEjercicios = Math.max(1, Math.min(lista.length, Math.ceil(tiempoPorSeccion / 15)));
-                    html += `<h4>${categoria}</h4>`;
-                    html += `<ul>`;
-                    lista.slice(0, numEjercicios).forEach(ej => {
+                Object.entries(ejercicios).forEach(([cat, lista]) => {
+                    const num = Math.max(2, Math.ceil(minPorSeccion / 10));
+                    html += `<h4>${cat}</h4><ul>`;
+                    lista.slice(0, num).forEach(ej => {
                         html += `<li>${ej}</li>`;
                     });
-                    html += `</ul>`;
+                    html += '</ul>';
                 });
                 
                 document.getElementById('result').innerHTML = html;
                 document.getElementById('result').style.display = 'block';
                 document.getElementById('spinner').classList.remove('show');
-            }, 500);
+            }, 300);
         }
         
         function cargarEjercicios() {
             const etapa = document.getElementById('etapa-ej').value;
             if (!etapa) return;
             
-            const ejercicios = ejerciciosDB[etapa] || {};
-            let html = `<h3>📚 Ejercicios - ${etapa}</h3>`;
+            const ejercicios = EJERCICIOS[etapa];
+            let html = `<h3>📚 ${etapa}</h3>`;
             
-            Object.entries(ejercicios).forEach(([categoria, lista]) => {
-                html += `<h4>${categoria}</h4>`;
-                html += `<ul>`;
+            Object.entries(ejercicios).forEach(([cat, lista]) => {
+                html += `<h4>${cat}</h4><ul>`;
                 lista.forEach(ej => {
                     html += `<li>${ej}</li>`;
                 });
-                html += `</ul>`;
+                html += '</ul>';
             });
             
             document.getElementById('result-ej').innerHTML = html;
         }
         
-        // Service Worker
+        // Service Worker para offline
         if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('static/js/sw.js').catch(() => {});
+            navigator.serviceWorker.register('data:application/javascript,' + encodeURIComponent(`
+                self.addEventListener('install', (event) => {
+                    self.skipWaiting();
+                });
+                self.addEventListener('activate', (event) => {
+                    event.waitUntil(clients.claim());
+                });
+                self.addEventListener('fetch', (event) => {
+                    if (event.request.method === 'GET') {
+                        event.respondWith(
+                            fetch(event.request).catch(() => {
+                                return new Response('Offline - App disponible', {
+                                    headers: {'Content-Type': 'text/html'}
+                                });
+                            })
+                        );
+                    }
+                });
+            `)).catch(() => {});
         }
+        
+        // PWA Install
+        let deferredPrompt;
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPrompt = e;
+        });
     </script>
 </body>
 </html>
