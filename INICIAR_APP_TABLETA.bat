@@ -16,6 +16,6 @@ echo    ⏳ Espera unos segundos...
 echo.
 timeout /t 2 /nobreak > nul
 
-python app_tableta.py
+python app_tableta_simple.py
 
 pause

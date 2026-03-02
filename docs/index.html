@@ -1,240 +1,627 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
-	<!-- PWA Meta Tags -->
-	<meta name="application-name" content="Entrena Voleibol WH">
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-	<meta name="apple-mobile-web-app-title" content="Entrena Voleibol WH">
-	<meta name="mobile-web-app-capable" content="yes">
-	<meta name="theme-color" content="#ff6b9d">
-	<meta name="msapplication-TileColor" content="#ff6b9d">
-	<meta name="msapplication-tap-highlight" content="no">
-	<meta name="description" content="Sistema profesional de planificación de entrenamientos de voleibol para entrenadores">
-	<meta name="format-detection" content="telephone=no">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=no, viewport-fit=cover">
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-	<meta name="apple-mobile-web-app-title" content="Entrena Voleibol WH">
-	<meta name="mobile-web-app-capable" content="yes">
-	<meta name="HandheldFriendly" content="true">
-	<meta name="mobile-web-app-capable" content="yes">
-	<meta name="apple-touch-fullscreen" content="yes">
-	<!-- PWA Manifest -->
-	<link rel="manifest" href="static/manifest.json">
-	<!-- Icons - Múltiples tamaños -->
-	<link rel="icon" type="image/png" sizes="16x16" href="static/img/icon-192.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="static/img/icon-192.png">
-	<link rel="icon" type="image/png" sizes="192x192" href="static/img/icon-192.png">
-	<link rel="icon" type="image/png" sizes="512x512" href="static/img/icon-512.png">
-	<!-- Apple Touch Icons -->
-	<link rel="apple-touch-icon" href="static/img/icon-152.png">
-	<link rel="apple-touch-icon" sizes="152x152" href="static/img/icon-152.png">
-	<link rel="apple-touch-icon" sizes="180x180" href="static/img/icon-192.png">
-	<!-- Android Chrome -->
-	<meta name="mobile-web-app-title" content="Entrena Voleibol WH">
-	<title>🏐 Entrena Voleibol WH</title>
-	<link rel="stylesheet" href="static/css/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Plan de Entrenamiento de Voleibol Profesional - Versión 4.0">
+    <title>🏐 Plan de Entrenamiento de Voleibol</title>
+    <meta name="theme-color" content="#667eea">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="manifest" href="static/manifest.json">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 10px;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            font-size: 16px;
+            opacity: 0.9;
+            margin-bottom: 10px;
+        }
+        
+        .version-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 12px;
+        }
+        
+        .tabs {
+            display: flex;
+            border-bottom: 2px solid #eee;
+            background: #f8f8f8;
+            flex-wrap: wrap;
+        }
+        
+        .tab-btn {
+            flex: 1;
+            min-width: 120px;
+            padding: 15px 10px;
+            border: none;
+            background: none;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            color: #666;
+            transition: all 0.3s;
+            border-bottom: 3px solid transparent;
+        }
+        
+        .tab-btn.active {
+            color: #667eea;
+            border-bottom-color: #667eea;
+            background: white;
+        }
+        
+        .content {
+            padding: 30px 20px;
+            min-height: 400px;
+        }
+        
+        .tab-pane {
+            display: none;
+        }
+        
+        .tab-pane.active {
+            display: block;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #333;
+        }
+        
+        select, input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: border-color 0.3s;
+            font-family: inherit;
+        }
+        
+        select:focus, input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        
+        button {
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        
+        button:active {
+            transform: scale(0.98);
+        }
+        
+        .result {
+            background: #f0f4ff;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            max-height: 500px;
+            overflow-y: auto;
+        }
+        
+        .result h3 {
+            color: #667eea;
+            margin: 15px 0 10px 0;
+            font-size: 18px;
+        }
+        
+        .result h4 {
+            color: #764ba2;
+            margin-top: 12px;
+            margin-bottom: 8px;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .result ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .result li {
+            padding: 8px 0 8px 25px;
+            color: #555;
+            font-size: 14px;
+            position: relative;
+            border-bottom: 1px solid #e0e0f0;
+        }
+        
+        .result li:last-child {
+            border-bottom: none;
+        }
+        
+        .result li:before {
+            content: "✓";
+            color: #667eea;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        .info-box {
+            background: #e8f4f8;
+            border-left: 4px solid #667eea;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        
+        .plan-info {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #e0e0e0;
+        }
+        
+        .plan-info strong {
+            color: #667eea;
+        }
+        
+        .spinner {
+            text-align: center;
+            padding: 20px;
+            display: none;
+        }
+        
+        .spinner.show {
+            display: block;
+        }
+        
+        .footer {
+            background: #f8f8f8;
+            padding: 20px;
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+            border-top: 1px solid #eee;
+        }
+        
+        @media (max-width: 600px) {
+            .header h1 {
+                font-size: 28px;
+            }
+            
+            .tab-btn {
+                min-width: 100px;
+                font-size: 12px;
+            }
+            
+            .content {
+                padding: 20px 15px;
+            }
+        }
+    </style>
 </head>
 <body>
-	<!-- Header -->
-	<header class="header">
-		<div class="container">
-			<h1 class="title">🏐 Entrena Voleibol WH</h1>
-			<p class="subtitle">Sistema de planificación para tablets</p>
-		</div>
-	</header>
-	<!-- Botón de instalación PWA -->
-	<div id="install-prompt" class="install-prompt" style="display: none;">
-		<div class="container">
-			<div class="install-card">
-				<div class="install-icon">📱</div>
-				<div class="install-text">
-					<h3>Instalar Aplicación</h3>
-					<p>Instala esta app para usarla sin conexión y como app independiente</p>
-				</div>
-				<div class="install-actions">
-					<button id="install-button" class="btn-install">Instalar Ahora</button>
-					<button id="dismiss-button" class="btn-dismiss">Más tarde</button>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- Navegación por pestañas -->
-	<nav class="tabs">
-		<button class="tab-btn active" data-tab="generar">📋 Generar Plan</button>
-		<button class="tab-btn" data-tab="consultar">📚 Consultar Ejercicios</button>
-		<button class="tab-btn" data-tab="diagrama">🏐 Diagramas</button>
-	</nav>
-	<!-- Contenido principal -->
-	<main class="main-content">
-		<div class="container">
-			<!-- TAB 1: Generar Plan -->
-			<section id="tab-generar" class="tab-content active">
-				<div class="card">
-					<h2 class="card-title">Crear Plan de Entrenamiento</h2>
-					<form id="form-plan" class="form">
-						<div class="form-group">
-							<label class="form-label">👥 Rango de Edad</label>
-							<select id="edad" name="edad" class="form-control" required>
-								<option value="">Seleccionar...</option>
-								<option value="8-10">8-10 años (Iniciación)</option>
-								<option value="11-13">11-13 años (Desarrollo)</option>
-								<option value="14-16">14-16 años (Perfeccionamiento)</option>
-								<option value="17+">17+ años (Alto Rendimiento)</option>
-							</select>
-						</div>
-						<div class="form-group">
-							<label class="form-label">🔢 Cantidad de Jugadoras</label>
-							<input type="number" id="cantidad" name="cantidad" class="form-control" min="4" max="30" value="12" required>
-							<small class="form-hint">4-30 jugadoras</small>
-						</div>
-						<div class="form-group">
-							<label class="form-label">📅 Etapa de la Temporada</label>
-							<select id="etapa" name="etapa" class="form-control" required>
-								<option value="">Seleccionar...</option>
-								<option value="Preparación General">Preparación General</option>
-								<option value="Preparación Específica">Preparación Específica</option>
-								<option value="Precompetitiva">Precompetitiva</option>
-								<option value="Competitiva">Competitiva</option>
-								<option value="Transición">Transición</option>
-							</select>
-						</div>
-						<div class="form-group">
-							<label class="form-label">⚡ Fundamento (Opcional)</label>
-							<select id="fundamento" name="fundamento" class="form-control">
-								<option value="todos">Todos los fundamentos</option>
-								<option value="saque">🏐 Saque</option>
-								<option value="recepcion">🤲 Recepción</option>
-								<option value="armado">🙌 Armado/Levantada</option>
-								<option value="ataque">⚡ Ataque/Remate</option>
-								<option value="bloqueo">🛡️ Bloqueo</option>
-								<option value="defensa">🏃 Defensa</option>
-							</select>
-						</div>
-						<div class="form-group">
-							<label class="form-label">⏱️ Duración del Entrenamiento (min)</label>
-							<input type="range" id="tiempo" name="tiempo" class="form-range" min="60" max="150" value="90" step="15">
-							<div class="range-value" id="tiempo-value">90 min</div>
-						</div>
-						<button type="submit" class="btn btn-primary btn-large">🎯 Generar Plan de Entrenamiento</button>
-					</form>
-				</div>
-				<!-- Resultado del plan -->
-				<div id="resultado-plan" class="result-container" style="display: none;">
-					<div class="card">
-						<div class="card-header">
-							<h2 class="card-title">✅ Plan de Entrenamiento Generado</h2>
-							<div class="action-buttons">
-								<button class="btn btn-secondary" onclick="imprimirPlan()">🖨️ Imprimir</button>
-								<button class="btn btn-secondary" onclick="compartirPlan()">📤 Compartir</button>
-								<button class="btn btn-outline" onclick="nuevoPlan()">🔄 Nuevo Plan</button>
-							</div>
-						</div>
-						<div id="plan-detalles" class="plan-details"></div>
-					</div>
-				</div>
-			</section>
-			<!-- TAB 2: Consultar Ejercicios -->
-			<section id="tab-consultar" class="tab-content">
-				<div class="card">
-					<h2 class="card-title">Consultar Base de Ejercicios</h2>
-					<div class="form-group">
-						<label class="form-label">📅 Seleccionar Etapa</label>
-						<select id="etapa-consulta" class="form-control">
-							<option value="">Seleccionar...</option>
-							<option value="Preparación General">Preparación General</option>
-							<option value="Preparación Específica">Preparación Específica</option>
-							<option value="Precompetitiva">Precompetitiva</option>
-							<option value="Competitiva">Competitiva</option>
-							<option value="Transición">Transición</option>
-						</select>
-					</div>
-					<div id="ejercicios-lista" class="ejercicios-container"></div>
-				</div>
-			</section>
-			<!-- TAB 3: Diagramas -->
-			<section id="tab-diagrama" class="tab-content">
-				<div class="card">
-					<h2 class="card-title">🏐 Diagramas de Cancha</h2>
-					<div class="diagrams-grid">
-						<button class="diagram-btn" onclick="mostrarDiagrama('cancha')">
-							<span class="diagram-icon">🏐</span>
-							<span class="diagram-label">Cancha Completa</span>
-						</button>
-						<button class="diagram-btn" onclick="mostrarDiagrama('formacion-w')">
-							<span class="diagram-icon">⭕</span>
-							<span class="diagram-label">Formación W</span>
-						</button>
-						<button class="diagram-btn" onclick="mostrarDiagrama('formacion-321')">
-							<span class="diagram-icon">🔷</span>
-							<span class="diagram-label">Formación 3-2-1</span>
-						</button>
-						<button class="diagram-btn" onclick="mostrarDiagrama('rotaciones')">
-							<span class="diagram-icon">🔄</span>
-							<span class="diagram-label">Rotaciones</span>
-						</button>
-					</div>
-					<div id="diagrama-display" class="diagram-display"></div>
-				</div>
-			</section>
-		</div>
-
-	<!-- Barra inferior tipo app -->
-	<nav class="appbar">
-			<button class="appbar-btn" id="appbar-generar" title="Generar Plan" onclick="document.querySelector('.tab-btn[data-tab=generar]').click();"><span>📋</span></button>
-			<button class="appbar-btn" id="appbar-consultar" title="Consultar Ejercicios" onclick="document.querySelector('.tab-btn[data-tab=consultar]').click();"><span>📚</span></button>
-			<button class="appbar-btn" id="appbar-diagrama" title="Diagramas" onclick="document.querySelector('.tab-btn[data-tab=diagrama]').click();"><span>🏐</span></button>
-	</nav>
-
-	<!-- Loading overlay -->
-	<div id="loading" class="loading-overlay" style="display: none;">
-			<div class="spinner"></div>
-			<p>Generando plan...</p>
-	</div>
-	<!-- Toast notifications -->
-	<div id="toast" class="toast"></div>
-	<script src="static/js/app.js"></script>
-	<script>
-		// Appbar active state
-		function updateAppbarActive(tab) {
-			document.querySelectorAll('.appbar-btn').forEach(btn => btn.classList.remove('active'));
-			if(tab === 'generar') document.getElementById('appbar-generar').classList.add('active');
-			if(tab === 'consultar') document.getElementById('appbar-consultar').classList.add('active');
-			if(tab === 'diagrama') document.getElementById('appbar-diagrama').classList.add('active');
-		}
-		document.querySelectorAll('.tab-btn').forEach(btn => {
-			btn.addEventListener('click', function() {
-				updateAppbarActive(this.dataset.tab);
-			});
-		});
-		updateAppbarActive('generar');
-		// Service Worker
-		if ('serviceWorker' in navigator) {
-			navigator.serviceWorker.register('static/js/sw.js');
-		}
-		// PWA Install Prompt personalizado
-		let deferredPrompt;
-		window.addEventListener('beforeinstallprompt', (e) => {
-			e.preventDefault();
-			deferredPrompt = e;
-			document.getElementById('install-prompt').style.display = 'block';
-		});
-		document.getElementById('install-button').addEventListener('click', async () => {
-			if (deferredPrompt) {
-				deferredPrompt.prompt();
-				const { outcome } = await deferredPrompt.userChoice;
-				if (outcome === 'accepted') {
-					document.getElementById('install-prompt').style.display = 'none';
-				}
-				deferredPrompt = null;
-			}
-		});
-		document.getElementById('dismiss-button').addEventListener('click', () => {
-			document.getElementById('install-prompt').style.display = 'none';
-		});
-	</script>
-	</body>
-	</html>
+    <div class="container">
+        <div class="header">
+            <h1>🏐 Plan de Entrenamiento</h1>
+            <p>Sistema Profesional de Voleibol</p>
+            <div class="version-badge">✨ Versión 4.0 - 2026</div>
+        </div>
+        
+        <div class="tabs">
+            <button class="tab-btn active" onclick="switchTab(event, 'plan')">📋 Generar Plan</button>
+            <button class="tab-btn" onclick="switchTab(event, 'ejercicios')">📚 Ejercicios</button>
+            <button class="tab-btn" onclick="switchTab(event, 'info')">ℹ️ Información</button>
+        </div>
+        
+        <div class="content">
+            <!-- TAB: Generar Plan -->
+            <div id="plan" class="tab-pane active">
+                <div class="info-box">
+                    <strong>✨ Novedad:</strong> Entrenamientos hasta 150 minutos (2.5 horas) con +70% más ejercicios especializado en 8-10 años
+                </div>
+                
+                <form id="form-plan" onsubmit="generarPlan(event)">
+                    <div class="form-group">
+                        <label>👥 Rango de Edad</label>
+                        <select id="edad" required>
+                            <option value="">Seleccionar...</option>
+                            <option value="8-10">8-10 años (Iniciación)</option>
+                            <option value="11-13">11-13 años (Desarrollo)</option>
+                            <option value="14-16">14-16 años (Perfeccionamiento)</option>
+                            <option value="17+">17+ años (Alto Rendimiento)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>🔢 Cantidad de Jugadoras</label>
+                        <input type="number" id="cantidad" min="4" max="30" value="12" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>📊 Etapa de Entrenamiento</label>
+                        <select id="etapa" required>
+                            <option value="">Seleccionar...</option>
+                            <option value="Preparación General">Preparación General</option>
+                            <option value="Preparación Específica">Preparación Específica</option>
+                            <option value="Precompetitiva">Precompetitiva</option>
+                            <option value="Competitiva">Competitiva</option>
+                            <option value="Transición">Transición</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>⏱️ Duración (minutos): <strong id="tiempoVal">90</strong></label>
+                        <input type="range" id="tiempo" min="60" max="150" value="90" step="15" 
+                               oninput="document.getElementById('tiempoVal').textContent = this.value">
+                    </div>
+                    
+                    <button type="submit">✨ Generar Plan</button>
+                </form>
+                
+                <div class="spinner" id="spinner">⏳ Generando plan...</div>
+                <div class="result" id="result" style="display:none;"></div>
+            </div>
+            
+            <!-- TAB: Ejercicios -->
+            <div id="ejercicios" class="tab-pane">
+                <div class="form-group">
+                    <label>📊 Selecciona una Etapa</label>
+                    <select id="etapa-ej" onchange="cargarEjercicios()">
+                        <option value="">Seleccionar...</option>
+                        <option value="Preparación General">Preparación General</option>
+                        <option value="Preparación Específica">Preparación Específica</option>
+                        <option value="Precompetitiva">Precompetitiva</option>
+                        <option value="Competitiva">Competitiva</option>
+                        <option value="Transición">Transición</option>
+                    </select>
+                </div>
+                <div class="result" id="result-ej"></div>
+            </div>
+            
+            <!-- TAB: Información -->
+            <div id="info" class="tab-pane">
+                <div class="result">
+                    <h3>🏐 Acerca de esta Aplicación</h3>
+                    <p style="color: #555; font-size: 14px; line-height: 1.8; margin-bottom: 15px;">
+                        <strong>Versión:</strong> 4.0 Mejorada<br>
+                        <strong>Actualización:</strong> 2 de Marzo, 2026<br>
+                        <strong>URL:</strong> plan-entrenamiento-voleibol.juliahvelez-rgb.github.io<br><br>
+                        
+                        <strong>✨ Características:</strong><br>
+                        • Entrenamientos 60-150 minutos<br>
+                        • 5 etapas profesionales<br>
+                        • +80 ejercicios disponibles<br>
+                        • Especializado en 8-10 años<br>
+                        • Nueva categoría Coordinación<br>
+                        • Adaptable a grupos grandes/pequeños<br><br>
+                        
+                        <strong>📚 Etapas incluidas:</strong><br>
+                        1. <strong>Preparación General</strong> - Base técnica y coordinación<br>
+                        2. <strong>Preparación Específica</strong> - Técnica avanzada<br>
+                        3. <strong>Precompetitiva</strong> - Táctica de equipo<br>
+                        4. <strong>Competitiva</strong> - Juego competitivo<br>
+                        5. <strong>Transición</strong> - Recuperación y evaluación<br><br>
+                        
+                        <strong>🎯 Cómo usar:</strong><br>
+                        1. Selecciona el rango de edad<br>
+                        2. Ingresa cantidad de jugadoras<br>
+                        3. Elige la etapa de entrenamiento<br>
+                        4. Ajusta la duración (máx 150 min)<br>
+                        5. ¡Genera tu plan personalizado!
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <strong>🏐 Plan de Entrenamiento de Voleibol</strong><br>
+            Versión 4.0 | Desarrollado por Julia Vélez | © 2026
+        </div>
+    </div>
+    
+    <script>
+        // Base de datos de ejercicios V4
+        const ejerciciosDB = {
+            'Preparación General': {
+                'Calentamiento': [
+                    'Trote suave alrededor de la cancha',
+                    'Movilidad articular completa',
+                    'Estiramientos dinámicos',
+                    'Juego de atrapar en parejas',
+                    'Caminata lateral con brazos',
+                    'Saltos ligeros en el lugar',
+                    'Giros de cintura con brazos extendidos',
+                    'Círculos de brazos',
+                    'Desplazamientos laterales suaves'
+                ],
+                'Técnica Básica': [
+                    'Posición básica y desplazamientos',
+                    'Golpe de antebrazos contra pared',
+                    'Golpe de dedos en parejas',
+                    'Saques de abajo',
+                    'Recepción básica',
+                    'Posición de defensa',
+                    'Movimientos de brazos con balón',
+                    'Práctica de contacto con pelota',
+                    'Pase de dedos individual',
+                    'Coordinación de brazos y piernas',
+                    'Toque de antebrazos',
+                    'Control del balón'
+                ],
+                'Juegos Grupales': [
+                    'Pase 10: mantener balón sin caer',
+                    'Carrera de relevos con balón',
+                    'Círculo de pases (5-6 personas)',
+                    'Mini voleibol 3 vs 3',
+                    'Pases en parejas en movimiento',
+                    'Juego del espejo',
+                    'Carreras con cambios dirección',
+                    'Relevos de velocidad',
+                    'Juego de los números',
+                    'Pases en triángulo',
+                    'Competencia precisión pases',
+                    'Juego modificado 4 vs 4',
+                    'Voleibol cancha reducida'
+                ],
+                'Coordinación y Habilidades': [
+                    'Saltos alternados con brazos',
+                    'Equilibrio en una pierna',
+                    'Desplazamientos en línea recta',
+                    'Carreras de espalda',
+                    'Saltos laterales',
+                    'Coordinación ojo-mano',
+                    'Pases mientras se camina',
+                    'Lanzamientos y recepciones',
+                    'Ejercicios agilidad con conos',
+                    'Trabajo footwork básico',
+                    'Cambios rápidos dirección'
+                ],
+                'Acondicionamiento': [
+                    'Sentadillas (3x10)',
+                    'Planchas (3x15-20 seg)',
+                    'Saltos (3x10)',
+                    'Abdominales (3x12)',
+                    'Flexiones modificadas',
+                    'Levantamiento piernas',
+                    'Puentes glúteos',
+                    'Patadas hacia atrás',
+                    'Ejercicios equilibrio',
+                    'Trabajo core ligero',
+                    'Estiramientos finales'
+                ]
+            },
+            'Preparación Específica': {
+                'Calentamiento': [
+                    'Trote con cambios dirección',
+                    'Desplazamientos defensivos',
+                    'Pases en movimiento',
+                    'Saltos activación'
+                ],
+                'Técnica Avanzada': [
+                    'Remate zona 4',
+                    'Bloqueo individual y parejas',
+                    'Saques arriba',
+                    'Recepción formación W',
+                    'Colocación zona 3'
+                ],
+                'Trabajo Grupal': [
+                    'Rotaciones posiciones',
+                    'Cadena recepción-colocación-remate',
+                    'Bloqueo-defensa-contraataque',
+                    'Juego dirigido 6 vs 6'
+                ],
+                'Acondicionamiento': [
+                    'Saltos cajón (3x8)',
+                    'Burpees (3x10)',
+                    'Desplazamientos (30s x3)',
+                    'Core planchas laterales'
+                ]
+            },
+            'Precompetitiva': {
+                'Calentamiento': [
+                    'Activación cardiovascular',
+                    'Desplazamientos específicos',
+                    'Pases en triángulo',
+                    'Saltos y bloqueos'
+                ],
+                'Táctica de Equipo': [
+                    'Sistemas recepción 3-1-2/3-2-1',
+                    'Sistemas ofensivos 4-2/5-1',
+                    'Jugadas ensayadas',
+                    'Cobertura bloqueo',
+                    'Transiciones defensa-ataque'
+                ],
+                'Simulación': [
+                    'Set 6 vs 6',
+                    'Situaciones presión',
+                    'Práctica rotaciones',
+                    'Estrategias formaciones'
+                ],
+                'Acondicionamiento': [
+                    'Intervalos alta intensidad',
+                    'Circuito potencia',
+                    'Saltos explosivos',
+                    'Recuperación activa'
+                ]
+            },
+            'Competitiva': {
+                'Calentamiento': [
+                    'Rutina precompetencia',
+                    'Activación neuromuscular',
+                    'Práctica remate saque',
+                    'Mentalización'
+                ],
+                'Mantenimiento': [
+                    'Repaso jugadas clave',
+                    'Ajustes tácticos',
+                    'Situaciones críticas',
+                    'Trabajo por posición'
+                ],
+                'Estrategia': [
+                    'Análisis rival',
+                    'Comunicación cancha',
+                    'Rotaciones optimizadas',
+                    'Gestión sustituciones'
+                ],
+                'Recuperación': [
+                    'Estiramientos prolongados',
+                    'Trabajo movilidad',
+                    'Ejercicios descarga',
+                    'Hidratación'
+                ]
+            },
+            'Transición': {
+                'Calentamiento': [
+                    'Actividad recreativa',
+                    'Juegos lúdicos',
+                    'Movilidad relajada'
+                ],
+                'Recreativo': [
+                    'Vóley playa',
+                    'Juegos modificados',
+                    'Actividades multideportivas',
+                    'Competencias divertidas'
+                ],
+                'Recuperación Activa': [
+                    'Yoga atletas',
+                    'Natación',
+                    'Trote suave',
+                    'Estiramientos'
+                ],
+                'Evaluación': [
+                    'Reflexión temporada',
+                    'Evaluación progreso',
+                    'Metas personales',
+                    'Feedback grupal'
+                ]
+            }
+        };
+        
+        function switchTab(event, tabName) {
+            document.querySelectorAll('.tab-pane').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+            document.getElementById(tabName).classList.add('active');
+            event.target.classList.add('active');
+        }
+        
+        function generarPlan(event) {
+            event.preventDefault();
+            
+            const edad = document.getElementById('edad').value;
+            const cantidad = document.getElementById('cantidad').value;
+            const etapa = document.getElementById('etapa').value;
+            const tiempo = document.getElementById('tiempo').value;
+            
+            if (!edad || !etapa) {
+                alert('Por favor completa todos los campos');
+                return;
+            }
+            
+            document.getElementById('spinner').classList.add('show');
+            document.getElementById('result').style.display = 'none';
+            
+            setTimeout(() => {
+                const ejercicios = ejerciciosDB[etapa] || {};
+                const numSecciones = Object.keys(ejercicios).length;
+                const tiempoPorSeccion = Math.floor(tiempo / numSecciones);
+                
+                let html = `<h3>✅ Plan Generado</h3>`;
+                html += `<div class="plan-info">`;
+                html += `<strong>Fecha:</strong> ${new Date().toLocaleDateString('es-ES')}<br>`;
+                html += `<strong>Edad:</strong> ${edad}<br>`;
+                html += `<strong>Jugadoras:</strong> ${cantidad}<br>`;
+                html += `<strong>Duración total:</strong> ${tiempo} minutos`;
+                html += `</div>`;
+                
+                html += `<h3>📋 Ejercicios del Plan</h3>`;
+                
+                Object.entries(ejercicios).forEach(([categoria, lista]) => {
+                    const numEjercicios = Math.max(1, Math.min(lista.length, Math.ceil(tiempoPorSeccion / 15)));
+                    html += `<h4>${categoria}</h4>`;
+                    html += `<ul>`;
+                    lista.slice(0, numEjercicios).forEach(ej => {
+                        html += `<li>${ej}</li>`;
+                    });
+                    html += `</ul>`;
+                });
+                
+                document.getElementById('result').innerHTML = html;
+                document.getElementById('result').style.display = 'block';
+                document.getElementById('spinner').classList.remove('show');
+            }, 500);
+        }
+        
+        function cargarEjercicios() {
+            const etapa = document.getElementById('etapa-ej').value;
+            if (!etapa) return;
+            
+            const ejercicios = ejerciciosDB[etapa] || {};
+            let html = `<h3>📚 Ejercicios - ${etapa}</h3>`;
+            
+            Object.entries(ejercicios).forEach(([categoria, lista]) => {
+                html += `<h4>${categoria}</h4>`;
+                html += `<ul>`;
+                lista.forEach(ej => {
+                    html += `<li>${ej}</li>`;
+                });
+                html += `</ul>`;
+            });
+            
+            document.getElementById('result-ej').innerHTML = html;
+        }
+        
+        // Service Worker
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('static/js/sw.js').catch(() => {});
+        }
+    </script>
+</body>
+</html>
