@@ -6,8 +6,17 @@ Optimizada para tabletas (Android, iOS, Windows)
 from flask import Flask, jsonify, request
 from datetime import datetime
 import json
+import os
 
 app = Flask(__name__)
+
+# Logging simplificado
+def log_request(path, method, status_code):
+    timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+    print(f"[{timestamp}] {method} {path} -> {status_code}")
+    sys.stdout.flush()
+
+import sys
 
 # Base de datos de ejercicios
 EJERCICIOS_DB = {
@@ -452,6 +461,19 @@ HTML_CONTENT = '''
                         <input type="number" id="tiempo" min="60" max="150" value="90" required>
                     </div>
                     
+                    <div class="form-group">
+                        <label>⚡ Fundamento (opcional)</label>
+                        <select id="fundamento">
+                            <option value="">Todos</option>
+                            <option value="saque">🏐 Saque</option>
+                            <option value="recepcion">🤲 Recepción</option>
+                            <option value="armado">🙌 Armado</option>
+                            <option value="ataque">⚡ Ataque</option>
+                            <option value="bloqueo">🛡️ Bloqueo</option>
+                            <option value="defensa">🏃 Defensa</option>
+                        </select>
+                    </div>
+                    
                     <button type="submit">Generar Plan</button>
                 </form>
                 
@@ -511,6 +533,7 @@ HTML_CONTENT = '''
             const cantidad = document.getElementById('cantidad').value;
             const etapa = document.getElementById('etapa').value;
             const tiempo = document.getElementById('tiempo').value;
+            const fundamento = document.getElementById('fundamento').value;
             
             document.getElementById('spinner').classList.add('show');
             document.getElementById('result').style.display = 'none';
@@ -519,7 +542,7 @@ HTML_CONTENT = '''
                 const response = await fetch('/api/generar-plan', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ edad, cantidad, etapa, tiempo })
+                    body: JSON.stringify({ edad, cantidad, etapa, tiempo, fundamento })
                 });
                 
                 const data = await response.json();
@@ -527,6 +550,10 @@ HTML_CONTENT = '''
                 let html = `<h3>✅ Plan Generado</h3>`;
                 html += `<p><strong>Fecha:</strong> ${data.fecha}</p>`;
                 html += `<p><strong>Duración:</strong> ${tiempo} minutos</p>`;
+                if (fundamento) {
+                    const nombr = {'saque': '🏐 Saque', 'recepcion': '🤲 Recepción', 'armado': '🙌 Armado', 'ataque': '⚡ Ataque', 'bloqueo': '🛡️ Bloqueo', 'defensa': '🏃 Defensa'};
+                    html += `<p><strong>Enfoque:</strong> ${nombr[fundamento]}</p>`;
+                }
                 html += `<h3 style="margin-top: 15px;">Ejercicios:</h3>`;
                 
                 if (data.secciones) {
@@ -593,6 +620,7 @@ def generar_plan():
     cantidad = int(data.get('cantidad', 12))
     etapa = data.get('etapa')
     tiempo = int(data.get('tiempo', 90))
+    fundamento = data.get('fundamento', '')
     
     plan = {
         'fecha': datetime.now().strftime('%d/%m/%Y %H:%M'),
@@ -600,11 +628,33 @@ def generar_plan():
         'cantidad': cantidad,
         'etapa': etapa,
         'tiempo': tiempo,
+        'fundamento': fundamento if fundamento else None,
         'secciones': []
     }
     
     # Obtener ejercicios de la etapa
     ejercicios_etapa = EJERCICIOS_DB.get(etapa, {})
+    
+    # Filtrar ejercicios por fundamento si está seleccionado
+    if fundamento and fundamento in EJERCICIOS_FUNDAMENTOS:
+        palabras_clave = EJERCICIOS_FUNDAMENTOS[fundamento]
+        ejercicios_etapa_filtrado = {}
+        
+        for categoria, ejercicios in ejercicios_etapa.items():
+            ejercicios_relacionados = []
+            for ejercicio in ejercicios:
+                # Buscar coincidencias con palabras clave del fundamento
+                if any(palabra.lower() in ejercicio.lower() for palabra in palabras_clave):
+                    ejercicios_relacionados.append(ejercicio)
+            
+            # Si la categoría tiene ejercicios relacionados, mantenerlos
+            if ejercicios_relacionados:
+                ejercicios_etapa_filtrado[categoria] = ejercicios_relacionados
+            else:
+                # Si no hay coincidencias exactas, mantener algunos ejercicios genéricos
+                ejercicios_etapa_filtrado[categoria] = ejercicios[:2]
+        
+        ejercicios_etapa = ejercicios_etapa_filtrado if ejercicios_etapa_filtrado else ejercicios_etapa
     
     # Distribuir ejercicios por secciones
     tiempo_por_seccion = tiempo // len(ejercicios_etapa) if ejercicios_etapa else 0
@@ -633,14 +683,51 @@ def health():
     """Health check endpoint"""
     return jsonify({'status': 'ok', 'version': '4.0'})
 
+# Manejador de errores 404
+@app.errorhandler(404)
+def not_found(error):
+    """Manejar rutas no encontradas"""
+    return jsonify({
+        'error': 'Ruta no encontrada',
+        'path': request.path,
+        'method': request.method,
+        'status': 404,
+        'rutas_disponibles': [
+            '/',
+            '/api/generar-plan',
+            '/api/ejercicios/<etapa>',
+            '/health'
+        ]
+    }), 404
+
+# Manejador de errores 500
+@app.errorhandler(500)
+def server_error(error):
+    """Manejar errores del servidor"""
+    return jsonify({
+        'error': 'Error interno del servidor',
+        'status': 500
+    }), 500
+
 if __name__ == '__main__':
-    print("\n" + "="*60)
-    print("🏐 ENTRENA VOLEIBOL WH - SERVIDOR ACTIVO")
-    print("="*60)
-    print("\n✅ Servidor funcionando correctamente\n")
-    print("📱 Acceso desde tableta:")
-    print("   http://10.143.157.177:5000")
-    print("\n💡 En la misma red? Usa esta dirección")
-    print("="*60 + "\n")
+    print("\n" + "="*70)
+    print("🏐 ENTRENA VOLEIBOL WH - SERVIDOR TABLETA ACTIVO")
+    print("="*70)
+    print("\n✅ SERVIDOR FUNCIONANDO CORRECTAMENTE\n")
+    print("📍 ACCESO DESDE LOCALHOST:")
+    print("   http://localhost:5000/")
+    print("\n📱 ACCESO DESDE TABLETA (MISMA RED):")
+    print("   http://10.143.157.177:5000/")
+    print("   http://192.168.x.x:5000/  (reemplaza x con tu IP)")
+    print("\n💡 RUTAS DISPONIBLES:")
+    print("   GET  /                     → Página principal")
+    print("   POST /api/generar-plan     → Generar plan (JSON)")
+    print("   GET  /api/ejercicios/<etapa> → Listar ejercicios")
+    print("   GET  /health               → Verificar estado")
+    print("\n⚠️ ERROR 404?")
+    print("   1. Verifica la IP correcta (ipconfig)")
+    print("   2. Usa http:// NO https://")
+    print("   3. Incluye el puerto :5000")
+    print("\n" + "="*70 + "\n")
     
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    app.run(debug=False, host='0.0.0.0', port=5000, use_reloader=False)

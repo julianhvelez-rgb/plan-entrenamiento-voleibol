@@ -319,6 +319,19 @@
                                oninput="document.getElementById('tiempoVal').textContent = this.value">
                     </div>
                     
+                    <div class="form-group">
+                        <label>⚡ Fundamento (opcional)</label>
+                        <select id="fundamento">
+                            <option value="">Todos los fundamentos</option>
+                            <option value="saque">🏐 Saque</option>
+                            <option value="recepcion">🤲 Recepción</option>
+                            <option value="armado">🙌 Armado/Levantada</option>
+                            <option value="ataque">⚡ Ataque/Remate</option>
+                            <option value="bloqueo">🛡️ Bloqueo</option>
+                            <option value="defensa">🏃 Defensa</option>
+                        </select>
+                    </div>
+                    
                     <button type="submit">✨ Generar Plan</button>
                 </form>
                 
@@ -554,6 +567,40 @@
             }
         };
         
+        // Base de datos de fundamentos específicos
+        const FUNDAMENTOS = {
+            'saque': {
+                'Saques de abajo': ['Saques de abajo principiantes', 'Saques de abajo zona 1', 'Saques de abajo zona 6'],
+                'Saques de arriba': ['Saques tipo tenis', 'Saques flotadores', 'Saques en salto', 'Precisión en zonas'],
+                'Práctica de saque': ['Combinaciones saques', 'Saques bajo presión', 'Rotación de saques']
+            },
+            'recepcion': {
+                'Recepción básica': ['Recepción en parejas', 'Recepción en formación W', 'Recepción de saque fuerte'],
+                'Recepción avanzada': ['Recepción con desplazamiento', 'Recepción en movimiento', 'Recepción de bloqueo'],
+                'Práctica grupal': ['Recepción 1v1', 'Recepción 3v3', 'Series de recepción']
+            },
+            'armado': {
+                'Colocación básica': ['Colocación desde zona 3', 'Levantada en movimiento', 'Dosificación de balones'],
+                'Colocación avanzada': ['Colocación diferentes zonas', 'Levantada de emergencia', 'Colocación bajo presión'],
+                'Práctica grupal': ['Colocación 1v1', 'Colocación 3v3', 'Combinaciones ofensivas']
+            },
+            'ataque': {
+                'Remate básico': ['Remate zona 4', 'Remate zona 2', 'Remate en salto'],
+                'Remate avanzado': ['Remate con carrera', 'Ataque en primera línea', 'Remate bajo presión'],
+                'Práctica grupal': ['Remate 1v1', 'Remate 3v3', 'Combinaciones de ataque']
+            },
+            'bloqueo': {
+                'Bloqueo individual': ['Bloqueo posición ofensiva', 'Bloqueo defensa', 'Bloqueo con desplazamiento'],
+                'Bloqueo en parejas': ['Bloqueo en parejas', 'Bloqueo en tríos', 'Cobertura de bloqueo'],
+                'Práctica grupal': ['Bloqueo defensivo', 'Bloqueos combinados', 'Bloqueo bajo presión']
+            },
+            'defensa': {
+                'Defensa básica': ['Defensa baja', 'Defensa en movimiento', 'Cobertura defensiva'],
+                'Defensa avanzada': ['Defensa en profundidad', 'Defensa de transición', 'Defensa rotada'],
+                'Práctica grupal': ['Defensa 1v1', 'Defensa 3v3', 'Sistemas defensivos']
+            }
+        };
+        
         function switchTab(event, tab) {
             document.querySelectorAll('.tab-pane').forEach(el => el.classList.remove('active'));
             document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
@@ -568,9 +615,10 @@
             const cantidad = document.getElementById('cantidad').value;
             const etapa = document.getElementById('etapa').value;
             const tiempo = document.getElementById('tiempo').value;
+            const fundamento = document.getElementById('fundamento').value;
             
             if (!edad || !etapa) {
-                alert('Completa los campos');
+                alert('Completa los campos obligatorios');
                 return;
             }
             
@@ -578,7 +626,7 @@
             document.getElementById('result').style.display = 'none';
             
             setTimeout(() => {
-                const ejercicios = EJERCICIOS[etapa] || {};
+                let ejercicios = EJERCICIOS[etapa] || {};
                 const secciones = Object.keys(ejercicios).length;
                 const minPorSeccion = Math.floor(tiempo / secciones);
                 
@@ -587,14 +635,39 @@
                 html += `<strong>Fecha:</strong> ${new Date().toLocaleDateString('es-ES')}<br>`;
                 html += `<strong>Edad:</strong> ${edad}<br>`;
                 html += `<strong>Jugadoras:</strong> ${cantidad}<br>`;
-                html += `<strong>Duración:</strong> ${tiempo} min`;
+                html += `<strong>Duración:</strong> ${tiempo} min<br>`;
+                if (fundamento) {
+                    const fundamentoNombre = {
+                        'saque': '🏐 Saque',
+                        'recepcion': '🤲 Recepción',
+                        'armado': '🙌 Armado',
+                        'ataque': '⚡ Ataque',
+                        'bloqueo': '🛡️ Bloqueo',
+                        'defensa': '🏃 Defensa'
+                    };
+                    html += `<strong>Enfoque:</strong> ${fundamentoNombre[fundamento]}`;
+                }
                 html += '</div>';
                 html += '<h3>📋 Ejercicios</h3>';
                 
                 Object.entries(ejercicios).forEach(([cat, lista]) => {
                     const num = Math.max(2, Math.ceil(minPorSeccion / 10));
+                    let filteredList = lista;
+                    
+                    // Filtrar por fundamento si se seleccionó uno
+                    if (fundamento && FUNDAMENTOS[fundamento]) {
+                        const fundEjs = FUNDAMENTOS[fundamento];
+                        filteredList = lista.filter(ej => {
+                            // Buscar si el ejercicio contiene palabras clave del fundamento
+                            const valores = Object.values(fundEjs).flat();
+                            return valores.some(v => ej.toLowerCase().includes(v.toLowerCase().split(' ')[0]));
+                        });
+                        // Si no hay ejercicios filtrados, mantener algunos de la lista original
+                        if (filteredList.length === 0) filteredList = lista.slice(0, num);
+                    }
+                    
                     html += `<h4>${cat}</h4><ul>`;
-                    lista.slice(0, num).forEach(ej => {
+                    filteredList.slice(0, num).forEach(ej => {
                         html += `<li>${ej}</li>`;
                     });
                     html += '</ul>';
