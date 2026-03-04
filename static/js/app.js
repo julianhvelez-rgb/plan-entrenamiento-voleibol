@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initTabs();
     initFormPlan();
     initConsultaEjercicios();
+    initEntrenamientos6Minutos();
     initRangeSlider();
     initInstallPrompt();
     
@@ -305,6 +306,143 @@ function mostrarEjercicios(ejercicios) {
     }
     
     listaDiv.innerHTML = html;
+}
+
+// ========== ENTRENAMIENTOS 6 MINUTOS ==========
+function initEntrenamientos6Minutos() {
+    const etapaSelect = document.getElementById('etapa-6min');
+    const sesionSelect = document.getElementById('sesion-6min');
+    const detalleDiv = document.getElementById('entrenamiento-6min-detalle');
+
+    if (!etapaSelect || !sesionSelect || !detalleDiv) {
+        return;
+    }
+
+    etapaSelect.addEventListener('change', async function() {
+        const etapa = this.value;
+        detalleDiv.innerHTML = '';
+
+        if (!etapa) {
+            sesionSelect.innerHTML = '<option value="">Primero selecciona una etapa...</option>';
+            sesionSelect.disabled = true;
+            return;
+        }
+
+        try {
+            const response = await fetch(`/api/entrenamientos-6min?etapa=${encodeURIComponent(etapa)}`);
+            if (!response.ok) {
+                throw new Error('No se pudieron cargar las sesiones');
+            }
+
+            const data = await response.json();
+            sesionSelect.innerHTML = '<option value="">Seleccionar sesión...</option>';
+
+            data.sesiones.forEach(sesion => {
+                const option = document.createElement('option');
+                option.value = sesion.id;
+                option.textContent = sesion.nombre;
+                sesionSelect.appendChild(option);
+            });
+
+            sesionSelect.disabled = false;
+            showToast('✅ Sesiones cargadas', 'success');
+        } catch (error) {
+            sesionSelect.innerHTML = '<option value="">Error al cargar sesiones</option>';
+            sesionSelect.disabled = true;
+            showToast('❌ ' + error.message, 'error');
+        }
+    });
+
+    sesionSelect.addEventListener('change', async function() {
+        const etapa = etapaSelect.value;
+        const sesion = this.value;
+
+        if (!etapa || !sesion) {
+            detalleDiv.innerHTML = '';
+            return;
+        }
+
+        try {
+            const response = await fetch(
+                `/api/entrenamientos-6min?etapa=${encodeURIComponent(etapa)}&sesion=${encodeURIComponent(sesion)}`
+            );
+            if (!response.ok) {
+                throw new Error('No se pudo cargar el detalle de la sesión');
+            }
+
+            const data = await response.json();
+            mostrarDetalle6Min(data, detalleDiv);
+        } catch (error) {
+            detalleDiv.innerHTML = '';
+            showToast('❌ ' + error.message, 'error');
+        }
+    });
+}
+
+function mostrarDetalle6Min(data, contenedor) {
+    const sesion = data.sesion;
+
+    const fases = [
+        { key: 'inicio', titulo: '🟢 Inicio (Individual)' },
+        { key: 'desarrollo', titulo: '🟡 Desarrollo (Parejas/Tríos)' },
+        { key: 'final', titulo: '🔴 Final (Grupos)' }
+    ];
+
+    let html = `
+        <div class="plan-info">
+            <div class="plan-info-grid">
+                <div class="plan-info-item">
+                    <div class="plan-info-label">📅 Etapa</div>
+                    <div class="plan-info-value">${data.etapa}</div>
+                </div>
+                <div class="plan-info-item">
+                    <div class="plan-info-label">⏱️ Bloque Base</div>
+                    <div class="plan-info-value">${data.duracion_base}</div>
+                </div>
+                <div class="plan-info-item">
+                    <div class="plan-info-label">🔄 Cambio</div>
+                    <div class="plan-info-value">cada ${data.cambio_cada}</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="plan-section">
+            <div class="plan-section-header">
+                <h3 class="plan-section-title">${sesion.nombre}</h3>
+                <span class="plan-section-duration">${data.refuerzo_equipo}</span>
+            </div>
+        </div>
+    `;
+
+    fases.forEach(fase => {
+        const bloque = sesion[fase.key];
+        html += `
+            <div class="plan-section">
+                <div class="plan-section-header">
+                    <h3 class="plan-section-title">${fase.titulo}</h3>
+                    <span class="plan-section-duration">${bloque.duracion}</span>
+                </div>
+                <div class="ejercicio-item">Modalidad: ${bloque.tipo}</div>
+        `;
+
+        bloque.ejercicios.forEach(ejercicio => {
+            html += `<div class="ejercicio-item">▪️ ${ejercicio}</div>`;
+        });
+
+        html += `</div>`;
+    });
+
+    html += `
+        <div class="recomendaciones">
+            <h3 class="plan-section-title">💡 Lógica de Progresión</h3>
+            <div class="recomendacion-item">Inicia en trabajo individual técnico.</div>
+            <div class="recomendacion-item">Cambia cada 3 minutos a interacción en parejas/tríos.</div>
+            <div class="recomendacion-item">Extiende con bloque grupal para reforzar trabajo en equipo.</div>
+        </div>
+    `;
+
+    contenedor.innerHTML = html;
+    contenedor.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
 // ========== DIAGRAMAS ==========

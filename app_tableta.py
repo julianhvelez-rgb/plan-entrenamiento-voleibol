@@ -270,6 +270,291 @@ EJERCICIOS_FUNDAMENTOS = {
     ]
 }
 
+# Entrenamientos de 6 minutos (cambio cada 3 minutos)
+# Estructura progresiva: Inicio (individual) -> Desarrollo (parejas/trios) -> Final (grupos)
+ENTRENAMIENTOS_6_MINUTOS = {
+    'Preparación General': {
+        'sesion_1': {
+            'nombre': 'Toque y Control Progresivo',
+            'inicio': {
+                'duracion': '3 min',
+                'tipo': 'Individual',
+                'ejercicios': [
+                    'Toque de dedos contra pared',
+                    'Toques rápidos de antebrazos en pared'
+                ]
+            },
+            'desarrollo': {
+                'duracion': '3 min',
+                'tipo': 'Parejas/Tríos',
+                'ejercicios': [
+                    'Toques continuos en parejas',
+                    'Pase en triángulo (tríos)'
+                ]
+            },
+            'final': {
+                'duracion': '3 min (extra recomendado)',
+                'tipo': 'Grupos (trabajo en equipo)',
+                'ejercicios': [
+                    'Círculo de pases en grupo',
+                    'Mini juego de control colectivo'
+                ]
+            }
+        },
+        'sesion_2': {
+            'nombre': 'Recepción Progresiva',
+            'inicio': {
+                'duracion': '3 min',
+                'tipo': 'Individual',
+                'ejercicios': [
+                    'Recepción individual contra pared',
+                    'Desplazamiento reactivo con balón'
+                ]
+            },
+            'desarrollo': {
+                'duracion': '3 min',
+                'tipo': 'Parejas/Tríos',
+                'ejercicios': [
+                    'Recepción y pase en parejas',
+                    'Recepción en triángulo'
+                ]
+            },
+            'final': {
+                'duracion': '3 min (extra recomendado)',
+                'tipo': 'Grupos (trabajo en equipo)',
+                'ejercicios': [
+                    'Cadena recepción-colocación-remate',
+                    'Mini voleibol 3 vs 3'
+                ]
+            }
+        },
+        'sesion_3': {
+            'nombre': 'Saque y Precisión',
+            'inicio': {
+                'duracion': '3 min',
+                'tipo': 'Individual',
+                'ejercicios': [
+                    'Saque objetivo individual por zonas',
+                    'Control de gesto de saque'
+                ]
+            },
+            'desarrollo': {
+                'duracion': '3 min',
+                'tipo': 'Parejas/Tríos',
+                'ejercicios': [
+                    'Saque y recepción en parejas',
+                    'Reto de precisión en tríos'
+                ]
+            },
+            'final': {
+                'duracion': '3 min (extra recomendado)',
+                'tipo': 'Grupos (trabajo en equipo)',
+                'ejercicios': [
+                    'Competencia de saques por equipos',
+                    'Juego dirigido con inicio por saque'
+                ]
+            }
+        }
+    },
+    'Preparación Específica': {
+        'sesion_1': {
+            'nombre': 'Defensa Progresiva',
+            'inicio': {
+                'duracion': '3 min',
+                'tipo': 'Individual',
+                'ejercicios': [
+                    'Postura defensiva y desplazamiento',
+                    'Defensa de balón lanzado individual'
+                ]
+            },
+            'desarrollo': {
+                'duracion': '3 min',
+                'tipo': 'Parejas/Tríos',
+                'ejercicios': [
+                    'Defensa y pase en parejas',
+                    'Cobertura defensiva en tríos'
+                ]
+            },
+            'final': {
+                'duracion': '3 min (extra recomendado)',
+                'tipo': 'Grupos (trabajo en equipo)',
+                'ejercicios': [
+                    'Defensa en cadena por equipo',
+                    'Juego 6 vs 6 con foco defensivo'
+                ]
+            }
+        },
+        'sesion_2': {
+            'nombre': 'Bloqueo y Cobertura',
+            'inicio': {
+                'duracion': '3 min',
+                'tipo': 'Individual',
+                'ejercicios': [
+                    'Saltos de bloqueo individual',
+                    'Timing de manos en red'
+                ]
+            },
+            'desarrollo': {
+                'duracion': '3 min',
+                'tipo': 'Parejas/Tríos',
+                'ejercicios': [
+                    'Bloqueo en parejas',
+                    'Bloqueo + cobertura en tríos'
+                ]
+            },
+            'final': {
+                'duracion': '3 min (extra recomendado)',
+                'tipo': 'Grupos (trabajo en equipo)',
+                'ejercicios': [
+                    'Bloqueo-defensa-contraataque por equipo',
+                    'Juego competitivo con puntos por bloqueo'
+                ]
+            }
+        },
+        'sesion_3': {
+            'nombre': 'Remate Progresivo',
+            'inicio': {
+                'duracion': '3 min',
+                'tipo': 'Individual',
+                'ejercicios': [
+                    'Aproximación y salto sin balón',
+                    'Remate controlado con lanzamiento'
+                ]
+            },
+            'desarrollo': {
+                'duracion': '3 min',
+                'tipo': 'Parejas/Tríos',
+                'ejercicios': [
+                    'Colocación-remate en parejas',
+                    'Ataque en triángulo'
+                ]
+            },
+            'final': {
+                'duracion': '3 min (extra recomendado)',
+                'tipo': 'Grupos (trabajo en equipo)',
+                'ejercicios': [
+                    'Secuencia completa por equipo',
+                    'Juego 6 vs 6 con foco en ataque'
+                ]
+            }
+        }
+    },
+    'Precompetitiva': {
+        'sesion_1': {
+            'nombre': 'Transiciones Rápidas',
+            'inicio': {
+                'duracion': '3 min',
+                'tipo': 'Individual',
+                'ejercicios': [
+                    'Transición ataque-defensa individual',
+                    'Lectura de balón y reacción'
+                ]
+            },
+            'desarrollo': {
+                'duracion': '3 min',
+                'tipo': 'Parejas/Tríos',
+                'ejercicios': [
+                    'Transición en parejas',
+                    'Rotación táctica en tríos'
+                ]
+            },
+            'final': {
+                'duracion': '3 min (extra recomendado)',
+                'tipo': 'Grupos (trabajo en equipo)',
+                'ejercicios': [
+                    'Transiciones 6 vs 6',
+                    'Situaciones de presión por equipos'
+                ]
+            }
+        },
+        'sesion_2': {
+            'nombre': 'Sistemas de Juego',
+            'inicio': {
+                'duracion': '3 min',
+                'tipo': 'Individual',
+                'ejercicios': [
+                    'Posicionamiento por rol',
+                    'Desplazamiento táctico individual'
+                ]
+            },
+            'desarrollo': {
+                'duracion': '3 min',
+                'tipo': 'Parejas/Tríos',
+                'ejercicios': [
+                    'Combinaciones tácticas en parejas',
+                    'Cobertura táctica en tríos'
+                ]
+            },
+            'final': {
+                'duracion': '3 min (extra recomendado)',
+                'tipo': 'Grupos (trabajo en equipo)',
+                'ejercicios': [
+                    'Sistema 4-2 / 5-1 en equipo',
+                    'Set corto con consignas tácticas'
+                ]
+            }
+        }
+    },
+    'Competitiva': {
+        'sesion_1': {
+            'nombre': 'Activación Competitiva',
+            'inicio': {
+                'duracion': '3 min',
+                'tipo': 'Individual',
+                'ejercicios': [
+                    'Activación neuromuscular individual',
+                    'Saque de precisión con objetivo'
+                ]
+            },
+            'desarrollo': {
+                'duracion': '3 min',
+                'tipo': 'Parejas/Tríos',
+                'ejercicios': [
+                    'Recepción-ataque en parejas',
+                    'Cobertura de ataque en tríos'
+                ]
+            },
+            'final': {
+                'duracion': '3 min (extra recomendado)',
+                'tipo': 'Grupos (trabajo en equipo)',
+                'ejercicios': [
+                    'Juego competitivo por puntos',
+                    'Cierre táctico de equipo'
+                ]
+            }
+        }
+    },
+    'Transición': {
+        'sesion_1': {
+            'nombre': 'Reactivación Coordinativa',
+            'inicio': {
+                'duracion': '3 min',
+                'tipo': 'Individual',
+                'ejercicios': [
+                    'Coordinación individual con balón',
+                    'Movilidad activa con control'
+                ]
+            },
+            'desarrollo': {
+                'duracion': '3 min',
+                'tipo': 'Parejas/Tríos',
+                'ejercicios': [
+                    'Pases recreativos en parejas',
+                    'Reto técnico en tríos'
+                ]
+            },
+            'final': {
+                'duracion': '3 min (extra recomendado)',
+                'tipo': 'Grupos (trabajo en equipo)',
+                'ejercicios': [
+                    'Juego cooperativo por equipos',
+                    'Actividad lúdica grupal con balón'
+                ]
+            }
+        }
+    }
+}
+
 @app.route('/')
 def index():
     """Página principal"""
@@ -369,6 +654,52 @@ def obtener_ejercicios(etapa):
 def obtener_fundamentos():
     """Obtiene la lista de fundamentos disponibles"""
     return jsonify(list(EJERCICIOS_FUNDAMENTOS.keys()))
+
+@app.route('/api/entrenamientos-6min')
+def obtener_entrenamientos_6min():
+    """Obtiene entrenamientos de 6 minutos con 3 momentos"""
+    etapa = request.args.get('etapa')
+    sesion = request.args.get('sesion')
+
+    if not etapa:
+        return jsonify({
+            'resumen': {
+                'duracion_base': '6 min',
+                'cambio_cada': '3 min',
+                'estructura': 'Inicio (individual) -> Desarrollo (parejas/trios) -> Final (grupos)',
+                'nota': 'La fase final grupal se recomienda como bloque extra para reforzar el trabajo en equipo.'
+            },
+            'etapas': list(ENTRENAMIENTOS_6_MINUTOS.keys())
+        })
+
+    if etapa not in ENTRENAMIENTOS_6_MINUTOS:
+        return jsonify({'error': 'Etapa no encontrada'}), 404
+
+    sesiones_etapa = ENTRENAMIENTOS_6_MINUTOS[etapa]
+
+    if not sesion:
+        sesiones = [
+            {'id': key, 'nombre': value['nombre']}
+            for key, value in sesiones_etapa.items()
+        ]
+        return jsonify({
+            'etapa': etapa,
+            'duracion_base': '6 min',
+            'cambio_cada': '3 min',
+            'sesiones': sesiones
+        })
+
+    if sesion not in sesiones_etapa:
+        return jsonify({'error': 'Sesión no encontrada para la etapa seleccionada'}), 404
+
+    return jsonify({
+        'etapa': etapa,
+        'sesion_id': sesion,
+        'duracion_base': '6 min',
+        'cambio_cada': '3 min',
+        'refuerzo_equipo': '3 min extra recomendados en fase final',
+        'sesion': sesiones_etapa[sesion]
+    })
 
 def generar_recomendaciones(edad, cantidad, etapa):
     """Genera recomendaciones basadas en los parámetros"""

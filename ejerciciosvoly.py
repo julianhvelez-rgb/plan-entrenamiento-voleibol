@@ -11,58 +11,286 @@ class EntrenamientoVoleibol:
             '5': 'Transición'
         }
         
-        self.ejercicios_db = {
-                    # NUEVA BASE DE EJERCICIOS DINÁMICOS POR MODALIDAD
-                    self.ejercicios_dinamicos = {
-                        'Individual': [
-                            'Toques rápidos en pared: Control de antebrazos y coordinación.',
-                            'Saque objetivo: Precisión y potencia del saque.',
-                            'Recepción zigzag: Desplazamiento y control en recepción.',
-                            'Control con toque de dedos: Sensibilidad y control de dedos.',
-                            'Saltos con toque de balón: Potencia de salto y coordinación.',
-                            'Dribbling de balón: Destreza manual y control.',
-                            'Lanzamiento y recepción contra pared: Adaptabilidad y reacción.',
-                            'Carrera con balón: Coordinación y resistencia.',
-                            'Toques sentados: Control y fuerza en posiciones no convencionales.',
-                            'Desplazamiento reactivo: Reacción y agilidad.'
-                        ],
-                        'Parejas': [
-                            'Toques continuos: Coordinación y comunicación.',
-                            'Pase y desplazamiento: Anticipación y desplazamiento.',
-                            'Mini-competencia de saques: Precisión bajo presión.',
-                            'Recepción y ataque: Fluidez defensa-ataque.',
-                            'Juego de reflejos: Reflejos y reacción.',
-                            'Pase bajo presión: Decisión rápida.',
-                            'Toques con obstáculos: Control de altura.',
-                            'Reto de control: Consistencia y concentración.',
-                            'Pase con giro: Coordinación y equilibrio.',
-                            'Pase y sentadilla: Trabajo físico y técnico.'
-                        ],
-                        'Tríos': [
-                            'Ronda de pases: Versatilidad técnica y ritmo.',
-                            'Ataque y defensa: Roles y rotación.',
-                            'Carrera de relevos con balón: Trabajo en equipo y resistencia.',
-                            'Pase en triángulo: Precisión y anticipación.',
-                            'Juego de eliminación: Concentración y motivación lúdica.',
-                            'Pase con salto: Potencia y coordinación.',
-                            'Defensa en zona: Cobertura y desplazamiento.',
-                            'Pase sorpresa: Atención y reacción.',
-                            'Pase con cambio de dirección: Adaptabilidad y comunicación.',
-                            'Reto de precisión: Estrategia y control.'
-                        ],
-                        'Grupos': [
-                            'Rondo voleibolero: Rapidez de pase y visión periférica.',
-                            'Mini-partido rotativo: Adaptación y táctica.',
-                            'Carrera de relevos con obstáculos: Agilidad y trabajo en equipo.',
-                            'Competencia de saques: Precisión y competitividad.',
-                            'Defensa en cadena: Coordinación defensiva.',
-                            'Juego de “eliminados”: Concentración y presión lúdica.',
-                            'Pase múltiple: Atención y trabajo colectivo.',
-                            'Circuito técnico: Desarrollo integral de habilidades.',
-                            'Juego de roles: Versatilidad y comprensión de roles.',
-                            'Competencia de resistencia: Resistencia y disciplina.'
+        # NUEVA BASE DE EJERCICIOS DINÁMICOS POR MODALIDAD
+        self.ejercicios_dinamicos = {
+            'Individual': [
+                'Toques rápidos en pared: Control de antebrazos y coordinación.',
+                'Saque objetivo: Precisión y potencia del saque.',
+                'Recepción zigzag: Desplazamiento y control en recepción.',
+                'Control con toque de dedos: Sensibilidad y control de dedos.',
+                'Saltos con toque de balón: Potencia de salto y coordinación.',
+                'Dribbling de balón: Destreza manual y control.',
+                'Lanzamiento y recepción contra pared: Adaptabilidad y reacción.',
+                'Carrera con balón: Coordinación y resistencia.',
+                'Toques sentados: Control y fuerza en posiciones no convencionales.',
+                'Desplazamiento reactivo: Reacción y agilidad.'
+            ],
+            'Parejas': [
+                'Toques continuos: Coordinación y comunicación.',
+                'Pase y desplazamiento: Anticipación y desplazamiento.',
+                'Mini-competencia de saques: Precisión bajo presión.',
+                'Recepción y ataque: Fluidez defensa-ataque.',
+                'Juego de reflejos: Reflejos y reacción.',
+                'Pase bajo presión: Decisión rápida.',
+                'Toques con obstáculos: Control de altura.',
+                'Reto de control: Consistencia y concentración.',
+                'Pase con giro: Coordinación y equilibrio.',
+                'Pase y sentadilla: Trabajo físico y técnico.'
+            ],
+            'Tríos': [
+                'Ronda de pases: Versatilidad técnica y ritmo.',
+                'Ataque y defensa: Roles y rotación.',
+                'Carrera de relevos con balón: Trabajo en equipo y resistencia.',
+                'Pase en triángulo: Precisión y anticipación.',
+                'Juego de eliminación: Concentración y motivación lúdica.',
+                'Pase con salto: Potencia y coordinación.',
+                'Defensa en zona: Cobertura y desplazamiento.',
+                'Pase sorpresa: Atención y reacción.',
+                'Pase con cambio de dirección: Adaptabilidad y comunicación.',
+                'Reto de precisión: Estrategia y control.'
+            ],
+            'Grupos': [
+                'Rondo voleibolero: Rapidez de pase y visión periférica.',
+                'Mini-partido rotativo: Adaptación y táctica.',
+                'Carrera de relevos con obstáculos: Agilidad y trabajo en equipo.',
+                'Competencia de saques: Precisión y competitividad.',
+                'Defensa en cadena: Coordinación defensiva.',
+                'Juego de "eliminados": Concentración y presión lúdica.',
+                'Pase múltiple: Atención y trabajo colectivo.',
+                'Circuito técnico: Desarrollo integral de habilidades.',
+                'Juego de roles: Versatilidad y comprensión de roles.',
+                'Competencia de resistencia: Resistencia y disciplina.'
+            ]
+        }
+        
+        # ENTRENAMIENTOS DE 6 MINUTOS CON 3 FASES (INICIO, DESARROLLO, FINAL)
+        # Estructura: INICIO (3 min - individual) → DESARROLLO (3 min - parejas/tríos) → FINAL (3 min - grupos)
+        self.entrenamientos_6_minutos = {
+            'Preparación General': {
+                'sesion_1': {
+                    'nombre': 'Toque de Dedos Progresivo',
+                    'inicio': {
+                        'duracion': '3 min',
+                        'fase': 'INICIO - Individual',
+                        'ejercicios': [
+                            'Control con toque de dedos contra pared: Sensibilidad y control de dedos.',
+                            'Toques rápidos en pared: Control de antebrazos y coordinación.'
+                        ]
+                    },
+                    'desarrollo': {
+                        'duracion': '3 min',
+                        'fase': 'DESARROLLO - Parejas',
+                        'ejercicios': [
+                            'Toques continuos en parejas: Coordinación y comunicación.',
+                            'Pase y desplazamiento: Anticipación y desplazamiento.'
+                        ]
+                    },
+                    'final': {
+                        'duracion': '3 min',
+                        'fase': 'FINAL - Grupos (Trabajo en Equipo)',
+                        'ejercicios': [
+                            'Círculo de pases (grupos de 5-6): Atención y trabajo colectivo.',
+                            'Ronda de pases: Versatilidad técnica y ritmo.'
                         ]
                     }
+                },
+                'sesion_2': {
+                    'nombre': 'Recepción Progresiva',
+                    'inicio': {
+                        'duracion': '3 min',
+                        'fase': 'INICIO - Individual',
+                        'ejercicios': [
+                            'Recepción individual contra pared: Destreza y control.',
+                            'Desplazamiento reactivo: Reacción y agilidad.'
+                        ]
+                    },
+                    'desarrollo': {
+                        'duracion': '3 min',
+                        'fase': 'DESARROLLO - Parejas/Tríos',
+                        'ejercicios': [
+                            'Recepción y ataque en parejas: Fluidez defensa-ataque.',
+                            'Pase en triángulo: Precisión y anticipación.'
+                        ]
+                    },
+                    'final': {
+                        'duracion': '3 min',
+                        'fase': 'FINAL - Grupos (Trabajo en Equipo)',
+                        'ejercicios': [
+                            'Cadena: recepción-colocación-remate (grupos de 4-5): Fluidez de juego.',
+                            'Mini voleibol (3 vs 3): Aplicación integral.'
+                        ]
+                    }
+                },
+                'sesion_3': {
+                    'nombre': 'Saques Progresivos',
+                    'inicio': {
+                        'duracion': '3 min',
+                        'fase': 'INICIO - Individual',
+                        'ejercicios': [
+                            'Saque objetivo individual: Precisión y potencia del saque.',
+                            'Saques de abajo hacia pared: Control y precisión.'
+                        ]
+                    },
+                    'desarrollo': {
+                        'duracion': '3 min',
+                        'fase': 'DESARROLLO - Parejas/Tríos',
+                        'ejercicios': [
+                            'Mini-competencia de saques en parejas: Precisión bajo presión.',
+                            'Saque y recepción en triángulo: Coordinación bajo presión.'
+                        ]
+                    },
+                    'final': {
+                        'duracion': '3 min',
+                        'fase': 'FINAL - Grupos (Trabajo en Equipo)',
+                        'ejercicios': [
+                            'Competencia de saques en grupos: Precisión y competitividad.',
+                            'Juego dirigido 4 vs 4: Aplicación táctica.'
+                        ]
+                    }
+                }
+            },
+            'Preparación Específica': {
+                'sesion_1': {
+                    'nombre': 'Defensa Progresiva',
+                    'inicio': {
+                        'duracion': '3 min',
+                        'fase': 'INICIO - Individual',
+                        'ejercicios': [
+                            'Desplazamientos defensivos individuales: Reacción y agilidad.',
+                            'Posición de defensa en "V": Estabilidad y coordinación.'
+                        ]
+                    },
+                    'desarrollo': {
+                        'duracion': '3 min',
+                        'fase': 'DESARROLLO - Parejas/Tríos',
+                        'ejercicios': [
+                            'Defensa en zona (parejas): Cobertura y desplazamiento.',
+                            'Pase en triángulo defensivo: Precisión y anticipación.'
+                        ]
+                    },
+                    'final': {
+                        'duracion': '3 min',
+                        'fase': 'FINAL - Grupos (Trabajo en Equipo)',
+                        'ejercicios': [
+                            'Defensa en cadena (grupos de 6): Coordinación defensiva integral.',
+                            'Juego dirigido con énfasis en defensa 6 vs 6: Aplicación competitiva.'
+                        ]
+                    }
+                },
+                'sesion_2': {
+                    'nombre': 'Bloqueo Progresivo',
+                    'inicio': {
+                        'duracion': '3 min',
+                        'fase': 'INICIO - Individual',
+                        'ejercicios': [
+                            'Saltos de bloqueo individual: Potencia de salto.',
+                            'Posicionamiento defensivo en red: Coordinación y timing.'
+                        ]
+                    },
+                    'desarrollo': {
+                        'duracion': '3 min',
+                        'fase': 'DESARROLLO - Parejas/Tríos',
+                        'ejercicios': [
+                            'Bloqueo individual y en parejas: Sincronización y cobertura.',
+                            'Bloqueo en triángulo con defensa: Roles y rotación.'
+                        ]
+                    },
+                    'final': {
+                        'duracion': '3 min',
+                        'fase': 'FINAL - Grupos (Trabajo en Equipo)',
+                        'ejercicios': [
+                            'Bloqueo-defensa-contraataque (grupos de 6): Sistema defensivo completo.',
+                            'Juego dirigido 6 vs 6 con énfasis en bloqueo: Aplicación integral.'
+                        ]
+                    }
+                },
+                'sesion_3': {
+                    'nombre': 'Remate Progresivo',
+                    'inicio': {
+                        'duracion': '3 min',
+                        'fase': 'INICIO - Individual',
+                        'ejercicios': [
+                            'Remate desde zona 4 (con lanzamiento): Técnica y precisión.',
+                            'Saltos con toque de balón: Potencia de salto y coordinación.'
+                        ]
+                    },
+                    'desarrollo': {
+                        'duracion': '3 min',
+                        'fase': 'DESARROLLO - Parejas/Tríos',
+                        'ejercicios': [
+                            'Remate en parejas con recepción: Coordinación ofensivo-defensiva.',
+                            'Ataque y defensa en triángulo: Roles y fluidez.'
+                        ]
+                    },
+                    'final': {
+                        'duracion': '3 min',
+                        'fase': 'FINAL - Grupos (Trabajo en Equipo)',
+                        'ejercicios': [
+                            'Cadena ofensiva: recepción-colocación-remate (grupos de 5-6): Flujo de juego integral.',
+                            'Juego dirigido 6 vs 6 con énfasis en remate: Competencia y táctica.'
+                        ]
+                    }
+                }
+            },
+            'Precompetitiva': {
+                'sesion_1': {
+                    'nombre': 'Sistemas Tácticos Progresivos',
+                    'inicio': {
+                        'duracion': '3 min',
+                        'fase': 'INICIO - Individual',
+                        'ejercicios': [
+                            'Posicionamiento individual según rol: Concentración táctica.',
+                            'Movimientos predictivos: Anticipación y lectura de juego.'
+                        ]
+                    },
+                    'desarrollo': {
+                        'duracion': '3 min',
+                        'fase': 'DESARROLLO - Parejas/Tríos',
+                        'ejercicios': [
+                            'Jugadas ensayadas en parejas: Precisión bajo presión.',
+                            'Cobertura de bloqueo y ataque en triángulo: Sincronización táctica.'
+                        ]
+                    },
+                    'final': {
+                        'duracion': '3 min',
+                        'fase': 'FINAL - Grupos (Trabajo en Equipo)',
+                        'ejercicios': [
+                            'Set completo táctica 6 vs 6: Sistema 4-2 o 5-1 aplicado.',
+                            'Jugadas ensayadas de equipo: Compenetración y sincronización.'
+                        ]
+                    }
+                },
+                'sesion_2': {
+                    'nombre': 'Transiciones Progresivas',
+                    'inicio': {
+                        'duracion': '3 min',
+                        'fase': 'INICIO - Individual',
+                        'ejercicios': [
+                            'Cambios de posición individual: Velocidad y precisión.',
+                            'Desplazamiento en transición: Agilidad y reacción.'
+                        ]
+                    },
+                    'desarrollo': {
+                        'duracion': '3 min',
+                        'fase': 'DESARROLLO - Parejas/Tríos',
+                        'ejercicios': [
+                            'Transición defensa-ataque en parejas: Fluidez y velocidad.',
+                            'Rotación y cobertura en triángulo: Continuidad de juego.'
+                        ]
+                    },
+                    'final': {
+                        'duracion': '3 min',
+                        'fase': 'FINAL - Grupos (Trabajo en Equipo)',
+                        'ejercicios': [
+                            'Transiciones defensa-ataque 6 vs 6: Velocidad competitiva.',
+                            'Juego situacional con punto de oro: Presión y concentración.'
+                        ]
+                    }
+                }
+            }
+        }
+        
+        self.ejercicios_db = {
             'Preparación General': {
                 'calentamiento': [
                     'Trote suave alrededor de la cancha (5 min)',
@@ -204,6 +432,101 @@ class EntrenamientoVoleibol:
     
     def limpiar_pantalla(self):
         os.system('cls' if os.name == 'nt' else 'clear')
+    
+    def mostrar_entrenamientos_6_minutos(self):
+        """Muestra los entrenamientos de 6 minutos con estructura de 3 fases"""
+        self.limpiar_pantalla()
+        print("\n" + "="*70)
+        print("🏐 ENTRENAMIENTOS DE 6 MINUTOS - 3 FASES PROGRESIVAS 🏐")
+        print("="*70)
+        print("\nEstructura: INICIO (individual) → DESARROLLO (parejas/tríos) → FINAL (grupos)")
+        print("Bloque base: 6 minutos (cambio de ejercicio cada 3 minutos)")
+        print("Parte final grupal: 3 minutos extra recomendados para reforzar trabajo en equipo\n")
+        
+        print("Seleccione una etapa de entrenamiento:")
+        for i, etapa in enumerate(self.entrenamientos_6_minutos.keys(), 1):
+            print(f"{i}. {etapa}")
+        
+        opcion = input("\nSeleccione (número): ").strip()
+        
+        etapas_list = list(self.entrenamientos_6_minutos.keys())
+        try:
+            idx = int(opcion) - 1
+            if 0 <= idx < len(etapas_list):
+                etapa_seleccionada = etapas_list[idx]
+                self._mostrar_sesiones_etapa(etapa_seleccionada)
+            else:
+                print("Opción inválida")
+        except ValueError:
+            print("Opción inválida")
+    
+    def _mostrar_sesiones_etapa(self, etapa):
+        """Muestra las sesiones de una etapa"""
+        self.limpiar_pantalla()
+        sesiones = self.entrenamientos_6_minutos[etapa]
+        
+        print("\n" + "="*70)
+        print(f"SESIONES DE 6 MINUTOS - {etapa}")
+        print("="*70)
+        
+        for i, (key, sesion) in enumerate(sesiones.items(), 1):
+            print(f"\n{i}. {sesion['nombre']}")
+        
+        opcion = input("\nSeleccione una sesión (número): ").strip()
+        
+        try:
+            idx = int(opcion) - 1
+            sesiones_list = list(sesiones.items())
+            if 0 <= idx < len(sesiones_list):
+                key, sesion = sesiones_list[idx]
+                self._mostrar_detalle_sesion(sesion)
+            else:
+                print("Opción inválida")
+        except ValueError:
+            print("Opción inválida")
+    
+    def _mostrar_detalle_sesion(self, sesion):
+        """Muestra el detalle completo de una sesión de 6 minutos"""
+        self.limpiar_pantalla()
+        print("\n" + "="*70)
+        print(f"📅 SESIÓN: {sesion['nombre']}")
+        print("="*70)
+        print("\n⏱️  DURACIÓN BASE: 6 MINUTOS")
+        print("⏱️  PARTE FINAL GRUPAL: 3 MINUTOS EXTRA (RECOMENDADO)\n")
+        
+        fases = ['inicio', 'desarrollo', 'final']
+        colores_emojis = ['🟢', '🟡', '🔴']
+        
+        for fase_key, emoji in zip(fases, colores_emojis):
+            fase_data = sesion[fase_key]
+            print(f"\n{emoji} {fase_data['fase']}")
+            print("─" * 70)
+            print(f"Duración: {fase_data['duracion']}")
+            print("\nEjercicios:")
+            for i, ejercicio in enumerate(fase_data['ejercicios'], 1):
+                print(f"   {i}. {ejercicio}")
+        
+        print("\n" + "="*70)
+        print("📊 RESUMEN DE LA PROGRESIÓN:")
+        print("="*70)
+        print("\n🟢 FASE INICIO (0-3 min) - INDIVIDUAL")
+        print("   • Trabajo técnico personal")
+        print("   • Desarrollo de habilidades básicas")
+        print("   • Concentración en mecánica correcta")
+        
+        print("\n🟡 FASE DESARROLLO (3-6 min) - PAREJAS/TRÍOS")
+        print("   • Coordinación entre jugadores")
+        print("   • Aplicación técnica en interacción")
+        print("   • Comunicación y sincronización")
+        
+        print("\n🔴 FASE FINAL (6-9 min) - GRUPOS (Trabajo en Equipo)")
+        print("   • Aplicación competitiva")
+        print("   • Sistemas de juego")
+        print("   • Refuerzo del trabajo en equipo")
+        print("   • Mayor dificultad y demanda física")
+        
+        print("\n" + "="*70)
+        input("\nPresione Enter para volver al menú...")
     
     def dibujar_cancha_completa(self):
         """Dibuja la cancha de voleibol con zonas numeradas"""
@@ -442,25 +765,6 @@ class EntrenamientoVoleibol:
         print(f"  👥 {cantidad} jugadoras ÷ {num_estaciones} estaciones = ~{cantidad//num_estaciones} por grupo")
         print("="*70)
     
-    def mostrar_diagrama_ejercicio(self, tipo_ejercicio, cantidad):
-        """Muestra el diagrama apropiado según el tipo de ejercicio"""
-        tipo_lower = tipo_ejercicio.lower()
-        
-        if 'parejas' in tipo_lower:
-            self.dibujar_ejercicio_parejas()
-        elif 'circulo' in tipo_lower or 'pase' in tipo_lower and cantidad <= 8:
-            self.dibujar_ejercicio_circulo(cantidad)
-        elif 'remate' in tipo_lower or 'colocación' in tipo_lower:
-            self.dibujar_ejercicio_remate()
-        elif 'bloqueo' in tipo_lower or 'defensa' in tipo_lower:
-            self.dibujar_ejercicio_bloqueo()
-        elif 'recepción' in tipo_lower and 'formación' in tipo_lower:
-            self.dibujar_formacion_recepcion()
-        elif cantidad > 12:
-            self.dibujar_estaciones(cantidad)
-        else:
-            self.dibujar_cancha_completa()
-    
     def mostrar_menu_principal(self):
         print("\n" + "="*60)
         print(" 🏐  SISTEMA DE ENTRENAMIENTO DE VOLEIBOL  🏐")
@@ -468,9 +772,10 @@ class EntrenamientoVoleibol:
         print("\n1. Crear Plan de Entrenamiento del Día")
         print("2. Ver Base de Ejercicios por Etapa")
         print("3. Generar Plan Personalizado")
-        print("4. Ver Diagramas de Cancha y Ejercicios")
-        print("5. Salir")
+        print("4. Entrenamientos de 6 Minutos (3 Fases Progresivas)")
+        print("5. Ver Diagramas de Cancha y Ejercicios")
         print("6. Ver Ejercicios Dinámicos por Modalidad")
+        print("7. Salir")
         print("\n" + "="*60)
         return input("\nSeleccione una opción: ")
     
@@ -512,7 +817,7 @@ class EntrenamientoVoleibol:
         
         opcion = input("\nSeleccione la etapa actual: ")
         return self.etapas.get(opcion, 'Preparación General')
-    
+
     def recomendar_organizacion(self, cantidad):
         print("\n" + "-"*60)
         print("RECOMENDACIONES DE ORGANIZACIÓN")
@@ -543,7 +848,6 @@ class EntrenamientoVoleibol:
             print("  - Asistentes o capitanas por grupo")
             print("  - Rotación organizada y rápida")
         
-        # Mostrar diagrama visual
         if cantidad > 12:
             self.dibujar_estaciones(cantidad)
         elif cantidad >= 6:
@@ -559,7 +863,7 @@ class EntrenamientoVoleibol:
             print(f"\n📋 {categoria.replace('_', ' ').title()}:")
             for i, ejercicio in enumerate(lista_ejercicios, 1):
                 print(f"   {i}. {ejercicio}")
-    
+
     def seleccionar_ejercicios_personalizados(self, etapa):
         ejercicios_seleccionados = {}
         ejercicios = self.ejercicios_db.get(etapa, {})
@@ -582,13 +886,15 @@ class EntrenamientoVoleibol:
             else:
                 try:
                     indices = [int(x.strip()) - 1 for x in seleccion.split(',')]
-                    ejercicios_seleccionados[categoria] = [lista_ejercicios[i] for i in indices if 0 <= i < len(lista_ejercicios)]
+                    ejercicios_seleccionados[categoria] = [
+                        lista_ejercicios[i] for i in indices if 0 <= i < len(lista_ejercicios)
+                    ]
                 except:
                     print("⚠️  Selección inválida, se incluirán todos los ejercicios de esta categoría")
                     ejercicios_seleccionados[categoria] = lista_ejercicios
         
         return ejercicios_seleccionados
-    
+
     def generar_plan_entrenamiento(self, edad, cantidad, etapa, ejercicios_personalizados=None):
         self.limpiar_pantalla()
         print("\n" + "="*60)
@@ -617,7 +923,6 @@ class EntrenamientoVoleibol:
             print(f"\n{i}. {categoria.replace('_', ' ').title().upper()}")
             print("-" * 60)
             
-            # Asignar tiempos aproximados según categoría
             if 'calentamiento' in categoria:
                 tiempo = 10
             elif 'acondicionamiento' in categoria or 'recuperacion' in categoria:
@@ -638,14 +943,12 @@ class EntrenamientoVoleibol:
         print(f"⏱️  DURACIÓN TOTAL ESTIMADA: {tiempo_total} minutos ({tiempo_total/60:.1f} horas)")
         print("="*60)
         
-        # Mostrar algunos diagramas clave
         print("\n" + "="*60)
         print("VISUALIZACIÓN DE EJERCICIOS EN CANCHA")
         print("="*60)
         
         ver_diagramas = input("\n¿Desea ver los diagramas de ejercicios en cancha? (s/n): ").lower()
         if ver_diagramas == 's':
-            # Mostrar diagrama según la etapa
             if etapa in ['Preparación Específica', 'Precompetitiva', 'Competitiva']:
                 self.dibujar_ejercicio_remate()
                 input("\nPresione Enter para ver más diagramas...")
@@ -656,12 +959,11 @@ class EntrenamientoVoleibol:
                 self.dibujar_ejercicio_parejas()
                 input("\nPresione Enter para ver más diagramas...")
                 self.dibujar_ejercicio_circulo(min(cantidad, 8))
-            else:  # Transición
+            else:
                 self.dibujar_ejercicio_circulo(min(cantidad, 6))
                 input("\nPresione Enter para ver la cancha completa...")
                 self.dibujar_cancha_completa()
         
-        # Sugerencias adicionales
         print("\n💡 SUGERENCIAS ADICIONALES:")
         if cantidad > 12:
             print("   • Considere tener un asistente para manejar grupos grandes")
@@ -676,7 +978,7 @@ class EntrenamientoVoleibol:
             print("   • Oportunidad para trabajar aspectos mentales del equipo")
         
         print("\n" + "="*60)
-    
+
     def guardar_plan(self, edad, cantidad, etapa):
         filename = f"plan_entrenamiento_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt"
         
@@ -738,8 +1040,11 @@ class EntrenamientoVoleibol:
                     self.guardar_plan(edad, cantidad, etapa)
                 
                 input("\nPresione Enter para continuar...")
-            
+
             elif opcion == '4':
+                self.mostrar_entrenamientos_6_minutos()
+            
+            elif opcion == '5':
                 self.limpiar_pantalla()
                 print("\n" + "="*60)
                 print("DIAGRAMAS DE CANCHA Y EJERCICIOS")
@@ -778,10 +1083,6 @@ class EntrenamientoVoleibol:
                 if diagrama != '9':
                     input("\nPresione Enter para continuar...")
             
-            elif opcion == '5':
-                print("\n¡Gracias por usar el Sistema de Entrenamiento de Voleibol! 🏐")
-                print("¡Buen entrenamiento!\n")
-                break
             elif opcion == '6':
                 self.limpiar_pantalla()
                 print("\n" + "="*60)
@@ -792,6 +1093,11 @@ class EntrenamientoVoleibol:
                     for i, ejercicio in enumerate(lista, 1):
                         print(f"   {i}. {ejercicio}")
                 input("\nPresione Enter para continuar...")
+            
+            elif opcion == '7':
+                print("\n¡Gracias por usar el Sistema de Entrenamiento de Voleibol! 🏐")
+                print("¡Buen entrenamiento!\n")
+                break
             else:
                 print("\n⚠️  Opción inválida. Por favor intente de nuevo.")
                 input("Presione Enter para continuar...")

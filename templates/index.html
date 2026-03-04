@@ -66,6 +66,7 @@
     <nav class="tabs">
         <button class="tab-btn active" data-tab="generar">📋 Generar Plan</button>
         <button class="tab-btn" data-tab="consultar">📚 Consultar Ejercicios</button>
+        <button class="tab-btn" data-tab="seismin">⏱️ 6 Minutos</button>
         <button class="tab-btn" data-tab="diagrama">🏐 Diagramas</button>
     </nav>
 
@@ -173,7 +174,35 @@
                 </div>
             </section>
 
-            <!-- TAB 3: Diagramas -->
+            <!-- TAB 3: Entrenamientos de 6 Minutos -->
+            <section id="tab-seismin" class="tab-content">
+                <div class="card">
+                    <h2 class="card-title">⏱️ Entrenamientos de 6 Minutos</h2>
+
+                    <div class="form-group">
+                        <label class="form-label">📅 Seleccionar Etapa</label>
+                        <select id="etapa-6min" class="form-control">
+                            <option value="">Seleccionar...</option>
+                            <option value="Preparación General">Preparación General</option>
+                            <option value="Preparación Específica">Preparación Específica</option>
+                            <option value="Precompetitiva">Precompetitiva</option>
+                            <option value="Competitiva">Competitiva</option>
+                            <option value="Transición">Transición</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">🎯 Seleccionar Sesión</label>
+                        <select id="sesion-6min" class="form-control" disabled>
+                            <option value="">Primero selecciona una etapa...</option>
+                        </select>
+                    </div>
+
+                    <div id="entrenamiento-6min-detalle" class="ejercicios-container"></div>
+                </div>
+            </section>
+
+            <!-- TAB 4: Diagramas -->
             <section id="tab-diagrama" class="tab-content">
                 <div class="card">
                     <h2 class="card-title">🏐 Diagramas de Cancha</h2>
